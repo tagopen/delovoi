@@ -1,0 +1,32 @@
+header.header
+  .container.header__container
+    .row.justify-content-between.header__row
+      .col-10.col-sm-8.col-lg-6.col-xl-5
+        .header__heading!=content.index.header.heading 
+      a.logo.header__logo
+        img.img-fluid.logo__img.hidden-sm-down(src!=content.index.header.logo.src, alt!=content.index.header.logo.alt)
+        img.img-fluid.logo__img.hidden-sm-up(src!=content.index.header.logo320.src, alt!=content.index.header.logo320.alt)  
+      .col-10.col-md-8.col-lg-6.col-xl-5
+        .header__contact
+          each item in content.index.header.number
+            .header__number
+              a.header__link(href!=item.href)!= item.text 
+          a.header__call(href="#")
+            i.ic.ic--call.hidden-sm-down
+            .header__call--text!=content.index.header.call.text 
+    .row.justify-content-center
+      .col-24.col-lg-14.text-center
+        h1.header__title!=content.index.header.title
+          i.ic.ic--lefthead
+          i.ic.ic--righthead
+        h2.header__subtitle!=content.index.header.subtitle
+      .col-24.col-lg-16.text-center 
+        .header__text!=content.index.header.text      
+        button.btn.header__btn.text-center
+          .header__btn--text!=content.index.header.btn    
+        .header__scroll.hidden-sm-down
+          a.header__scroll--link
+            i.ic.ic--scrolldown  
+            .header__scroll--circle-1
+            .header__scroll--circle-2
+            .header__scroll--circle-3

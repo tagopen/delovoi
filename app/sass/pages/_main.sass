@@ -1,5 +1,11 @@
 +comment('general style')
 +ic
+@each $sprite in $spritesheet-sprites
+  .ic--#{nth($sprite, 10)}
+    &:before
+      +bs($sprite) 
+.ic
+  vertical-align: top       
 +cm('form')
 .text-danger
   color: $text-danger
@@ -16,10 +22,10 @@
     background-position: 40px 0
   to
     background-position: 0 0
-//+cm('modal')
-//.modal
-//  -webkit-overflow-scrolling: touch
-//  transform: translateZ(0)
++cm('modal')
+.modal
+  -webkit-overflow-scrolling: touch
+  transform: translateZ(0)
 .body
   display: flex
   flex-direction: column
@@ -28,4 +34,171 @@
   flex: 1
 +comment("home page style")
 .header
-  font-size: 10px
+  padding: 25px 0 0
+  background: url(../img/headerbg.jpg) no-repeat
+  background-size: cover
+  &__container
+    position: relative
+  &__row
+    margin-bottom: 40px  
+  &__logo
+    position: absolute
+    left: 50%
+    top: -25px
+    margin-left: -84px
+    display: inline-block
+  &__heading
+    position: relative
+    z-index: 10
+    color: $color-orange
+    font: 400 12px/18px $font-open-sans
+  &__contact
+    text-align: right  
+    position: relative
+    z-index: 10
+  &__number
+    display: block  
+  &__link
+    font: 600 14px/21px $font-open-sans
+    color: #fff   
+    &:hover,
+    &:focus
+      text-decoration: none
+      color: $color-orange 
+  &__call
+    &--text
+      display: inline-block
+      font: 400 11px/27px $font-open-sans   
+      color: $color-orange
+    .ic
+      margin-right: 10px
+  &__title
+    display: inline-block
+    position: relative
+    font: 700 36px/37px $font-lora
+    color: #fff
+    text-transform: uppercase   
+    margin-bottom: 20px
+    .ic
+      position: absolute
+      &--lefthead
+        bottom: 35px
+        left: -8px
+      &--righthead
+        bottom: 35px
+        right: -8px  
+  &__subtitle
+    font: 400 24px/36px $font-lora
+    color: #fff
+    margin-bottom: 30px
+  &__text
+    font: 400 14px/20px $font-open-sans  
+    color: $color-orange 
+    margin-bottom: 15px
+  &__btn
+    background-color: #e7b869
+    cursor: pointer
+    border-radius: 0
+    padding: 12px 20px 10px
+    margin-bottom: 90px
+    white-space: normal
+    &:hover,
+    &:focus
+      .header__btn--text
+        &:before
+          left: 0
+    &--text
+      position: relative
+      display: inline-block
+      font: 600 14px/21px $font-open-sans 
+      color: #212121
+      text-transform: uppercase
+      overflow-x: hidden
+      &:before
+        content: ''
+        position: absolute
+        display: block
+        width: 100%
+        height: 1px
+        background-color: #212121
+        bottom: 0
+        left: -100%
+        transition: all .6s ease
+  &__scroll
+    &--link
+      position: relative
+      display: inline-block
+      cursor: pointer
+      height: 40px
+      width: 40px
+      border-radius: 50%
+      background-color: rgba(255, 255, 255, 0.2)
+      border: 1px solid rgba(255, 255, 255, 0.5)   
+      line-height: 36px   
+      &:hover,
+      &:focus
+        background-color: rgba(255, 255, 255, 0.4)
+    &--circle
+      &-1
+        position: absolute
+        display: inline-block
+        height: 6px
+        width: 6px
+        bottom: -15px
+        left: 50%
+        margin-left: -3px
+        background-color: #FFF
+        border-radius: 50%  
+      &-2
+        position: absolute
+        display: inline-block
+        height: 4px
+        width: 4px
+        bottom: -26px
+        left: 50%
+        margin-left: -2px
+        background-color: #FFF
+        border-radius: 50%  
+      &-3    
+        position: absolute
+        display: inline-block
+        height: 2px
+        width: 2px
+        bottom: -35px
+        left: 50%
+        margin-left: -1px
+        background-color: #FFF
+        border-radius: 50%   
++r(760)         
+  .header
+    padding: 25px 0 60px
+    &__row
+      margin-bottom: 150px
+    &__logo
+      margin-left: -179px
+    &__heading
+      font: 400 18px/27px $font-open-sans
+    &__link
+      font: 600 18px/27px $font-open-sans
+    &__call
+      &--text
+        font: 400 18px/27px $font-open-sans 
+    &__title
+      font: 700 48px/50px $font-lora    
+      margin-bottom: 30px
+      .ic
+        position: absolute
+        &--lefthead
+          bottom: auto
+          left: -100px
+        &--righthead
+          bottom: auto
+          right: -100px
+    &__subtitle
+      font: 400 30px/45px $font-lora
+      margin-bottom: 100px
+    &__text
+      font: 400 18px/20px $font-open-sans 
+    &__btn
+      &--text
+        font: 600 18px/30px $font-open-sans 
