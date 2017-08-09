@@ -1,0 +1,19 @@
+section.tool
+  .container
+    .row.justify-content-center
+      .col-24.col-md-16.text-center
+        h2.heading.tool__heading
+          .heading__text!=content.index.tool.heading 
+          i.ic.ic--headingborder.heading__icon
+        .tool__subheading!=content.index.tool.subheading 
+  each item, i in content.index.tool.content        
+    .tool__elem(class="tool__elem--"+(i+1))        
+      .container
+        .row.tool__row(class={'flex-row-reverse': i%2 == 1})
+          .col-md-12
+            .tool__image
+              img.img-fluid(src!=item.img.src)
+          .col-md-12.col-lg-10.offset-lg-2    
+            .tool__box(class="tool__box--"+(i+1))   
+              .tool__name!=item.name
+              .tool__text!=item.text

@@ -1,0 +1,16 @@
+section.intro
+  .container
+    .row.justify-content-center
+      .col-24.col-sm-12.col-lg-10.col-xl-8.text-center
+        h2.heading.intro__heading
+          .heading__text!=content.index.intro.heading 
+          i.ic.ic--headingborder.heading__icon
+    .row
+      .col-24.col-xl-20.offset-xl-2
+        .row
+          each item in content.index.intro.content
+            .col-24.col-md-12.col-lg-6
+              .intro__box
+                .intro__image
+                  img.img-fluid.intro__img(src!=item.img.src, alt!=item.img.alt)
+                .intro__text!=item.text        

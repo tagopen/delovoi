@@ -22,6 +22,17 @@
     background-position: 40px 0
   to
     background-position: 0 0
+a    
+  &:hover,
+  &:focus
+    outline: none !important
+button
+  &:hover,
+  &:focus
+    outline: none !important    
+.button
+  &--size
+    width: 100%    
 +cm('modal')
 .modal
   -webkit-overflow-scrolling: touch
@@ -32,6 +43,24 @@
   min-height: 100vh
 .main
   flex: 1
++cm('heading')
+.heading
+  position: relative
+  &__text
+    color: #212121 
+    font: 700 24px/36px $font-lora
+    text-transform: uppercase
+    &--white
+      color: #fff
+  &__icon
+    position: absolute
+    left: 50%
+    margin-left: -50px
+    bottom: -25px
++r(760)  
+  .heading
+    &__text
+      font: 700 30px/45px $font-lora  
 +comment("home page style")
 .header
   padding: 25px 0 0
@@ -202,3 +231,348 @@
     &__btn
       &--text
         font: 600 18px/30px $font-open-sans 
++comment("intro style")
+.intro
+  padding: 80px 0
+  background-color: #FFF      
+  &__heading
+    margin-bottom: 70px  
+  &__box
+    text-align: center  
+  &__text  
+    color: #050505
+    font: 400 18px/27px $font-lora
+    margin-bottom: 20px
+    &--span
+      font: 700 18px/27px $font-lora
+  &__image
+    text-align: center
+    margin-bottom: 25px
+    line-height: 196px
+  &__img 
+    display: inline-block   
++r(992)
+  .intro
+    &__text
+      margin-bottom: 0      
++comment("video style")
+.video
+  position: relative
+  height: 600px
+  &__image
+    position: absolute
+    left: 0
+    top: 0
+    max-width: 45%
+    z-index: 10
+  &__container
+    position: relative
+    &:before
+      content: ''
+      position: absolute
+      display: block
+      right: 0
+      top: 160px
+      width: 100%
+      height: 440px
+      background: url(../img/setkasm.png) repeat
+  &__heading
+    margin-top: 45px    
+  &__time
+    position: relative
+    display: inline-block
+    color: $color-orange 
+    text-shadow: 7.5px 13px 25px rgba(0, 0, 0, 0.2)
+    font: 700 219px/220px $font-lora
+  &__elem
+    position: absolute
+    color: #212121
+    font: 400 18px/20px $font-open-sans 
+    &--1
+      left: -15px
+      top: 85px
+    &--2
+      top: 150px
+      left: 90px  
++comment("tool style")      
+.tool
+  padding: 80px 0
+  &__subheading
+    color: #212121
+    font: 400 18px/21px $font-lora
+    margin: 50px 0
+  &__elem
+    position: relative
+    &--1
+      &:before
+        content: ''
+        display: block
+        position: absolute
+        width: 100%
+        right: 0
+        top: -115px
+        height: 390px
+        background: url(../img/setkasm.png) repeat
+    &--2
+      padding-bottom: 35px
+      .tool__image
+        margin-bottom: 20px
+      &:before
+        content: ''
+        display: block
+        position: absolute
+        width: 100%
+        right: 0
+        top: 250px
+        height: 300px
+        background: url(../img/setkasm.png) repeat 
+    &--3
+      &:before
+        content: ''
+        display: block
+        position: absolute
+        width: 100%
+        right: 0
+        top: 120px
+        height: 333px
+        background: url(../img/setkasm.png) repeat 
+    &--4,
+    &--5
+      .tool__image
+        margin-bottom: 20px     
+  &__row
+    margin-bottom: 40px 
+  &__name  
+    position: relative
+    color: #212121
+    font: 700 22px/24px $font-open-sans 
+    text-transform: uppercase
+    margin-bottom: 50px
+    &--span
+      font: 400 22px/24px $font-lora
+      color: $color-orange 
+    &:before
+      content: ''
+      display: block
+      position: absolute
+      top: -15px
+      left: 0
+      height: 1px
+      width: 200px
+      background-color: $color-orange
+    &:after
+      content: ''
+      display: block
+      position: absolute
+      bottom: -15px
+      left: 0
+      height: 1px
+      width: 200px
+      background-color: $color-orange
+  &__text
+    color: #212121
+    font: 400 18px/27px $font-lora
+  &__image
+    position: relative
+    z-index: 20  
++r(760)
+  .tool
+    &__row
+      margin-bottom: 0
+    &__elem
+      &--1 
+        &:before
+          height: 400px
+          width: 70%
+          top: 0
+      &--2  
+        margin-top: 20px  
+        &:before
+          content: none
+      &--3
+        margin-bottom: 130px
+        &:before
+          height: 300px
+          width: 75%
+          top: 85px
+      &--4
+        &:before
+          content: none    
+      &--5
+        &:before
+          content: ''
+          display: block
+          position: absolute
+          width: 60%
+          left: 0
+          top: -130px
+          height: 333px
+          background: url(../img/setkasm.png) repeat 
+      &--4,
+      &--5
+        .tool__image
+          margin-bottom: 0    
+    &__box
+      &--1
+        padding: 60px 0 50px
+      &--2
+        padding-top: 60px   
+      &--3
+        padding: 0
+      &--4
+        padding-bottom: 190px 
+      &--5
+        margin-top: -40px  
+    &__name    
+      font: 700 23px/30px $font-open-sans 
++r(992)
+  .tool
+    &__name      
+      font: 700 26px/30px $font-open-sans 
+    &__elem
+      &--1
+        &:before
+          width: 60%
+          height: 460px
+          top: 55px
+      &--2
+        margin-top: -20px    
+      &--3
+        margin-bottom: 200px
+        &:before
+          width: 60%
+          height: 560px
+          top: -50px 
+      &--5
+        &:before
+          width: 60%
+          height: 460px
+          top: -228px    
+    &__box
+      &--1
+        padding-top: 100px   
+      &--2
+        padding-top: 180px       
+      &--3
+        padding-top: 70px  
+      &--4
+        padding-top: 100px  
+        padding-bottom: 0
+        margin-bottom: 150px
+      &__5
+        padding: 0
+        margin: 0
++comment("price style")        
+.price
+  padding: 90px 0
+  background-color: #e9e9e9
+  background-image: linear-gradient(to top, white 0%, #e9e9e9 100%)
+  &__heading
+    margin-bottom: 50px
+  &__title
+    color: $color-orange
+    font: 700 22px/33px $font-lora
+    text-transform: uppercase
+    margin-bottom: 25px
+    text-align: center
+  &__text
+    color: #212121
+    font: 400 18px/27px $font-open-sans 
+    text-align: center
+    &--span
+      font: 700 18px/27px $font-open-sans
+  &__image
+    display: inline-block 
+    position: relative   
+  &__zoom
+    position: absolute
+    left: 50%
+    top: 50%
+    margin-top: -27px
+    margin-left: -27px  
+    display: block
+    height: 54px
+    width: 54px
+    background-color: #fff
+    border-radius: 50%
+    line-height: 54px
+    box-shadow: 15px 26px 80px rgba(0, 0, 0, 0.2)
+    cursor: pointer
+    transition: all .3s ease
+    &:hover,
+    &:focus
+      background-color: $color-orange
+      transform: scale(1.2)
++r(760)
+  .price
+    &__title      
+      font: 700 24px/33px $font-lora
+      text-align: left
+    &__text
+      text-align: left
++r(992)
+  .price
+    &__box
+      padding-top: 30px
++r(1200)
+  .price
+    position: relative
+    &__box
+      padding-top: 60px
+    &__bg
+      position: absolute
+      right: 0
+      bottom: 0
++comment("cost style")        
+.cost
+  padding: 85px 0
+  background: url(../img/costbg.jpg) no-repeat
+  background-size: cover
+  &__heading
+    margin-bottom: 40px
+  &__subheading
+    color: #fff
+    font: 400 18px/27px $font-lora
+    margin-bottom: 35px
+.input
+  &__heading
+    color: $color-orange
+    font: 300 18px/27px $font-open-sans
+    margin-bottom: 10px  
+.form
+  &__group
+    margin-bottom: 20px
+  &__input    
+    border-radius: 0
+    background-color: #FFF
+    padding: 14px 20px
+    color: #212121
+    font: 300 18px/26px $font-open-sans
+    border: 0
+    +placeholder
+      color: #212121
+      font: 300 18px/26px $font-open-sans  
+    &:focus
+      box-shadow: 0 0 4px 1px $color-orange
+  &__btn
+    border: 3px solid white
+    box-shadow: 7.5px 13px 35px rgba(0, 0, 0, 0.25) 
+    background: transparent
+    color: $color-orange  
+    font: 600 16px/26px $font-open-sans
+    text-transform: uppercase
+    padding: 11px 20px
+    text-align: center
+    cursor: pointer
+    transition: all .3s ease
+    &:hover,
+    &:focus
+      background-color: #FFF
++r(760)
+  .form      
+    &__group
+      margin-bottom: 0
++r(992)
+  .form      
+    &__btn  
+      font: 600 18px/26px $font-open-sans

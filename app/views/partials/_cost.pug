@@ -1,0 +1,17 @@
+section.cost
+  .container
+    .row.justify-content-center
+      .col-24.col-sm-20.col-lg-16.text-center
+        h2.heading.cost__heading
+          .heading__text.heading__text--white!=content.index.cost.heading 
+          i.ic.ic--headingborderfff.heading__icon
+        .cost__subheading!=content.index.cost.subheading     
+    .row.justify-content-center
+      .col-24.col-lg-20
+        form.contact__form.contactForm.contactForm--modal(method='post', action='./mail/mail.php')
+          .row
+            .col-24.col-md-9.form__group
+              .input__heading!=content.index.cost.form.title   
+              input.form-control.form__input.form__input--phone.form__phone(aria-invalid='false', placeholder="+38 (___) ___-__-__", name='phone', type='tel')
+            .col-24.col-md-15.d-flex.align-items-end     
+              button.button.button--size.form__btn(name='form[контакты]', type='submit', data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Файл отправляется...")!=content.index.cost.form.btn

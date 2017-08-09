@@ -1,0 +1,19 @@
+section.price
+  .price__bg
+    img.img-fluid(src!=content.index.price.bg.src, alt!=content.index.price.bg.alt)
+  .container
+    .row.justify-content-center
+      .col-24.col-md-16.col-lg-12.text-center
+        h2.heading.price__heading
+          .heading__text!=content.index.price.heading 
+          i.ic.ic--headingborder.heading__icon
+    .row
+      .col-24.col-md-12.text-center
+        a.price__image
+          img.img-fluid(src!=content.index.price.img.src, alt!=content.index.price.img.alt)
+          .price__zoom  
+            i.ic.ic--zoom
+      .col-24.col-md-12
+        .price__box
+          .price__title!=content.index.price.title
+          .price__text!=content.index.price.text       
