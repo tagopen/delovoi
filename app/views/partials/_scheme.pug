@@ -1,0 +1,21 @@
+section.scheme
+  .container
+    .row.justify-content-center
+      .col-24.col-sm-18.col-lg-14.text-center
+        h2.heading.scheme__heading
+          .heading__text!=content.index.scheme.heading 
+          i.ic.ic--headingborder.heading__icon
+  .container.scheme__container.animate(data-animation="fadeInUp")
+    .row
+      each item, i in content.index.scheme.content  
+        .col-24.col-md-8.text-center.scheme__col
+          .scheme__box
+            .scheme__date(data-time!=item.date)
+            .scheme__image
+              i.ic(class="ic--scheme"+(i+1))
+              span.scheme__number!=item.number
+            .scheme__text!=item.text      
+            .scheme__icon(class="scheme__icon--"+(i+1))
+          .scheme__hover
+            .scheme__title!=item.hover.title
+            .scheme__descr!=item.hover.text    

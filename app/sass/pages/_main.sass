@@ -22,6 +22,16 @@
     background-position: 40px 0
   to
     background-position: 0 0
+@keyframes fadeInUp 
+  from 
+    opacity: 0
+    transform: translate3d(0, 100%, 0)
+  to 
+    opacity: 1
+    transform: none
+.fadeInUp 
+  animation-name: fadeInUp
+  animation-duration: 1.5s
 a    
   &:hover,
   &:focus
@@ -576,3 +586,106 @@ button
   .form      
     &__btn  
       font: 600 18px/26px $font-open-sans
++comment("scheme style")       
+.scheme
+  padding: 85px 0
+  &__heading
+    margin-bottom: 80px
+  &__container
+    position: relative
+    &:before
+      content: ''
+      display: block
+      position: absolute
+      left: 0
+      bottom: 0
+      height: 85%
+      width: 100%
+      background: url(../img/setkasm.png) repeat  
+  &__col
+    position: relative   
+  &__box
+    display: inline-block
+    position: relative
+    text-align: center
+    margin-bottom: 120px  
+    cursor: pointer
+  &__date
+    color: $color-orange 
+    font: 700 14px/16px $font-lora 
+    margin-bottom: 20px
+  &__image
+    position: relative
+    display: inline-block
+    height: 116px
+    width: 116px
+    border-radius: 50%
+    line-height: 110px
+    background-color: white
+    box-shadow: 5px 8.7px 30px rgba(0, 0, 0, 0.1)  
+    text-align: center 
+  &__number
+    position: absolute
+    display: inline-block
+    left: 5px
+    top: 5px
+    height: 26px
+    width: 26px
+    background-color: $color-orange  
+    border-radius: 50%
+    color: #fff
+    font: 700 14px/24px $font-lora
+  &__text  
+    position: absolute
+    display: inline-block
+    width: 200px
+    left: 50%
+    margin-left: -100px
+    bottom: -60px
+    color: #212121
+    font: 400 18px/27px $font-open-sans
+  &__icon
+    &--1,
+    &--4  
+      display: inline-block
+      position: absolute
+      bottom: 0
+      left: 80%
+      height: 51px
+      width: 2px
+      background: url(../img/schemeline.png) no-repeat
+      background-size: auto
+    &--2,
+    &--5  
+      display: inline-block
+      position: absolute
+      top: 50px
+      left: 92%
+      height: 51px
+      width: 0
+      background: url(../img/schemeline2.png) no-repeat
+      background-size: auto
+  &__hover
+    position: absolute   
+    opacity: 0
+    visibility: hidden
+    left: 0
+    top: 0
+    width: 100%
+    height: auto
+    text-align: left
+    background-color: white
+    box-shadow: 10px 17.3px 40px rgba(0, 0, 0, 0.2)
+    padding: 25px
+    transition: all .5s ease
+    &--visible
+      opacity: 1
+      visibility: visible
+      z-index: 25
+  &__title
+    color: $color-orange  
+    font: 600 18px/27px $font-open-sans
+    margin-bottom: 20px
+  &__descr
+    color: #212121
+    font: 400 14px/21px $font-lora  
