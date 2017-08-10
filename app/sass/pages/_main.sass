@@ -644,48 +644,232 @@ button
     bottom: -60px
     color: #212121
     font: 400 18px/27px $font-open-sans
-  &__icon
-    &--1,
-    &--4  
-      display: inline-block
-      position: absolute
-      bottom: 0
-      left: 80%
-      height: 51px
-      width: 2px
-      background: url(../img/schemeline.png) no-repeat
-      background-size: auto
-    &--2,
-    &--5  
-      display: inline-block
-      position: absolute
-      top: 50px
-      left: 92%
-      height: 51px
-      width: 0
-      background: url(../img/schemeline2.png) no-repeat
-      background-size: auto
   &__hover
-    position: absolute   
-    opacity: 0
-    visibility: hidden
-    left: 0
-    top: 0
-    width: 100%
-    height: auto
-    text-align: left
+    display: none  
++r(760)
+  .scheme
+    &__icon
+      z-index: -1
+      &--1,
+      &--4  
+        display: inline-block
+        position: absolute
+        bottom: 20px
+        left: 80%
+        height: 51px
+        width: 0
+        background: url(../img/schemeline.png) no-repeat
+        background-size: auto
+      &--2,
+      &--5  
+        display: inline-block
+        position: absolute
+        top: 50px
+        left: 92%
+        height: 51px
+        width: 0
+        background: url(../img/schemeline2.png) no-repeat
+        background-size: auto
+    &__hover
+      display: block
+      position: absolute   
+      opacity: 0
+      visibility: hidden
+      left: 0
+      top: 0
+      width: 100%
+      height: auto
+      text-align: left
+      background-color: white
+      box-shadow: 10px 17.3px 40px rgba(0, 0, 0, 0.2)
+      padding: 25px
+      transition: visible, opacity .5s ease
+      z-index: 50
+      &--visible
+        opacity: 1
+        visibility: visible
+    &__title
+      position: relative
+      color: $color-orange  
+      font: 600 18px/27px $font-open-sans
+      margin-bottom: 20px
+      &:before
+        content: ''
+        position: absolute
+        left: 0
+        bottom: -10px
+        display: block
+        width: 120px
+        height: 1px
+        background-color: $color-orange
+    &__descr
+      color: #212121
+      font: 400 14px/21px $font-lora  
++comment("case style")      
+.case
+  padding: 100px 0
+  background-color: #e9e9e9
+  background-image: linear-gradient(to top, white 0%, #e9e9e9 100%)
+  &__heading
+    margin-bottom: 80px
+  &__image
+    position: relative 
+    img
+      max-width: 100%
+      height: auto
+  &__name
+    color: $color-orange
+    font: 700 22px/24px $font-lora 
+    padding: 35px 0
+    text-align: center
     background-color: white
-    box-shadow: 10px 17.3px 40px rgba(0, 0, 0, 0.2)
-    padding: 25px
-    transition: all .5s ease
-    &--visible
-      opacity: 1
-      visibility: visible
-      z-index: 25
+    box-shadow: 10px 17.3px 40px rgba(0, 0, 0, 0.1) 
+    text-transform: uppercase
+    margin-bottom: 25px
+  &__elem
+    margin-bottom: 30px  
   &__title
-    color: $color-orange  
-    font: 600 18px/27px $font-open-sans
-    margin-bottom: 20px
-  &__descr
+    position: relative
     color: #212121
-    font: 400 14px/21px $font-lora  
+    font: 700 18px/24px $font-lora 
+    margin-bottom: 20px
+    &:before
+      content: ''
+      position: absolute
+      display: block
+      height: 1px
+      width: 166px
+      background-color: #212121
+      left: 0
+      bottom: -5px
+  &__text    
+    color: #212121
+    font: 400 16px/24px $font-open-sans
+  &__detail
+    color: $color-orange
+    font: 700 16px/24px $font-lora  
+  &__value
+    color: #212121
+    font: 400 16px/24px $font-lora 
+  &__dots
+    position: relative 
+    width: 100px 
+    margin: 0 auto
+  &__arrows
+    position: relative
+    display: block
+    width: 160px
+    margin: 50px auto 0
+    z-index: 25
+    height: 75px    
+    .slick
+      &-arrow
+        &:hover,
+        &:focus
+          background-color: $color-orange
+      &-prev
+        left: 0
+        top: 0
+      &-next
+        right: 0
+        top: 15px    
+  &__info
+    &--mob
+      display: none                   
++r(760)
+  .case     
+    &__image
+      margin-bottom: 30px
+    &__name
+      position: relative
+      left: -30px
+      text-align: left
+      padding-left: 30px  
+    &__point
+      margin-bottom: 10px 
+    &__info
+      &--mob
+        display: block
+      &--desctop
+        display: none    
+    &__arrows
+      margin: 50px 0 0 0  
+      display: inline-block
+      top: -90px
+    &__dots
+      display: inline-block 
+      position: relative
+      top: -100px
+      .slick-dots
+        bottom: 50px  
++r(992)
+  .case
+    &__arrows
+      top: 0
+    &__dots
+      top: 0               
++r(1200)
+  .case
+    overflow: hidden
+    &__image
+      margin: 0
+      img
+        position: absolute
+        right: 0
+        top: 0 
+        max-width: none
+    &__name
+      left: -228px
+      padding-left: 105px  
+    &__info
+      &--desctop
+        display: block  
+    &__arrows
+      display: block
+      margin-left: 260px 
+      top: -186px    
+    &__dots
+      position: static
+      padding-left: 40px    
+      .slick-dots
+        bottom: 120px 
++r(1366)
+  .case 
+    &__arrows
+      top: -126px   
++r(1600)        
+  .case 
+    &__arrows
+      top: -66px  
+.container
+  &--size
+    width: 100% !important
+    padding: 0 !important        
+.slick
+  &-slide
+    outline: none !important
+  &-arrow
+    height: 66px
+    width: 66px
+    background-color: white
+    box-shadow: 5px 8.7px 15px rgba(0, 0, 0, 0.2)  
+  &-dots
+    li
+      button
+        height: 20px
+        width: 20px
+        background-color: #FFF     
+        border: 4px solid $color-orange
+        &:before
+          content: ''
+    .slick-active
+      button
+        &:before
+          content: ''
+          position: absolute
+          left: 6px
+          top: 6px
+          display: block
+          height: 8px
+          width: 8px
+          background-color: #212121      

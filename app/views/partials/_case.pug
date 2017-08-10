@@ -1,0 +1,40 @@
+section.case
+  .container
+    .row.justify-content-center
+      .col-24.col-sm-20.col-lg-16.text-center
+        h2.heading.case__heading
+          .heading__text.heading__text!=content.index.case.heading 
+          i.ic.ic--headingborder.heading__icon
+  .container.container--size         
+    .case__slider  
+      each item, i in content.index.case.slides
+        div  
+          .case__item
+            .container
+              .row
+                .col-24.col-md-10
+                  .case__image
+                    img(src!=item.img.src, alt!=item.img.alt)
+                  .case__info.case__info--mob   
+                    each box in  item.info   
+                      .case__point
+                        .case__detail!=box.detail
+                        .case__value!=box.value    
+                .col-24.col-md-14.col-lg-12.offset-lg-2.flex-lg-last
+                  .case__box
+                    .case__name!=item.name
+                    .case__descr
+                      each elem in item.descr
+                        .case__elem
+                          .case__title!=elem.title
+                          .case__text!=elem.text
+                    .case__info.case__info--desctop
+                      .row     
+                        each box in  item.info   
+                          .col-24.col-lg-8
+                            .case__point
+                              .case__detail!=box.detail
+                              .case__value!=box.value
+  .container                            
+    .case__arrows                           
+    .case__dots

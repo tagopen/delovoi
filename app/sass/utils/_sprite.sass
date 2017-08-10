@@ -8,6 +8,28 @@
 //
 // At the bottom of this section, we provide information about the spritesheet itself
 // $spritesheet: width height image $spritesheet-sprites
+$arrowleft-name: 'arrowleft'
+$arrowleft-x: 134px
+$arrowleft-y: 145px
+$arrowleft-offset-x: -134px
+$arrowleft-offset-y: -145px
+$arrowleft-width: 33px
+$arrowleft-height: 7px
+$arrowleft-total-width: 170px
+$arrowleft-total-height: 156px
+$arrowleft-image: 'sprite.png'
+$arrowleft: (134px, 145px, -134px, -145px, 33px, 7px, 170px, 156px, 'sprite.png', 'arrowleft', )
+$arrowright-name: 'arrowright'
+$arrowright-x: 91px
+$arrowright-y: 145px
+$arrowright-offset-x: -91px
+$arrowright-offset-y: -145px
+$arrowright-width: 33px
+$arrowright-height: 7px
+$arrowright-total-width: 170px
+$arrowright-total-height: 156px
+$arrowright-image: 'sprite.png'
+$arrowright: (91px, 145px, -91px, -145px, 33px, 7px, 170px, 156px, 'sprite.png', 'arrowright', )
 $call-name: 'call'
 $call-x: 150px
 $call-y: 35px
@@ -21,26 +43,26 @@ $call-image: 'sprite.png'
 $call: (150px, 35px, -150px, -35px, 20px, 20px, 170px, 156px, 'sprite.png', 'call', )
 $headingborder-name: 'headingborder'
 $headingborder-x: 0px
-$headingborder-y: 73px
+$headingborder-y: 52px
 $headingborder-offset-x: 0px
-$headingborder-offset-y: -73px
+$headingborder-offset-y: -52px
 $headingborder-width: 100px
 $headingborder-height: 11px
 $headingborder-total-width: 170px
 $headingborder-total-height: 156px
 $headingborder-image: 'sprite.png'
-$headingborder: (0px, 73px, 0px, -73px, 100px, 11px, 170px, 156px, 'sprite.png', 'headingborder', )
+$headingborder: (0px, 52px, 0px, -52px, 100px, 11px, 170px, 156px, 'sprite.png', 'headingborder', )
 $headingborderfff-name: 'headingborderfff'
 $headingborderfff-x: 0px
-$headingborderfff-y: 52px
+$headingborderfff-y: 73px
 $headingborderfff-offset-x: 0px
-$headingborderfff-offset-y: -52px
+$headingborderfff-offset-y: -73px
 $headingborderfff-width: 100px
 $headingborderfff-height: 11px
 $headingborderfff-total-width: 170px
 $headingborderfff-total-height: 156px
 $headingborderfff-image: 'sprite.png'
-$headingborderfff: (0px, 52px, 0px, -52px, 100px, 11px, 170px, 156px, 'sprite.png', 'headingborderfff', )
+$headingborderfff: (0px, 73px, 0px, -73px, 100px, 11px, 170px, 156px, 'sprite.png', 'headingborderfff', )
 $lefthead-name: 'lefthead'
 $lefthead-x: 46px
 $lefthead-y: 145px
@@ -154,7 +176,7 @@ $zoom: (150px, 0px, -150px, 0px, 20px, 25px, 170px, 156px, 'sprite.png', 'zoom',
 $spritesheet-width: 170px
 $spritesheet-height: 156px
 $spritesheet-image: 'sprite.png'
-$spritesheet-sprites: ($call, $headingborder, $headingborderfff, $lefthead, $righthead, $scheme1, $scheme2, $scheme3, $scheme4, $scheme5, $scheme6, $scrolldown, $zoom, )
+$spritesheet-sprites: ($arrowleft, $arrowright, $call, $headingborder, $headingborderfff, $lefthead, $righthead, $scheme1, $scheme2, $scheme3, $scheme4, $scheme5, $scheme6, $scrolldown, $zoom, )
 $spritesheet: (170px, 156px, 'sprite.png', $spritesheet-sprites, )
 
 // The provided mixins are intended to be used with the array-like variables

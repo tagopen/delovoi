@@ -21,16 +21,6 @@
     });
   });
 
-  /*CSS ANIMATION*/
-  $(window).scroll(function (){ 
-    $('.animate').each(function (){
-     if ($(window).scrollTop() + $(window).height() >= $(this).offset().top){
-      $(this).addClass($(this).data('animation')); 
-    } 
-  }); 
-  });﻿
-
-
   if( $( window ).width() >= 760 ) {
 
     $('.intro__image').matchHeight({
@@ -39,6 +29,17 @@
       target: null,
       remove: false
     });
+
+
+    /*CSS ANIMATION*/
+    $(window).scroll(function (){ 
+      $('.animate').each(function (){
+       if ($(window).scrollTop() + $(window).height() >= $(this).offset().top){
+        $(this).addClass($(this).data('animation')); 
+      } 
+    }); 
+    });﻿
+
   }
 
   $('.scheme__text').matchHeight({
@@ -109,25 +110,82 @@ $(function($){
     });
   });
 
+/*CSS ANIMATION*/
+  if( $( window ).width() >= 760 && $( window ).width() < 992 ) {
+    $(window).scroll(function (){ 
+      $('.scheme__container').each(function (){
+       if ($(window).scrollTop() + $(window).height() >= $(this).offset().top){
+        setTimeout(function(){ $( ".scheme__icon--1" ).animate({width: "180px"}, 2000); },1000);
+        setTimeout(function(){ $( ".scheme__icon--2" ).animate({width: "180px"}, 2000); },3000);
+        setTimeout(function(){ $( ".scheme__icon--4" ).animate({width: "180px"}, 2000); },5000);
+        setTimeout(function(){ $( ".scheme__icon--5" ).animate({width: "180px"}, 2000); },7000);
+      } 
+    }); 
+    });﻿
+  };
+  if( $( window ).width() >= 992 && $( window ).width() < 1200 ) {
+    $(window).scroll(function (){ 
+      $('.scheme__container').each(function (){
+       if ($(window).scrollTop() + $(window).height() >= $(this).offset().top){
+        setTimeout(function(){ $( ".scheme__icon--1" ).animate({width: "220px"}, 2000); },1000);
+        setTimeout(function(){ $( ".scheme__icon--2" ).animate({width: "220px"}, 2000); },3000);
+        setTimeout(function(){ $( ".scheme__icon--4" ).animate({width: "220px"}, 2000); },5000);
+        setTimeout(function(){ $( ".scheme__icon--5" ).animate({width: "220px"}, 2000); },7000);
+      } 
+    }); 
+    });﻿
+  };
+  if( $( window ).width() >= 1200 ) {
+    $(window).scroll(function (){ 
+      $('.scheme__container').each(function (){
+       if ($(window).scrollTop() + $(window).height() >= $(this).offset().top){
+        setTimeout(function(){ $( ".scheme__icon--1" ).animate({width: "289px"}, 2000); },1000);
+        setTimeout(function(){ $( ".scheme__icon--2" ).animate({width: "289px"}, 2000); },3000);
+        setTimeout(function(){ $( ".scheme__icon--4" ).animate({width: "289px"}, 2000); },5000);
+        setTimeout(function(){ $( ".scheme__icon--5" ).animate({width: "289px"}, 2000); },7000);
+      } 
+    }); 
+    });﻿
+  };
 
-  /*CSS ANIMATION*/
-  $(window).scroll(function (){ 
-    $('.scheme__container').each(function (){
-     if ($(window).scrollTop() + $(window).height() >= $(this).offset().top){
-      setTimeout(function(){ $( ".scheme__icon--1" ).animate({width: "289px"}, 2000); },1000);
-      setTimeout(function(){ $( ".scheme__icon--2" ).animate({width: "289px"}, 2000); },3000);
-      setTimeout(function(){ $( ".scheme__icon--4" ).animate({width: "289px"}, 2000); },5000);
-      setTimeout(function(){ $( ".scheme__icon--5" ).animate({width: "289px"}, 2000); },7000);
-         
-    } 
-  }); 
-  });﻿
-
-$('.scheme__box').mouseover(function() {
-  $(this).siblings('.scheme__hover').addClass('scheme__hover--visible')
+$('.scheme__image').mouseover(function() {
+  $(this).parent().siblings('.scheme__hover').addClass('scheme__hover--visible')
 });
-$('.scheme__hover--visible').mouseout(function() {
+
+$('.scheme__hover').mouseout(function() {
   $(this).removeClass('scheme__hover--visible')
 });
+
+ if( $( window ).width() >= 1200 ) {
+    var sectionWidth = $( window).width() + 17,
+        containerWidth = $('.container').width(),
+        containerColumn2 = containerWidth/12,
+        resultWidth = sectionWidth/2 - containerColumn2 -26 +"px";
+    $('.case__image > img').css('width', resultWidth);
+  };
+
+
+  $('.case__slider').slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: true,
+    dots: false,
+    infinite: true,
+    focusOnSelect: true,
+    dots: true,
+    appendArrows: $('.case__arrows'),
+    appendDots: $('.case__dots'),
+    prevArrow: '<button type="button" data-role="none" class="slick-prev" aria-label="Previous" tabindex="0" role="button"><i class="ic ic--arrowleft"></i></button>',
+    nextArrow: '<button type="button" data-role="none" class="slick-next" aria-label="Next" tabindex="0" role="button"><i class="ic ic--arrowright"></i></button>',
+    responsive: [
+    {
+      breakpoint: 1600,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1
+      }
+    }
+    ]
+  });
 
 })(jQuery); // End of use strict
