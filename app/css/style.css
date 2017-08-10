@@ -394,19 +394,25 @@
 .ic--arrowleft:before {
   width: 33px;
   height: 7px;
-  background: url(../img/sprite.png) -134px -145px no-repeat;
+  background: url(../img/sprite.png) -180px -17px no-repeat;
 }
 
 .ic--arrowright:before {
   width: 33px;
   height: 7px;
-  background: url(../img/sprite.png) -91px -145px no-repeat;
+  background: url(../img/sprite.png) -180px 0px no-repeat;
 }
 
 .ic--call:before {
   width: 20px;
   height: 20px;
   background: url(../img/sprite.png) -150px -35px no-repeat;
+}
+
+.ic--createrline:before {
+  width: 63px;
+  height: 1px;
+  background: url(../img/sprite.png) -91px -145px no-repeat;
 }
 
 .ic--headingborder:before {
@@ -472,7 +478,7 @@
 .ic--scrolldown:before {
   width: 14px;
   height: 6px;
-  background: url(../img/sprite.png) -150px -65px no-repeat;
+  background: url(../img/sprite.png) -180px -34px no-repeat;
 }
 
 .ic--zoom:before {
@@ -1749,4 +1755,105 @@ button:hover, button:focus {
   height: 8px;
   width: 8px;
   background-color: #212121;
+}
+
+/* ---------------------------------------- */
+/* P R O G R E S S    S T Y L E             */
+/* ---------------------------------------- */
+.progress {
+  padding: 50px 0 70px;
+}
+
+.progress__heading {
+  margin-bottom: 30px;
+}
+
+.progress__creater {
+  padding: 25px 15px;
+  background-color: #FFF;
+  -webkit-box-shadow: 10px 17.3px 40px rgba(0, 0, 0, 0.1);
+          box-shadow: 10px 17.3px 40px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.progress__box {
+  padding-top: 30px;
+}
+
+.progress__name {
+  color: #e7b869;
+  font: 700 26px/30px "Lora", sans-serif;
+  text-transform: uppercase;
+}
+
+.progress__position {
+  color: #212121;
+  font: 600 18px/20px "Open Sans", sans-serif;
+  margin-top: 10px;
+}
+
+.progress__item {
+  text-align: left;
+}
+
+.progress__text {
+  color: #212121;
+  font: 400 20px/24px "Open Sans", sans-serif;
+  margin-bottom: 25px;
+}
+
+.progress__text:before {
+  content: '\f00c';
+  display: inline-block;
+  width: 26px;
+  height: 26px;
+  line-height: 22px;
+  text-align: center;
+  color: #e7b869;
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
+  border: 3px solid #e7b869;
+  font-family: "FontAwesome";
+  font-size: 16px;
+  margin-right: 10px;
+}
+
+@media only screen and (min-width: 760px) {
+  .progress__box {
+    padding-top: 0;
+  }
+  .progress__text {
+    font: 400 24px/34px "Open Sans", sans-serif;
+    margin-bottom: 30px;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .progress {
+    padding-bottom: 100px;
+  }
+  .progress__box {
+    padding-top: 30px;
+  }
+  .progress__text {
+    margin-bottom: 30px;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .progress__image {
+    position: relative;
+  }
+  .progress__creater {
+    position: absolute;
+    padding-left: 90px;
+    width: 100%;
+    right: -85%;
+    bottom: 50px;
+  }
+  .progress__creater .ic {
+    position: absolute;
+    left: 20px;
+    top: 40%;
+  }
 }

@@ -1,0 +1,20 @@
+section.progress
+  .container
+    .row.justify-content-center
+      .col-24.col-sm-20.col-lg-16.text-center
+        h2.heading.progress__heading
+          .heading__text.heading__text!=content.index.progress.heading 
+          i.ic.ic--headingborder.heading__icon
+    .row
+      .col-24.col-md-10
+        .progress__image
+          img.img-fluid(src!=content.index.progress.img.src, alt!=content.index.progress.img.alt)
+          .progress__creater
+            i.ic.ic--createrline.hidden-lg-down
+            .progress__name!=content.index.progress.name
+              .progress__position!=content.index.progress.pos  
+      .col-24.col-md-14.col-lg-12.offset-lg-2       
+        .progress__box
+          each item, i in content.index.progress.content
+            .progress__item
+              .progress__text!=item.text

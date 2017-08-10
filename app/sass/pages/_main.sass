@@ -873,3 +873,71 @@ button
           height: 8px
           width: 8px
           background-color: #212121      
++comment("progress style")    
+.progress
+  padding: 50px 0 70px     
+  &__heading
+    margin-bottom: 30px   
+  &__creater
+    padding: 25px 15px
+    background-color: #FFF
+    box-shadow: 10px 17.3px 40px rgba(0, 0, 0, 0.1)
+    text-align: center
+  &__box
+    padding-top: 30px  
+  &__name
+    color: $color-orange
+    font: 700 26px/30px $font-lora  
+    text-transform: uppercase
+  &__position
+    color: #212121
+    font: 600 18px/20px $font-open-sans  
+    margin-top: 10px
+  &__item
+    text-align: left
+  &__text
+    color: #212121  
+    font: 400 20px/24px $font-open-sans 
+    margin-bottom: 25px
+    &:before
+      content: '\f00c'
+      display: inline-block
+      width: 26px
+      height: 26px
+      line-height: 22px
+      text-align: center
+      color: $color-orange
+      border-radius: 50%
+      border: 3px solid $color-orange
+      font-family: $font-awesome
+      font-size: 16px
+      margin-right: 10px
++r(760)
+  .progress
+    &__box
+      padding-top: 0
+    &__text
+      font: 400 24px/34px $font-open-sans 
+      margin-bottom: 30px
++r(992)
+  .progress
+    padding-bottom: 100px
+    &__box      
+      padding-top: 30px
+    &__text
+      margin-bottom: 30px  
++r(1200)
+  .progress
+    &__image
+      position: relative 
+    &__creater
+      position: absolute
+      padding-left: 90px
+      width: 100%
+      right: -85%
+      bottom: 50px    
+      .ic
+        position: absolute
+        left: 20px
+        top: 40%    
+    
