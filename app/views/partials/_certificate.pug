@@ -1,0 +1,19 @@
+section.certificate
+  .container.certificate__container
+    .row.justify-content-center
+      .col-24.col-sm-20.col-lg-16.text-center
+        h2.heading.certificate__heading
+          .heading__text.heading__text!=content.index.certificate.heading 
+          i.ic.ic--headingborder.heading__icon
+  .container     
+    .row
+      .col-24
+        .certificate__slider  
+          each item, i in content.index.certificate.slides
+            .certificate__item
+              .certificate__box
+                img.img-fluid(src!=item.img.src, alt!=item.img.alt)
+                .certificate__zoom
+                  i.ic.ic--zoom  
+  .container                                                      
+    .certificate__arrows               

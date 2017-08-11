@@ -1572,7 +1572,7 @@ button:hover, button:focus {
 .case__name {
   color: #e7b869;
   font: 700 22px/24px "Lora", sans-serif;
-  padding: 35px 0;
+  padding: 30px 0;
   text-align: center;
   background-color: white;
   -webkit-box-shadow: 10px 17.3px 40px rgba(0, 0, 0, 0.1);
@@ -2007,5 +2007,239 @@ button:hover, button:focus {
   }
   .form__input--small {
     width: 100%;
+  }
+}
+
+/* ---------------------------------------- */
+/* C O M M E N T    S T Y L E               */
+/* ---------------------------------------- */
+.comment {
+  padding: 90px 0 0;
+  background-color: #e9e9e9;
+  background-image: -webkit-gradient(linear, left bottom, left top, from(white), to(#e9e9e9));
+  background-image: -webkit-linear-gradient(bottom, white 0%, #e9e9e9 100%);
+  background-image: linear-gradient(to top, white 0%, #e9e9e9 100%);
+}
+
+.comment__heading {
+  margin-bottom: 85px;
+}
+
+.comment__slider {
+  margin-bottom: 0 !important;
+}
+
+.comment__name {
+  color: #e7b869;
+  font: 700 22px/30px "Lora", sans-serif;
+  padding: 30px 20px;
+  text-align: center;
+  background-color: white;
+  -webkit-box-shadow: 10px 17.3px 40px rgba(0, 0, 0, 0.1);
+          box-shadow: 10px 17.3px 40px rgba(0, 0, 0, 0.1);
+  text-transform: uppercase;
+  margin-bottom: 25px;
+}
+
+.comment__info {
+  padding-top: 40px;
+}
+
+.comment__text {
+  color: #212121;
+  font: 400 16px/24px "Open Sans", sans-serif;
+}
+
+.comment__arrows {
+  position: relative;
+  display: block;
+  width: 160px;
+  margin: 50px auto 0;
+  z-index: 25;
+  height: 75px;
+}
+
+.comment__arrows .slick-arrow:hover, .comment__arrows .slick-arrow:focus {
+  background-color: #e7b869;
+}
+
+.comment__arrows .slick-prev {
+  left: 0;
+  top: 0;
+}
+
+.comment__arrows .slick-next {
+  right: 0;
+  top: 15px;
+}
+
+.comment__dots {
+  position: relative;
+  width: 100px;
+  margin: 0 auto;
+}
+
+@media only screen and (min-width: 760px) {
+  .comment__name {
+    position: relative;
+    left: -30px;
+    text-align: left;
+    padding-left: 30px;
+  }
+  .comment__arrows {
+    margin: 50px 0 0 0;
+    display: inline-block;
+    top: -200px;
+  }
+  .comment__dots {
+    display: inline-block;
+    position: relative;
+    top: -210px;
+  }
+  .comment__dots .slick-dots {
+    bottom: 40px;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .comment__arrows {
+    display: block;
+    margin-left: 180px;
+    top: -66px;
+  }
+  .comment__dots {
+    position: static;
+  }
+  .comment__dots .slick-dots {
+    left: 0;
+    bottom: 115px;
+    padding-left: 110px;
+  }
+  .comment__name {
+    left: -228px;
+    padding-left: 105px;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .comment__dots .slick-dots {
+    bottom: 256px;
+  }
+}
+
+@media only screen and (min-width: 1600px) {
+  .comment__arrows {
+    margin-left: 270px;
+  }
+  .comment__dots .slick-dots {
+    bottom: 156px;
+  }
+}
+
+/* ---------------------------------------- */
+/* C E R T I F I C A T E    S T Y L E       */
+/* ---------------------------------------- */
+.certificate {
+  padding: 100px 0;
+}
+
+.certificate__container {
+  position: relative;
+}
+
+.certificate__container:before {
+  content: '';
+  display: block;
+  position: absolute;
+  height: 340px;
+  width: 30%;
+  left: 0;
+  top: 30px;
+  background: url(../img/setkasm.png) repeat;
+}
+
+.certificate__heading {
+  margin-bottom: 70px;
+}
+
+.certificate__item {
+  text-align: center;
+}
+
+.certificate__box {
+  position: relative;
+  display: inline-block;
+}
+
+.certificate__zoom {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-top: -27px;
+  margin-left: -85px;
+  display: block;
+  height: 54px;
+  width: 54px;
+  background-color: #fff;
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
+  line-height: 54px;
+  -webkit-box-shadow: 15px 26px 80px rgba(0, 0, 0, 0.2);
+          box-shadow: 15px 26px 80px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+}
+
+.certificate__zoom:hover, .certificate__zoom:focus {
+  background-color: #e7b869;
+  -webkit-transform: scale(1.2);
+      -ms-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+.certificate__arrows {
+  margin: 40px auto 0;
+  width: 120px;
+  position: relative;
+}
+
+.certificate__arrows .slick-arrow:hover, .certificate__arrows .slick-arrow:focus {
+  background-color: #e7b869;
+}
+
+.certificate__arrows .slick-next {
+  top: 15px;
+}
+
+@media only screen and (min-width: 760px) {
+  .certificate {
+    padding-top: 0;
+  }
+  .certificate__container:before {
+    top: -30px;
+    width: 600px;
+    left: -300px;
+  }
+  .certificate__zoom {
+    margin-left: -65px;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .certificate__zoom {
+    margin-left: -80px;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .certificate__container:before {
+    height: 500px;
+    top: -50px;
+    width: 44%;
+    left: 0;
+  }
+  .certificate__arrows {
+    margin-top: 85px;
   }
 }

@@ -169,7 +169,6 @@ $('.scheme__hover').mouseout(function() {
     slidesToShow: 1,
     slidesToScroll: 1,
     arrows: true,
-    dots: false,
     infinite: true,
     focusOnSelect: true,
     dots: true,
@@ -183,6 +182,50 @@ $('.scheme__hover').mouseout(function() {
       settings: {
         slidesToShow: 1,
         slidesToScroll: 1
+      }
+    }
+    ]
+  });
+
+  $('.comment__slider').slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: true,
+    infinite: true,
+    focusOnSelect: true,
+    dots: true,
+    appendArrows: $('.comment__arrows'),
+    appendDots: $('.comment__dots'),
+    prevArrow: '<button type="button" data-role="none" class="slick-prev" aria-label="Previous" tabindex="0" role="button"><i class="ic ic--arrowleft"></i></button>',
+    nextArrow: '<button type="button" data-role="none" class="slick-next" aria-label="Next" tabindex="0" role="button"><i class="ic ic--arrowright"></i></button>',
+    responsive: [
+    {
+      breakpoint: 1600,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1
+      }
+    }
+    ]
+  });
+
+  $('.certificate__slider').slick({
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    arrows: true,
+    dots: false,
+    infinite: true,
+    focusOnSelect: true,
+    appendArrows: $('.certificate__arrows'),
+    prevArrow: '<button type="button" data-role="none" class="slick-prev" aria-label="Previous" tabindex="0" role="button"><i class="ic ic--arrowleft"></i></button>',
+    nextArrow: '<button type="button" data-role="none" class="slick-next" aria-label="Next" tabindex="0" role="button"><i class="ic ic--arrowright"></i></button>',
+    responsive: [
+    {
+      breakpoint: 760,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        dots: false
       }
     }
     ]
