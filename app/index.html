@@ -488,7 +488,7 @@
         </div>
       </section>
       <section class="progress">
-        <div class="container">
+        <div class="container progress__container">
           <div class="row justify-content-center">
             <div class="col-24 col-sm-20 col-lg-16 text-center">
               <h2 class="heading progress__heading">
@@ -523,6 +523,34 @@
               </div>
             </div>
           </div>
+        </div>
+      </section>
+      <section class="plan">
+        <div class="container plan__container">
+          <div class="row justify-content-center plan__row">
+            <div class="col-24 col-sm-20 col-lg-14 offset-lg-10 text-center text-lg-left">
+              <h2 class="heading plan__heading">
+                <div class="heading__text heading__text heading__text--white">Получите маркетинговый план с описанием того, как мы продадим вашу недвижимость!</div><i class="ic ic--headingborderright heading__icon"></i>
+              </h2>
+              <div class="plan__subheading">Укажите ваш email и через минуту вам придет файл с описанием маркетинговой стратегии по продаже вашей квартиры!</div>
+            </div>
+            <div class="col-24 col-sm-20 offset-sm-2 col-md-14 offset-md-10 col-lg-14 offset-lg-10">
+              <form class="contact__form contactForm contactForm--modal" method="post" action="./mail/mail.php">
+                <div class="row">
+                  <div class="col-24 col-xl-9 form__group">
+                    <div class="input__heading input__heading--black">Ваш e-mail</div>
+                    <input class="form-control form__input form__input--small form__mail" aria-invalid="false" placeholder="Введите Ваш E-mail" name="email" type="email">
+                  </div>
+                  <div class="col-24 col-xl-15 d-flex align-items-end">
+                    <button class="button button--size form__btn plan__btn" name="form[контакты]" type="submit" data-loading-text="&lt;i class='fa fa-circle-o-notch fa-spin'&gt;&lt;/i&gt; Файл отправляется...">
+                      <div class="plan__btn--text">Получить маркетинговый план</div>
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="plan__icon"><i class="ic ic--kit1200 hidden-md-down"></i><i class="ic ic--kit760 hidden-lg-up">          </i></div>
         </div>
       </section>
     </main>

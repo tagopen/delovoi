@@ -394,97 +394,115 @@
 .ic--arrowleft:before {
   width: 33px;
   height: 7px;
-  background: url(../img/sprite.png) -180px -17px no-repeat;
+  background: url(../img/sprite.png) -726px -351px no-repeat;
 }
 
 .ic--arrowright:before {
   width: 33px;
   height: 7px;
-  background: url(../img/sprite.png) -180px 0px no-repeat;
+  background: url(../img/sprite.png) -768px -309px no-repeat;
 }
 
 .ic--call:before {
   width: 20px;
   height: 20px;
-  background: url(../img/sprite.png) -150px -35px no-repeat;
+  background: url(../img/sprite.png) -696px -340px no-repeat;
 }
 
 .ic--createrline:before {
   width: 63px;
   height: 1px;
-  background: url(../img/sprite.png) -91px -145px no-repeat;
+  background: url(../img/sprite.png) -726px -340px no-repeat;
 }
 
 .ic--headingborder:before {
   width: 100px;
   height: 11px;
-  background: url(../img/sprite.png) 0px -52px no-repeat;
+  background: url(../img/sprite.png) -688px -288px no-repeat;
 }
 
 .ic--headingborderfff:before {
   width: 100px;
   height: 11px;
-  background: url(../img/sprite.png) 0px -73px no-repeat;
+  background: url(../img/sprite.png) -567px -309px no-repeat;
+}
+
+.ic--headingborderright:before {
+  width: 111px;
+  height: 11px;
+  background: url(../img/sprite.png) -567px -288px no-repeat;
+}
+
+.ic--kit1200:before {
+  width: 505px;
+  height: 478px;
+  background: url(../img/sprite.png) 0px 0px no-repeat;
+}
+
+.ic--kit760:before {
+  width: 294px;
+  height: 278px;
+  background: url(../img/sprite.png) -515px 0px no-repeat;
 }
 
 .ic--lefthead:before {
   width: 35px;
   height: 11px;
-  background: url(../img/sprite.png) -46px -145px no-repeat;
+  background: url(../img/sprite.png) -723px -309px no-repeat;
 }
 
 .ic--righthead:before {
   width: 36px;
   height: 11px;
-  background: url(../img/sprite.png) 0px -145px no-repeat;
+  background: url(../img/sprite.png) -677px -309px no-repeat;
 }
 
 .ic--scheme1:before {
   width: 41px;
   height: 25px;
-  background: url(../img/sprite.png) -92px -94px no-repeat;
+  background: url(../img/sprite.png) -615px -340px no-repeat;
 }
 
 .ic--scheme2:before {
   width: 40px;
   height: 40px;
-  background: url(../img/sprite.png) -52px 0px no-repeat;
+  background: url(../img/sprite.png) -515px -340px no-repeat;
 }
 
 .ic--scheme3:before {
   width: 42px;
   height: 42px;
-  background: url(../img/sprite.png) 0px 0px no-repeat;
+  background: url(../img/sprite.png) -515px -288px no-repeat;
 }
 
 .ic--scheme4:before {
   width: 40px;
   height: 31px;
-  background: url(../img/sprite.png) -42px -94px no-repeat;
+  background: url(../img/sprite.png) -565px -340px no-repeat;
 }
 
 .ic--scheme5:before {
   width: 38px;
   height: 41px;
-  background: url(../img/sprite.png) -102px 0px no-repeat;
+  background: url(../img/sprite.png) -515px -390px no-repeat;
 }
 
 .ic--scheme6:before {
   width: 32px;
   height: 41px;
-  background: url(../img/sprite.png) 0px -94px no-repeat;
+  background: url(../img/sprite.png) -563px -390px no-repeat;
 }
 
 .ic--scrolldown:before {
   width: 14px;
   height: 6px;
-  background: url(../img/sprite.png) -180px -34px no-repeat;
+  background: url(../img/sprite.png) -769px -351px no-repeat;
 }
 
 .ic--zoom:before {
   width: 20px;
   height: 25px;
-  background: url(../img/sprite.png) -150px 0px no-repeat;
+  background: url(../img/sprite.png) -666px -340px no-repeat;
 }
 
 .ic {
@@ -1298,6 +1316,10 @@ button:hover, button:focus {
   margin-bottom: 10px;
 }
 
+.input__heading--black {
+  color: #212121;
+}
+
 .form__group {
   margin-bottom: 20px;
 }
@@ -1764,6 +1786,21 @@ button:hover, button:focus {
   padding: 50px 0 70px;
 }
 
+.progress__container {
+  position: relative;
+}
+
+.progress__container:before {
+  content: '';
+  display: block;
+  position: absolute;
+  height: 400px;
+  width: 80%;
+  right: 0;
+  top: 300px;
+  background: url(../img/setkasm.png) repeat;
+}
+
 .progress__heading {
   margin-bottom: 30px;
 }
@@ -1826,11 +1863,20 @@ button:hover, button:focus {
     font: 400 24px/34px "Open Sans", sans-serif;
     margin-bottom: 30px;
   }
+  .progress__container:before {
+    top: auto;
+    bottom: -65px;
+  }
 }
 
 @media only screen and (min-width: 992px) {
   .progress {
     padding-bottom: 100px;
+  }
+  .progress__container:before {
+    width: 1000px;
+    right: -228px;
+    bottom: 100px;
   }
   .progress__box {
     padding-top: 30px;
@@ -1855,5 +1901,111 @@ button:hover, button:focus {
     position: absolute;
     left: 20px;
     top: 40%;
+  }
+}
+
+/* ---------------------------------------- */
+/* P L A N    S T Y L E                     */
+/* ---------------------------------------- */
+.plan {
+  padding: 90px 0 0;
+  background-color: #e7b869;
+}
+
+.plan__container {
+  position: relative;
+  padding-bottom: 90px;
+}
+
+.plan__row {
+  position: relative;
+  z-index: 25;
+}
+
+.plan__heading {
+  margin-bottom: 45px;
+}
+
+.plan__subheading {
+  color: #FFF;
+  font: 400 18px/27px "Lora", sans-serif;
+  margin-bottom: 30px;
+}
+
+.plan__btn {
+  background-color: #fff;
+  -webkit-box-shadow: 7.5px 13px 35px rgba(0, 0, 0, 0.15);
+          box-shadow: 7.5px 13px 35px rgba(0, 0, 0, 0.15);
+}
+
+.plan__btn:hover .plan__btn--text:before, .plan__btn:focus .plan__btn--text:before {
+  left: 0;
+}
+
+.plan__btn--text {
+  color: #212121;
+  font: 600 13px/26px "Open Sans", sans-serif;
+  display: inline-block;
+  position: relative;
+  overflow-x: hidden;
+}
+
+.plan__btn--text:before {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 1px;
+  background-color: #212121;
+  bottom: 0;
+  left: -100%;
+  -webkit-transition: all .6s ease;
+  transition: all .6s ease;
+}
+
+.plan__icon {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  margin-left: -147px;
+  z-index: 5;
+}
+
+@media only screen and (min-width: 760px) {
+  .plan__container {
+    padding-bottom: 100px;
+  }
+  .plan__btn {
+    margin-top: 15px;
+    padding: 8px 20px;
+  }
+  .plan__btn--text {
+    font: 600 18px/26px "Open Sans", sans-serif;
+  }
+  .plan__icon {
+    left: 0;
+    margin: 0;
+  }
+  .form__input--small {
+    width: auto;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .plan__icon {
+    left: -25px;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .plan__heading .ic {
+    left: 0;
+    margin: 0;
+  }
+  .plan__icon {
+    left: 0;
+  }
+  .form__input--small {
+    width: 100%;
   }
 }
