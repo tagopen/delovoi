@@ -231,4 +231,24 @@ $('.scheme__hover').mouseout(function() {
     ]
   });
 
+  $(document).ready(function() {
+    $('.fancybox').fancybox();
+  });
+
+$(function() {
+    //create instance
+    $('.chart').easyPieChart({
+        animate: 3000,
+        barColor: '#e7b869',
+        trackColor: 'transparent',
+        lineWidth: 6,
+        scaleColor: 'transparent'
+    });
+    //update instance after 5 sec
+    setTimeout(function() {
+        $('.chart').data('easyPieChart').update(100);
+    }, 5000);
+});
+
+
 })(jQuery); // End of use strict

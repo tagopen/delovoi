@@ -47,6 +47,80 @@ button
 .modal
   -webkit-overflow-scrolling: touch
   transform: translateZ(0)
+  &-dialog
+    box-shadow: 0 0 75px 11px #ffe877
+  &__content
+    position: relative
+    background: #fff
+    padding: 35px 30px
+    border: 0
+    border-radius: 0
+    text-align: center
+  &__close
+    display: block
+    height: 56px
+    width: 56px
+    background: #FFF !important
+    opacity: 1 !important 
+    position: absolute
+    right: -65px
+    top: 0
+    box-shadow: 5px 8.7px 15px rgba(0, 0, 0, 0.2)
+    transition: all .3s ease
+    &:hover,
+    &:focus
+      background: $color-orange !important
+      .modal__close--icon
+        fill: #000
+        transition: all .3s ease
+    &--icon
+      fill: $color-orange 
+  &__heading
+    color: #000
+    font: 700 22px/27px $font-lora
+    margin-bottom: 15px
+  &__subheading  
+    position: relative
+    color: #000
+    font: 400 18px/27px $font-lora
+    margin-bottom: 55px
+  &__input
+    background-color: #ebebeb !important
+    box-shadow: 1px 1.7px 3px rgba(0, 0, 0, 0.35) !important
+    margin-bottom: 30px
+    &:hover,
+    &:focus
+      box-shadow: 3.5px 6.1px 15px rgba(0, 0, 0, 0.35) !important
+  &__btn
+    background-color: $color-orange
+    text-align: center
+    border: 0
+    box-shadow: none
+    cursor: pointer
+    padding: 15px 20px
+    margin-bottom: 10px
+    &:hover,
+    &:focus
+      .modal__btn--text
+        color: #fff
+    &--text
+      display: inline-block
+      font: 600 18px/27px $font-open-sans
+      text-transform: uppercase
+      color: #212121
+      transition: all .3s ease
+  &__access
+    color: #212121   
+    font: 300 12px/18px $font-open-sans
++r(992)
+  .modal
+    &-open
+      .modal
+        display: flex!important
+        align-items: center!important
+        .modal-dialog
+          margin: 0 auto
+          flex-grow: 1    
 .body
   display: flex
   flex-direction: column
@@ -76,6 +150,7 @@ button
   padding: 25px 0 0
   background: url(../img/headerbg.jpg) no-repeat
   background-size: cover
+  min-height: 100vh
   &__container
     position: relative
   &__row
@@ -269,12 +344,6 @@ button
 .video
   position: relative
   height: 600px
-  &__image
-    position: absolute
-    left: 0
-    top: 0
-    max-width: 45%
-    z-index: 10
   &__container
     position: relative
     &:before
@@ -288,22 +357,68 @@ button
       background: url(../img/setkasm.png) repeat
   &__heading
     margin-top: 45px    
-  &__time
-    position: relative
-    display: inline-block
-    color: $color-orange 
-    text-shadow: 7.5px 13px 25px rgba(0, 0, 0, 0.2)
-    font: 700 219px/220px $font-lora
-  &__elem
-    position: absolute
-    color: #212121
-    font: 400 18px/20px $font-open-sans 
-    &--1
-      left: -15px
-      top: 85px
-    &--2
++r(760)
+  .video
+    &__image
+      position: absolute
+      left: 0
+      top: 200px
+      max-width: 45%
+      z-index: 10
+    &__time
+      font: 700 219px/220px $font-lora     
+      position: relative
+      display: inline-block
       top: 150px
-      left: 90px  
+      color: $color-orange 
+      text-shadow: 7.5px 13px 25px rgba(0, 0, 0, 0.2)
+    &__elem   
+      position: absolute
+      color: #212121
+      font: 400 18px/20px $font-open-sans 
+      &--1
+        top: 85px
+      &--2  
+        top: 150px
+        left: 90px 
+    &__loader
+      display: inline-block
+      position: relative
+      cursor: pointer
+      &:hover
+        &:before
+          background-color: $color-orange 
+        &:after
+          color: #fff  
+      &:before
+        content: ''
+        display: block
+        position: absolute
+        left: 50%
+        top: 50%
+        margin-left: -38px
+        margin-top: -41px
+        width: 76px
+        height: 76px
+        background-color: rgba(255,255,255, .6)
+        border-radius: 50%
+        transition: all .3s ease
+      &:after
+        content: '\f0da'
+        display: inline-block
+        position: absolute
+        font-size: 30px
+        color: $color-orange 
+        line-height: 106px
+        left: 50%
+        top: 0
+        margin-left: -4px
+        font-family: $font-awesome  
+        transition: all .3s ease 
++r(1200)
+  .video
+    &__image
+      top: 0             
 +comment("tool style")      
 .tool
   padding: 80px 0
@@ -524,15 +639,15 @@ button
   .price
     &__box
       padding-top: 30px
+    &__bg
+      position: absolute
+      right: 0
+      bottom: 0       
 +r(1200)
   .price
     position: relative
     &__box
       padding-top: 60px
-    &__bg
-      position: absolute
-      right: 0
-      bottom: 0
 +comment("cost style")        
 .cost
   padding: 85px 0
@@ -1046,9 +1161,55 @@ button
   background-color: #e9e9e9
   background-image: linear-gradient(to top, white 0%, #e9e9e9 100%)
   &__heading
-    margin-bottom: 85px
+    margin-bottom: 85px  
   &__slider
     margin-bottom: 0 !important  
+  &__image
+    position: relative
+    img
+      position: relative
+      z-index: 10
+  &__button
+    position: absolute
+    top: 50%
+    left: 50%
+    margin-left: -55px
+    margin-top: -55px   
+    z-index: 50 
+  &__loader
+    display: inline-block
+    position: relative
+    cursor: pointer
+    &:hover
+      &:before
+        background-color: $color-orange 
+      &:after
+        color: #fff  
+    &:before
+      content: ''
+      display: block
+      position: absolute
+      left: 50%
+      top: 50%
+      margin-left: -38px
+      margin-top: -41px
+      width: 76px
+      height: 76px
+      background-color: rgba(255,255,255, .6)
+      border-radius: 50%
+      transition: all .3s ease
+    &:after
+      content: '\f0da'
+      display: inline-block
+      position: absolute
+      font-size: 30px
+      color: $color-orange 
+      line-height: 106px
+      left: 50%
+      top: 0
+      margin-left: -4px
+      font-family: $font-awesome  
+      transition: all .3s ease 
   &__name  
     color: $color-orange
     font: 700 22px/30px $font-lora 
@@ -1204,3 +1365,95 @@ button
         left: 0  
     &__arrows
       margin-top: 85px    
++comment("contact style")   
+.contact
+  position: relative
+  padding: 75px 0 0
+  #map
+    display: block
+    height: 300px
+    width: 100%
+  &__container
+    position: relative
+    z-index: 25  
+  &__info
+    padding: 60px 30px
+    margin: 0 -15px
+    background-color: white
+    box-shadow: 10px 17.3px 40px rgba(0, 0, 0, 0.2) 
+  &__heading
+    margin-bottom: 65px
+    .ic
+      left: 0
+      margin: 0  
+  &__point
+    margin-bottom: 45px    
+  &__name
+    color: $color-orange
+    font: 400 14px/18px $font-lora 
+    margin-bottom: 10px
+  &__text
+    color: #212121 
+    font: 700 14px/20px $font-open-sans
+    text-transform: uppercase    
++r(760)
+  .contact
+    padding-bottom: 75px
+    &__info
+      padding: 60px  
+      margin: 0  
+    #map
+      position: absolute
+      left: 0
+      top: 0
+      width: 100%
+      height: 100%
++comment("footer style")    
+.footer
+  padding: 40px 0 30px    
+  background: url(../img/footerbg.jpg) no-repeat
+  background-size: cover
+  &__logo
+    padding: 30px
+    border: 2px solid $color-orange
+    margin-bottom: 20px
+    &--img
+      text-align: center
+      img
+        display: inline-block
+    &--text
+      display: inline-block
+      vertical-align: middle
+      text-align: center
+      color: $color-orange
+      font: 400 14px/21px $font-lora  
+  &__question
+    color: #fff
+    font: 400 14px/21px $font-open-sans
+    text-transform: uppercase   
+    margin-bottom: 20px
+  &__btn
+    @extend .form__btn  
+    margin-bottom: 15px   
+  &__copy
+    color: #fff
+    font: 300 12px/26px $font-open-sans
+    text-align: center
+  &__author
+    text-align: center
+    &--link
+      display: inline-block  
++r(760)
+  .footer
+    padding: 45px 0
+    &__logo
+      margin-bottom: 0
+    &__question        
+      font: 700 14px/21px $font-open-sans
+      margin-bottom: 0
+    &__box
+      padding-top: 55px  
++r(992)
+  .footer
+    &__question        
+      font: 700 18px/30px $font-open-sans      

@@ -1,0 +1,30 @@
+section.contact
+  .container.contact__container
+    .row.justify-content-center
+      .col-24.col-md-12.offset-md-12
+        .contact__info
+          h2.heading.contact__heading
+            .heading__text.heading__text!=content.index.contact.heading 
+            i.ic.ic--headingborderrightblack.heading__icon
+          .contact__detail
+            each item, i in content.index.contact.details
+              .contact__point
+                .contact__name!=item.name
+                .contact__text!=item.text
+  #map
+    script.
+      function initMap() {
+        var uluru = {lat: 50.428867, lng: 30.517704};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 17,
+          mapTypeControl: false,
+          scrollwheel: false,
+          streetViewControl: false,
+          center: uluru
+        });
+        var marker = new google.maps.Marker({
+          position: uluru,
+          map: map
+        });
+      }
+  script(async='', defer='', src='https://maps.googleapis.com/maps/api/js?key=AIzaSyDMiE1FSNLDqeWHjoHH6cZBlhl6NITkw2w&callback=initMap')                

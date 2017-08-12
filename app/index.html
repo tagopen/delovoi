@@ -62,7 +62,7 @@
           <div class="col-10 col-md-8 col-lg-6 col-xl-5">
             <div class="header__contact">
               <div class="header__number"><a class="header__link" href="tel:+80507965289">8 050 79 652 89</a></div>
-              <div class="header__number"><a class="header__link" href="tel:+80675963314">8 067 59 633 14</a></div><a class="header__call" href="#"><i class="ic ic--call hidden-sm-down"></i>
+              <div class="header__number"><a class="header__link" href="tel:+80675963314">8 067 59 633 14</a></div><a class="header__call" data-toggle="modal" href="#header__modal"><i class="ic ic--call hidden-sm-down"></i>
                 <div class="header__call--text">Обратный звонок</div></a>
             </div>
           </div>
@@ -127,21 +127,23 @@
           </div>
         </div>
       </section>
-      <section class="video">
-        <div class="video__image"><img class="img-fluid" src="img/videoimg.jpg"></div>
+      <section class="video" id="video">
+        <div class="video__image hidden-sm-down"><img class="img-fluid" src="img/videoimg.jpg"></div>
         <div class="container video__container">
           <div class="row">
-            <div class="col-24 col-lg-14 offset-lg-10 text-center">
+            <div class="col-24 col-xl-14 offset-xl-10 text-center">
               <h2 class="heading video__heading">
                 <div class="heading__text">Узнайте за 3 минуты все детали нашей работы на собственника</div>
               </h2>
             </div>
-            <div class="col-24 col-lg-11 offset-lg-13">
+            <div class="col-12 offset-12 col-lg-11 offset-lg-13 hidden-sm-down">
               <div class="video__time">3
                 <div class="video__elem video__elem--1">видео</div>
                 <div class="video__elem video__elem--2">минуты</div>
               </div>
-              <div class="video__loader"></div>
+              <div class="video__loader">
+                <div class="chart" data-percent="0"> </div>
+              </div>
             </div>
           </div>
         </div>
@@ -278,6 +280,93 @@
                   </div>
                 </div>
               </form>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="scheme">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-24 col-sm-18 col-lg-14 text-center">
+              <h2 class="heading scheme__heading">
+                <div class="heading__text">Гарантированный спрос на Вашу квартиру уже через 8 дней</div><i class="ic ic--headingborder heading__icon"></i>
+              </h2>
+            </div>
+          </div>
+        </div>
+        <div class="container scheme__container animate" data-animation="fadeInUp">
+          <div class="row">
+            <div class="col-24 col-md-8 text-center scheme__col">
+              <div class="scheme__box">
+                <div class="scheme__date" data-time="0"></div>
+                <div class="scheme__image"><i class="ic ic--scheme1"></i><span class="scheme__number">1</span></div>
+                <div class="scheme__text">Предварительная<br> оценка</div>
+                <div class="scheme__icon scheme__icon--1"></div>
+              </div>
+              <div class="scheme__hover">
+                <div class="scheme__title">Определение стоимости</div>
+                <div class="scheme__descr">Для того что-бы определить правильную стартовую* стоимость квартиры, мы:<br>       1) Узнаем по какой цене были проданы налогичные квартиры за последние 9 месяцев.<br>2) Мониторим все квартиры из данного сегмента, которые актуальны в продаже.<br>3) Делаем свод по каким ценам они продаются и как давно.<br>4) САМОЕ ВАЖНОЕ! Мы узнаем всю информацию по этим квартирам: Сколько им поступает звонков, как много просмотров, какие им поступают предложения от покупателей.</div>
+              </div>
+            </div>
+            <div class="col-24 col-md-8 text-center scheme__col">
+              <div class="scheme__box">
+                <div class="scheme__date" data-time="1"></div>
+                <div class="scheme__image"><i class="ic ic--scheme2"></i><span class="scheme__number">2</span></div>
+                <div class="scheme__text">Предпродажная<br> подготовка</div>
+                <div class="scheme__icon scheme__icon--2"></div>
+              </div>
+              <div class="scheme__hover">
+                <div class="scheme__title">Предпродажная подготовка</div>
+                <div class="scheme__descr">На любом виде рынка внешний вид продукта имеет одно из ключевых значений. Для того что бы получить максимальную цену, мы уделяем особое внимание внешнему виду квартиры: личные вещи, кухонный и другой гарнитур, старые ненужные предметы – все убирается. В квартире наводится чистота и порядок. На фото ниже, пример одной из проданных нами квартиры, которая была продана на 10% выше от стартовой стоимости, до и после предпродажной подготовки:</div>
+              </div>
+            </div>
+            <div class="col-24 col-md-8 text-center scheme__col">
+              <div class="scheme__box">
+                <div class="scheme__date" data-time="3"></div>
+                <div class="scheme__image"><i class="ic ic--scheme3"></i><span class="scheme__number">3</span></div>
+                <div class="scheme__text">Рекламная<br> кампания</div>
+                <div class="scheme__icon scheme__icon--3"></div>
+              </div>
+              <div class="scheme__hover">
+                <div class="scheme__title">Рекламная кампания</div>
+                <div class="scheme__descr">После того, как квартира готова к продаже мы начинаем крупную маркетинговую кампанию. Готовим весь презентационный материал. Информация о квартире размещается на все интернет ресурсы* (более 32 площадок), презентация квартиры попадает во все Агентства Недвижимости, наружная реклама*, закрытые риелторские сообщества и базы.</div>
+              </div>
+            </div>
+            <div class="col-24 col-md-8 text-center scheme__col">
+              <div class="scheme__box">
+                <div class="scheme__date" data-time="3"></div>
+                <div class="scheme__image"><i class="ic ic--scheme4"></i><span class="scheme__number">4</span></div>
+                <div class="scheme__text">День<br> показа</div>
+                <div class="scheme__icon scheme__icon--4"></div>
+              </div>
+              <div class="scheme__hover">
+                <div class="scheme__title">День показа квартиры</div>
+                <div class="scheme__descr">Всем покупателям мы проводим показ квартиры в один день. Показ проводится нашим профессиональным сотрудником, который компетентен во всех вопросах о квартире. После чего все предложения покупателей собираются в письменном виде. Как правило 30% покупателей готовых приобрести квартиру делают ценовые предложения.</div>
+              </div>
+            </div>
+            <div class="col-24 col-md-8 text-center scheme__col">
+              <div class="scheme__box">
+                <div class="scheme__date" data-time="1"></div>
+                <div class="scheme__image"><i class="ic ic--scheme5"></i><span class="scheme__number">5</span></div>
+                <div class="scheme__text">Работа<br> с предложениями</div>
+                <div class="scheme__icon scheme__icon--5"></div>
+              </div>
+              <div class="scheme__hover">
+                <div class="scheme__title">Работа с предложениями</div>
+                <div class="scheme__descr">С каждым покупателем, который оставил ценовое предложение, мы проводим диалог, целью которого является получить максимальную цену за квартиру.</div>
+              </div>
+            </div>
+            <div class="col-24 col-md-8 text-center scheme__col">
+              <div class="scheme__box">
+                <div class="scheme__date" data-time="1"></div>
+                <div class="scheme__image"><i class="ic ic--scheme6"></i><span class="scheme__number">6</span></div>
+                <div class="scheme__text">Результат</div>
+                <div class="scheme__icon scheme__icon--6"></div>
+              </div>
+              <div class="scheme__hover">
+                <div class="scheme__title">Результат</div>
+                <div class="scheme__descr">Вы получаете задаток за квартиру, по самой выгодной для Вас цене.</div>
+              </div>
             </div>
           </div>
         </div>
@@ -570,7 +659,13 @@
                 <div class="comment__item">
                   <div class="row">
                     <div class="col-24 col-md-10">
-                      <div class="comment__image"><img class="img-fluid" src="img/comment1.jpg" alt="Мадам"></div>
+                      <div class="comment__image"><img class="img-fluid" src="img/comment1.jpg" alt="Мадам">
+                        <div class="comment__button"> 
+                          <div class="comment__loader">
+                            <div class="chart2" data-percent="0"> </div>
+                          </div>
+                        </div>
+                      </div>
                     </div>
                     <div class="col-24 col-md-14 col-lg-12 offset-lg-2"> 
                       <div class="comment__box">
@@ -585,7 +680,13 @@
                 <div class="comment__item">
                   <div class="row">
                     <div class="col-24 col-md-10">
-                      <div class="comment__image"><img class="img-fluid" src="img/comment1.jpg" alt="Мадам"></div>
+                      <div class="comment__image"><img class="img-fluid" src="img/comment1.jpg" alt="Мадам">
+                        <div class="comment__button"> 
+                          <div class="comment__loader">
+                            <div class="chart2" data-percent="0"> </div>
+                          </div>
+                        </div>
+                      </div>
                     </div>
                     <div class="col-24 col-md-14 col-lg-12 offset-lg-2"> 
                       <div class="comment__box">
@@ -600,7 +701,13 @@
                 <div class="comment__item">
                   <div class="row">
                     <div class="col-24 col-md-10">
-                      <div class="comment__image"><img class="img-fluid" src="img/comment1.jpg" alt="Мадам"></div>
+                      <div class="comment__image"><img class="img-fluid" src="img/comment1.jpg" alt="Мадам">
+                        <div class="comment__button"> 
+                          <div class="comment__loader">
+                            <div class="chart2" data-percent="0"> </div>
+                          </div>
+                        </div>
+                      </div>
                     </div>
                     <div class="col-24 col-md-14 col-lg-12 offset-lg-2"> 
                       <div class="comment__box">
@@ -635,26 +742,14 @@
           <div class="row">
             <div class="col-24">
               <div class="certificate__slider"> 
-                <div class="certificate__item">
-                  <div class="certificate__box"><img class="img-fluid" src="img/cert1.png" alt="Сертификат">
-                    <div class="certificate__zoom"><i class="ic ic--zoom"> </i></div>
-                  </div>
-                </div>
-                <div class="certificate__item">
-                  <div class="certificate__box"><img class="img-fluid" src="img/cert1.png" alt="Сертификат">
-                    <div class="certificate__zoom"><i class="ic ic--zoom"> </i></div>
-                  </div>
-                </div>
-                <div class="certificate__item">
-                  <div class="certificate__box"><img class="img-fluid" src="img/cert1.png" alt="Сертификат">
-                    <div class="certificate__zoom"><i class="ic ic--zoom"> </i></div>
-                  </div>
-                </div>
-                <div class="certificate__item">
-                  <div class="certificate__box"><img class="img-fluid" src="img/cert1.png" alt="Сертификат">
-                    <div class="certificate__zoom"><i class="ic ic--zoom"> </i></div>
-                  </div>
-                </div>
+                <div class="certificate__item"><a class="certificate__box fancybox" rel="group" data-fancybox="images" href="img/cert1.png"><img class="img-fluid" src="img/cert1.png" alt="Сертификат">
+                    <div class="certificate__zoom"><i class="ic ic--zoom"> </i></div></a></div>
+                <div class="certificate__item"><a class="certificate__box fancybox" rel="group" data-fancybox="images" href="img/cert1.png"><img class="img-fluid" src="img/cert1.png" alt="Сертификат">
+                    <div class="certificate__zoom"><i class="ic ic--zoom"> </i></div></a></div>
+                <div class="certificate__item"><a class="certificate__box fancybox" rel="group" data-fancybox="images" href="img/cert1.png"><img class="img-fluid" src="img/cert1.png" alt="Сертификат">
+                    <div class="certificate__zoom"><i class="ic ic--zoom"> </i></div></a></div>
+                <div class="certificate__item"><a class="certificate__box fancybox" rel="group" data-fancybox="images" href="img/cert1.png"><img class="img-fluid" src="img/cert1.png" alt="Сертификат">
+                    <div class="certificate__zoom"><i class="ic ic--zoom"> </i></div></a></div>
               </div>
             </div>
           </div>
@@ -663,8 +758,124 @@
           <div class="certificate__arrows">              </div>
         </div>
       </section>
+      <section class="contact">
+        <div class="container contact__container">
+          <div class="row justify-content-center">
+            <div class="col-24 col-md-12 offset-md-12">
+              <div class="contact__info">
+                <h2 class="heading contact__heading">
+                  <div class="heading__text heading__text">Наши контакты</div><i class="ic ic--headingborderrightblack heading__icon"></i>
+                </h2>
+                <div class="contact__detail">
+                  <div class="contact__point">
+                    <div class="contact__name">Наш контактный адрес</div>
+                    <div class="contact__text">г. Киев, ул. Деловая 5, 4-й этаж</div>
+                  </div>
+                  <div class="contact__point">
+                    <div class="contact__name">Наш электронный адрес</div>
+                    <div class="contact__text">bg.delovaya@gmail.com</div>
+                  </div>
+                  <div class="contact__point">
+                    <div class="contact__name">Наш номер телефона</div>
+                    <div class="contact__text">097 118 10 10</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="map">
+          <script>
+            function initMap() {
+              var uluru = {lat: 50.428867, lng: 30.517704};
+              var map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 17,
+                mapTypeControl: false,
+                scrollwheel: false,
+                streetViewControl: false,
+                center: uluru
+              });
+              var marker = new google.maps.Marker({
+                position: uluru,
+                map: map
+              });
+            }
+          </script>
+        </div>
+        <script async="" defer="" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDMiE1FSNLDqeWHjoHH6cZBlhl6NITkw2w&amp;callback=initMap">               </script>
+      </section>
     </main>
-    <div class="footer"></div>
+    <footer class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-22 offset-1 col-md-8 offset-md-0 col-lg-6">
+            <div class="footer__logo">
+              <div class="row">
+                <div class="col-12">
+                  <div class="footer__logo--img"><img class="img-fluid" src="img/logo.png" alt="Лого"></div>
+                </div>
+                <div class="col-12 align-self-center"> 
+                  <div class="footer__logo--text">Агентство по продаже квартир</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-22 offset-1 col-md-7 offset-md-0 col-lg-11 col-xl-12 align-self-center text-center">
+            <div class="footer__question"> Нужна помощь? Задайте вопрос специалисту!</div>
+          </div>
+          <div class="col-20 offset-2 col-md-9 offset-md-0 col-lg-7 col-xl-6">
+            <div class="footer__box">
+              <button class="button button--size footer__btn">Задать вопрос</button>
+              <div class="row">
+                <div class="col-24 col-md-16">
+                  <div class="footer__copy">Cделано с душой студией</div>
+                </div>
+                <div class="col-24 col-md-8">
+                  <div class="footer__author"> <a class="footer__author--link" href="#"><img class="img-fluid" src="img/well.png" alt="Well Done"></a></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <div class="modal fade" id="header__modal" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog modal__size">
+        <div class="modal-content modal__content">
+          <button class="close modal__close" type="button" data-dismiss="modal" aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewbox="0 0 30 30">
+              <metadata>
+                <x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.6-c138 79.159824, 2016/09/14-01:09:01        ">
+                  <rdf:rdf xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+                    <rdf:description rdf:about=""></rdf:description>
+                  </rdf:rdf>
+                </x:xmpmeta>
+              </metadata>
+              <defs></defs>
+              <path class="modal__close--icon" d="M1199.01,185.281l-0.72.732L1184,171.37l-14.29,14.643-0.72-.732,14.3-14.644-13.58-13.911,0.71-.732L1184,169.905l13.58-13.911,0.71,0.732-13.58,13.911Z" transform="translate(-1169 -156)"></path>
+            </svg>
+            <div class="modal__icon"></div>
+          </button>
+          <div class="modal__heading">Как быстро продать квартиру?</div>
+          <div class="modal__subheading">Предложить ее уже существующим клиентам! Оставьте контактный номер и с Вами свяжется наш эксперт, чтобы узнать детали по квартире<i class="ic ic--headingborder heading__icon"></i></div>
+          <form class="contact__form contactForm contactForm--modal" method="post" action="./mail/mail.php">
+            <div class="row">
+              <div class="col-24"> 
+                <input class="form-control form__input modal__input form__input--phone form__phone" aria-invalid="false" placeholder="+38 (___) ___-__-__" name="phone" type="tel">
+              </div>
+              <div class="col-24">    
+                <button class="button button--size modal__btn" name="form[контакты]" type="submit" data-loading-text="&lt;i class='fa fa-circle-o-notch fa-spin'&gt;&lt;/i&gt; Файл отправляется...">
+                  <div class="modal__btn--text">Связаться с экспертом по недвижимости</div>
+                </button>
+              </div>
+              <div class="col-24">
+                <div class="modal__access">Мы гарантируем безопасность Ваших данных. Нажимая на кнопку, вы соглашаетесь с Политикой конфиденциальности</div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
     <!-- build:js js/bundle.min.js-->
     <!-- Tether JavaScript-->
     <script src="js/tether.js"></script>
@@ -680,6 +891,10 @@
     <script src="js/slick.js"></script>
     <!-- Match Height JavaScript    -->
     <script src="js/jquery.matchHeight.js"></script>
+    <!-- Fancybox JavaScript    -->
+    <script src="js/jquery.fancybox.js"> </script>
+    <!-- Easypiechart JavaScript    -->
+    <script src="js/jquery.easypiechart.js"> </script>
     <!-- Custom JavaScript-->
     <script src="js/main.js"></script>
     <!-- endbuild-->

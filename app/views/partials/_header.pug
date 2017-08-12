@@ -11,7 +11,7 @@ header.header
           each item in content.index.header.number
             .header__number
               a.header__link(href!=item.href)!= item.text 
-          a.header__call(href="#")
+          a.header__call(data-toggle="modal", href="#header__modal")
             i.ic.ic--call.hidden-sm-down
             .header__call--text!=content.index.header.call.text 
     .row.justify-content-center

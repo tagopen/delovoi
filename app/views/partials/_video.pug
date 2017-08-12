@@ -1,13 +1,15 @@
-section.video
-  .video__image
+section.video#video
+  .video__image.hidden-sm-down
     img.img-fluid(src="img/videoimg.jpg")
   .container.video__container
     .row
-      .col-24.col-lg-14.offset-lg-10.text-center
+      .col-24.col-xl-14.offset-xl-10.text-center
         h2.heading.video__heading
           .heading__text!=content.index.video.heading 
-      .col-24.col-lg-11.offset-lg-13
+      .col-12.offset-12.col-lg-11.offset-lg-13.hidden-sm-down
         .video__time!=content.index.video.time
           .video__elem.video__elem--1!=content.index.video.elem1
           .video__elem.video__elem--2!=content.index.video.elem2
         .video__loader
+          .chart(data-percent="0")  
+          

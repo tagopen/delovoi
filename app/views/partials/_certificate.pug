@@ -11,7 +11,7 @@ section.certificate
         .certificate__slider  
           each item, i in content.index.certificate.slides
             .certificate__item
-              .certificate__box
+              a.certificate__box.fancybox(rel="group", data-fancybox="images", href=item.href)
                 img.img-fluid(src!=item.img.src, alt!=item.img.alt)
                 .certificate__zoom
                   i.ic.ic--zoom  
