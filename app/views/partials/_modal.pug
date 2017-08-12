@@ -16,10 +16,13 @@
       form.contact__form.contactForm.contactForm--modal(method='post', action='./mail/mail.php')
         .row
           .col-24 
-            input.form-control.form__input.modal__input.form__input--phone.form__phone(aria-invalid='false', placeholder="+38 (___) ___-__-__", name='phone', type='tel')
+            .form-group
+              input.form-control.form__input.modal__input.form__input--phone.form__phone(aria-invalid='false', placeholder="+38 (___) ___-__-__", name='phone', type='tel', data-error='Введите телефон', required)
+              p.help-block.with-errors
           .col-24     
-            button.button.button--size.modal__btn(name='form[контакты]', type='submit', data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Файл отправляется...")
+            button.button.button--size.modal__btn(name='form[модалка в шапке]', type='submit', data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Файл отправляется...")
               .modal__btn--text!=content.index.header.modal.btn  
+            .success
           .col-24
             .modal__access!=content.index.header.modal.access    
 

@@ -272,11 +272,17 @@
               <form class="contact__form contactForm contactForm--modal" method="post" action="./mail/mail.php">
                 <div class="row">
                   <div class="col-24 col-md-9 form__group">
-                    <div class="input__heading">Ваш номер телефона</div>
-                    <input class="form-control form__input form__input--phone form__phone" aria-invalid="false" placeholder="+38 (___) ___-__-__" name="phone" type="tel">
+                    <label class="input__heading">Ваш номер телефона</label>
+                    <div class="form-group">
+                      <input class="form-control form__input form__input--phone form__phone" aria-invalid="false" placeholder="+38 (___) ___-__-__" name="phone" type="tel" data-error="Введите телефон" required>
+                      <p class="help-block with-errors"></p>
+                    </div>
                   </div>
                   <div class="col-24 col-md-15 d-flex align-items-end">    
-                    <button class="button button--size form__btn" name="form[контакты]" type="submit" data-loading-text="&lt;i class='fa fa-circle-o-notch fa-spin'&gt;&lt;/i&gt; Файл отправляется...">Узнать рыночную стоимость квартиры</button>
+                    <button class="button button--size form__btn" name="form[динамика цен]" type="submit" data-loading-text="&lt;i class='fa fa-circle-o-notch fa-spin'&gt;&lt;/i&gt; Файл отправляется...">Узнать рыночную стоимость квартиры</button>
+                  </div>
+                  <div class="col-24">
+                    <div class="success"></div>
                   </div>
                 </div>
               </form>
@@ -626,14 +632,18 @@
             <div class="col-24 col-sm-20 offset-sm-2 col-md-14 offset-md-10 col-lg-14 offset-lg-10">
               <form class="contact__form contactForm contactForm--modal" method="post" action="./mail/mail.php">
                 <div class="row">
-                  <div class="col-24 col-xl-9 form__group">
-                    <div class="input__heading input__heading--black">Ваш e-mail</div>
-                    <input class="form-control form__input form__input--small form__mail" aria-invalid="false" placeholder="Введите Ваш E-mail" name="email" type="email">
+                  <div class="col-24 col-xl-9 form-group form__group">
+                    <label class="input__heading input__heading--black">Ваш e-mail</label>
+                    <input class="form-control form__input form__input--small form__mail" aria-invalid="false" placeholder="Введите Ваш E-mail" name="email" type="email" data-error="Введите email" required>
+                    <p class="help-block with-errors"></p>
                   </div>
                   <div class="col-24 col-xl-15 d-flex align-items-end">
-                    <button class="button button--size form__btn plan__btn" name="form[контакты]" type="submit" data-loading-text="&lt;i class='fa fa-circle-o-notch fa-spin'&gt;&lt;/i&gt; Файл отправляется...">
+                    <button class="button button--size form__btn plan__btn" name="form[Маркетинговый план]" type="submit" data-loading-text="&lt;i class='fa fa-circle-o-notch fa-spin'&gt;&lt;/i&gt; Файл отправляется...">
                       <div class="plan__btn--text">Получить маркетинговый план</div>
                     </button>
+                  </div>
+                  <div class="col-24">
+                    <div class="success"></div>
                   </div>
                 </div>
               </form>
@@ -861,12 +871,16 @@
           <form class="contact__form contactForm contactForm--modal" method="post" action="./mail/mail.php">
             <div class="row">
               <div class="col-24"> 
-                <input class="form-control form__input modal__input form__input--phone form__phone" aria-invalid="false" placeholder="+38 (___) ___-__-__" name="phone" type="tel">
+                <div class="form-group">
+                  <input class="form-control form__input modal__input form__input--phone form__phone" aria-invalid="false" placeholder="+38 (___) ___-__-__" name="phone" type="tel" data-error="Введите телефон" required>
+                  <p class="help-block with-errors"></p>
+                </div>
               </div>
               <div class="col-24">    
-                <button class="button button--size modal__btn" name="form[контакты]" type="submit" data-loading-text="&lt;i class='fa fa-circle-o-notch fa-spin'&gt;&lt;/i&gt; Файл отправляется...">
+                <button class="button button--size modal__btn" name="form[модалка в шапке]" type="submit" data-loading-text="&lt;i class='fa fa-circle-o-notch fa-spin'&gt;&lt;/i&gt; Файл отправляется...">
                   <div class="modal__btn--text">Связаться с экспертом по недвижимости</div>
                 </button>
+                <div class="success"></div>
               </div>
               <div class="col-24">
                 <div class="modal__access">Мы гарантируем безопасность Ваших данных. Нажимая на кнопку, вы соглашаетесь с Политикой конфиденциальности</div>
@@ -885,15 +899,18 @@
     <script src="js/bootstrap.js"></script>
     <!-- Old browsers reject JavaScript-->
     <script src="js/jquery.reject.js"></script>
-    <!-- Masked Input JavaScript    -->
+    <!-- Bootstrap Validation JavaScript-->
+    <script src="js/validator.js"></script>
+    <script src="js/contact_me.js"></script>
+    <!-- Masked Input JavaScript-->
     <script src="js/jquery.maskedinput.js"></script>
     <!-- Slick-Slider JavaScript-->
     <script src="js/slick.js"></script>
-    <!-- Match Height JavaScript    -->
+    <!-- Match Height JavaScript-->
     <script src="js/jquery.matchHeight.js"></script>
-    <!-- Fancybox JavaScript    -->
+    <!-- Fancybox JavaScript-->
     <script src="js/jquery.fancybox.js"> </script>
-    <!-- Easypiechart JavaScript    -->
+    <!-- Easypiechart JavaScript-->
     <script src="js/jquery.easypiechart.js"> </script>
     <!-- Custom JavaScript-->
     <script src="js/main.js"></script>

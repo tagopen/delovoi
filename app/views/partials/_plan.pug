@@ -9,12 +9,15 @@ section.plan
       .col-24.col-sm-20.offset-sm-2.col-md-14.offset-md-10.col-lg-14.offset-lg-10
         form.contact__form.contactForm.contactForm--modal(method='post', action='./mail/mail.php')
           .row
-            .col-24.col-xl-9.form__group
-              .input__heading.input__heading--black!=content.index.plan.form.title   
-              input.form-control.form__input.form__input--small.form__mail(aria-invalid='false', placeholder="Введите Ваш E-mail", name='email', type='email')
+            .col-24.col-xl-9.form-group.form__group
+              label.input__heading.input__heading--black!=content.index.plan.form.title   
+              input.form-control.form__input.form__input--small.form__mail(aria-invalid='false', placeholder="Введите Ваш E-mail", name='email', type='email', data-error='Введите email', required)
+              p.help-block.with-errors
             .col-24.col-xl-15.d-flex.align-items-end
-              button.button.button--size.form__btn.plan__btn(name='form[контакты]', type='submit', data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Файл отправляется...")
+              button.button.button--size.form__btn.plan__btn(name='form[Маркетинговый план]', type='submit', data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Файл отправляется...")
                 .plan__btn--text!=content.index.plan.form.btn
+            .col-24
+              .success
     .plan__icon
       i.ic.ic--kit1200.hidden-md-down
       i.ic.ic--kit760.hidden-lg-up           
