@@ -147,7 +147,7 @@ $(function($){
     }); 
     });﻿
   };
-  
+
   $(function () {
     $('.scheme__col').hover(
       function() {
@@ -248,16 +248,17 @@ $(function($){
           barColor: '#e7b869',
           trackColor: 'transparent',
           lineWidth: 6,
-          scaleColor: 'transparent',
-          onStop: function() {
-            $('.comment .chart').easyPieChart({
-              animate: 3000,
-              barColor: '#e7b869',
-              trackColor: 'transparent',
-              lineWidth: 6,
-              scaleColor: 'transparent',
-            });
-          }
+          scaleColor: 'transparent'
+        });
+      } 
+      
+      if($(this).scrollTop() + $(this).height() >= $('.comment').offset().top) {
+        $('.comment .chart').easyPieChart({
+          animate: 3000,
+          barColor: '#e7b869',
+          trackColor: 'transparent',
+          lineWidth: 6,
+          scaleColor: 'transparent'
         });
       }
     });
