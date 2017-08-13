@@ -969,6 +969,32 @@ button:hover, button:focus {
   font: 300 12px/18px "Open Sans", sans-serif;
 }
 
+.checkbox-btn__control {
+  display: none;
+}
+
+.checkbox-btn__control:checked + .checkbox-btn__box {
+  background: -webkit-gradient(linear, left top, left bottom, from(#ffb619), to(#efa209));
+  background: -webkit-linear-gradient(top, #ffb619 0%, #efa209 100%);
+  background: linear-gradient(to bottom, #ffb619 0%, #efa209 100%);
+}
+
+.checkbox-btn__box {
+  position: relative;
+  padding: 17px 20px 16px;
+  min-width: 150px;
+  border-top: 1px solid #acacac;
+  border-bottom: 1px solid #cacaca;
+  margin: 0 10px;
+  background: #acacac;
+  color: #fff;
+  font-size: 20px;
+  text-shadow: 0 -1px 0 #b5b5b5;
+  overflow: hidden;
+  cursor: pointer;
+  text-align: center;
+}
+
 @media only screen and (min-width: 992px) {
   .modal-open .modal {
     display: -webkit-box !important;

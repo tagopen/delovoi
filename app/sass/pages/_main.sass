@@ -112,6 +112,26 @@ button
   &__access
     color: #212121   
     font: 300 12px/18px $font-open-sans
+.checkbox-btn
+  &__control
+    display: none
+    &:checked 
+      &+ .checkbox-btn__box
+        background: linear-gradient(to bottom, #ffb619 0%, #efa209 100%)
+  &__box
+    position: relative
+    padding: 17px 20px 16px
+    min-width: 150px
+    border-top: 1px solid #acacac
+    border-bottom: 1px solid #cacaca
+    margin: 0 10px
+    background: #acacac
+    color: #fff
+    font-size: 20px
+    text-shadow: 0 -1px 0 #b5b5b5
+    overflow: hidden
+    cursor: pointer
+    text-align: center
 +r(992)
   .modal
     &-open

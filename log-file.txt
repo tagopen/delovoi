@@ -1,0 +1,44 @@
+[BV] app/index.html
+[BV] [line: 66] Using the modifier class `header__call--text` requires this element to also have the class `header__call`
+[BV] [line: 78] Using the modifier class `header__btn--text` requires this element to also have the class `header__btn`
+[BV] [line: 80] Using the modifier class `header__scroll--link` requires this element to also have the class `header__scroll`
+[BV] [line: 81] Using the modifier class `header__scroll--circle-1` requires this element to also have the class `header__scroll`
+[BV] [line: 82] Using the modifier class `header__scroll--circle-2` requires this element to also have the class `header__scroll`
+[BV] [line: 83] Using the modifier class `header__scroll--circle-3` requires this element to also have the class `header__scroll`
+[BV] [line: 104] Using the modifier class `intro__text--span` requires this element to also have the class `intro__text`
+[BV] [line: 110] Using the modifier class `intro__text--span` requires this element to also have the class `intro__text`
+[BV] [line: 116] Using the modifier class `intro__text--span` requires this element to also have the class `intro__text`
+[BV] [line: 122] Using the modifier class `intro__text--span` requires this element to also have the class `intro__text`
+[BV] [line: 170] Using the modifier class `tool__name--span` requires this element to also have the class `tool__name`
+[BV] [line: 185] Using the modifier class `tool__name--span` requires this element to also have the class `tool__name`
+[BV] [line: 200] Using the modifier class `tool__name--span` requires this element to also have the class `tool__name`
+[BV] [line: 215] Using the modifier class `tool__name--span` requires this element to also have the class `tool__name`
+[BV] [line: 230] Using the modifier class `tool__name--span` requires this element to also have the class `tool__name`
+[BV] [line: 254] Using the modifier class `price__text--span` requires this element to also have the class `price__text`
+[BV] [line: 272] Using the class `contact__form` requires a parent element with the class `contact`. You cannot use an element outside of a block
+[BV] [line: 274] Using the class `form__group` requires a parent element with the class `form`. You cannot use an element outside of a block
+[BV] [line: 275] Using the class `input__heading` requires a parent element with the class `input`. You cannot use an element outside of a block
+[BV] [line: 277] Using the class `form__input` requires a parent element with the class `form`. You cannot use an element outside of a block
+[BV] [line: 277] Using the class `form__input--phone` requires a parent element with the class `form`. You cannot use an element outside of a block
+[BV] [line: 277] Using the class `form__phone` requires a parent element with the class `form`. You cannot use an element outside of a block
+[BV] [line: 282] Using the class `form__btn` requires a parent element with the class `form`. You cannot use an element outside of a block
+[BV] [line: 633] Using the class `contact__form` requires a parent element with the class `contact`. You cannot use an element outside of a block
+[BV] [line: 635] Using the class `form__group` requires a parent element with the class `form`. You cannot use an element outside of a block
+[BV] [line: 636] Using the class `input__heading` requires a parent element with the class `input`. You cannot use an element outside of a block
+[BV] [line: 636] Using the class `input__heading--black` requires a parent element with the class `input`. You cannot use an element outside of a block
+[BV] [line: 637] Using the class `form__input` requires a parent element with the class `form`. You cannot use an element outside of a block
+[BV] [line: 637] Using the class `form__input--small` requires a parent element with the class `form`. You cannot use an element outside of a block
+[BV] [line: 637] Using the class `form__mail` requires a parent element with the class `form`. You cannot use an element outside of a block
+[BV] [line: 641] Using the class `form__btn` requires a parent element with the class `form`. You cannot use an element outside of a block
+[BV] [line: 642] Using the modifier class `plan__btn--text` requires this element to also have the class `plan__btn`
+[BV] [line: 825] Using the modifier class `footer__logo--img` requires this element to also have the class `footer__logo`
+[BV] [line: 828] Using the modifier class `footer__logo--text` requires this element to also have the class `footer__logo`
+[BV] [line: 844] Using the modifier class `footer__author--link` requires this element to also have the class `footer__author`
+[BV] [line: 865] Using the modifier class `modal__close--icon` requires this element to also have the class `modal__close`
+[BV] [line: 870] Using the class `heading__icon` requires a parent element with the class `heading`. You cannot use an element outside of a block
+[BV] [line: 871] Using the class `contact__form` requires a parent element with the class `contact`. You cannot use an element outside of a block
+[BV] [line: 875] Using the class `form__input` requires a parent element with the class `form`. You cannot use an element outside of a block
+[BV] [line: 875] Using the class `form__input--phone` requires a parent element with the class `form`. You cannot use an element outside of a block
+[BV] [line: 875] Using the class `form__phone` requires a parent element with the class `form`. You cannot use an element outside of a block
+[BV] [line: 881] Using the modifier class `modal__btn--text` requires this element to also have the class `modal__btn`
+[BV] Total Errors [42] [app/index.html]
