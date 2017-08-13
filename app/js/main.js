@@ -147,14 +147,19 @@ $(function($){
     }); 
     });﻿
   };
-
-$('.scheme__image').mouseover(function() {
-  $(this).parent().siblings('.scheme__hover').addClass('scheme__hover--visible')
-});
-
-$('.scheme__hover').mouseout(function() {
-  $(this).removeClass('scheme__hover--visible')
-});
+  
+  $(function () {
+    $('.scheme__col').hover(
+      function() {
+        // don't update 'rel' attribute
+        $(this).find('.scheme__hover').addClass('scheme__hover--visible');
+      },
+      function() {
+        // here's the tricky part, if the rel attr is set
+        $('.scheme__col').find('.scheme__hover').removeClass('scheme__hover--visible');
+      }
+    );
+  });
 
  if( $( window ).width() >= 1200 ) {
     var sectionWidth = $( window).width() + 17,
