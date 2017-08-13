@@ -9,7 +9,6 @@
                 rdf:description(rdf:about='')
           defs
           path.modal__close--icon(d='M1199.01,185.281l-0.72.732L1184,171.37l-14.29,14.643-0.72-.732,14.3-14.644-13.58-13.911,0.71-.732L1184,169.905l13.58-13.911,0.71,0.732-13.58,13.911Z', transform='translate(-1169 -156)')
-        .modal__icon
       .modal__heading!=content.index.modal.header.heading 
       .modal__subheading!=content.index.modal.header.subheading 
         i.ic.ic--headingborder.heading__icon
@@ -37,7 +36,6 @@
                 rdf:description(rdf:about='')
           defs
           path.modal__close--icon(d='M1199.01,185.281l-0.72.732L1184,171.37l-14.29,14.643-0.72-.732,14.3-14.644-13.58-13.911,0.71-.732L1184,169.905l13.58-13.911,0.71,0.732-13.58,13.911Z', transform='translate(-1169 -156)')
-        .modal__icon
       .modal__heading!=content.index.modal.footer.heading 
       .modal__subheading!=content.index.modal.footer.subheading 
         i.ic.ic--headingborder.heading__icon
@@ -69,7 +67,7 @@
               p.help-block.with-errors
           .col-24     
             button.button.button--size.modal__btn(name='form', value='модалка в футере', type='submit', data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Файл отправляется...")
-              .modal__btn--text!=content.index.modal.footer.btn  
+              span.modal__btn--text!=content.index.modal.footer.btn  
             .success
           .col-24
             .modal__access

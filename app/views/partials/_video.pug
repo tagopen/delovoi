@@ -1,11 +1,11 @@
 section.video#video
   .video__image.hidden-sm-down
-    img.img-fluid(src="img/videoimg.jpg")
+    img.img-fluid(src="img/videoimg.jpg", alt="Здание")
   .container.video__container
     .row
       .col-24.col-xl-14.offset-xl-10.text-center
         h2.heading.video__heading
-          .heading__text!=content.index.video.heading 
+          span.heading__text!=content.index.video.heading 
       .col-12.offset-12.col-lg-11.offset-lg-13.hidden-sm-down
         .video__time!=content.index.video.time
           .video__elem.video__elem--1!=content.index.video.elem1
