@@ -9,11 +9,11 @@ section.price
           i.ic.ic--headingborder.heading__icon
     .row
       .col-24.col-md-12.text-center
-        a.price__image
+        a.price__image(data-toggle="modal", href="#price__modal")
           img.img-fluid(src!=content.index.price.img.src, alt!=content.index.price.img.alt)
           .price__zoom  
             i.ic.ic--zoom
-      .col-24.col-md-12
+      .col-24.col-md-10.col-xl-12
         .price__box
           .price__title!=content.index.price.title
           .price__text!=content.index.price.text       

@@ -244,7 +244,7 @@ $(function($){
     $(window).scroll( function() {
       if ($(this).scrollTop() + $(this).height() >= $('.video').offset().top) {
         $('.video .chart').easyPieChart({
-          animate: 3000,
+          animate: 10000,
           barColor: '#e7b869',
           trackColor: 'transparent',
           lineWidth: 6,
@@ -254,7 +254,7 @@ $(function($){
       
       if($(this).scrollTop() + $(this).height() >= $('.comment').offset().top) {
         $('.comment .chart').easyPieChart({
-          animate: 3000,
+          animate: 10000,
           barColor: '#e7b869',
           trackColor: 'transparent',
           lineWidth: 6,

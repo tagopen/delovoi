@@ -12,7 +12,8 @@ section.scheme
           .scheme__box
             .scheme__date(data-time!=item.date)
             .scheme__image
-              i.ic(class="ic--scheme"+(i+1))
+              .scheme__img
+                img(src="img/"+(i+1)+".svg")
               span.scheme__number!=item.number
             .scheme__text!=item.text      
             .scheme__icon(class="scheme__icon--"+(i+1))

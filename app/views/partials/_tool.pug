@@ -8,7 +8,7 @@ section.tool
         .tool__subheading!=content.index.tool.subheading 
   each item, i in content.index.tool.content        
     .tool__elem(class="tool__elem--"+(i+1))        
-      .container
+      .container.animate(data-animation="fadeInUp")
         .row.tool__row(class={'flex-row-reverse': i%2 == 1})
           .col-md-12
             .tool__image

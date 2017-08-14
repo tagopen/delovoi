@@ -5,7 +5,7 @@ section.intro
         h2.heading.intro__heading
           span.heading__text!=content.index.intro.heading 
           i.ic.ic--headingborder.heading__icon
-    .row
+    .row.animate(data-animation="fadeInUp")
       .col-24.col-xl-20.offset-xl-2
         .row
           each item in content.index.intro.content
