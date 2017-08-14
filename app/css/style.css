@@ -2994,3 +2994,140 @@ button:hover, button:focus {
     font: 700 18px/30px "Open Sans", sans-serif;
   }
 }
+
+@media only screen and (min-width: 760px) {
+  @-webkit-keyframes widthAnimate {
+    from {
+      width: 0;
+    }
+    to {
+      width: 180px;
+    }
+  }
+  @keyframes widthAnimate {
+    from {
+      width: 0;
+    }
+    to {
+      width: 180px;
+    }
+  }
+  .scheme__icon--1 {
+    -webkit-animation: widthAnimate 3s forwards;
+            animation: widthAnimate 3s forwards;
+    -webkit-animation-delay: 1s;
+            animation-delay: 1s;
+  }
+  .scheme__icon--2 {
+    -webkit-animation: widthAnimate 3s forwards;
+            animation: widthAnimate 3s forwards;
+    -webkit-animation-delay: 4s;
+            animation-delay: 4s;
+  }
+  .scheme__icon--4 {
+    -webkit-animation: widthAnimate 3s forwards;
+            animation: widthAnimate 3s forwards;
+    -webkit-animation-delay: 7s;
+            animation-delay: 7s;
+  }
+  .scheme__icon--5 {
+    -webkit-animation: widthAnimate 3s forwards;
+            animation: widthAnimate 3s forwards;
+    -webkit-animation-delay: 10s;
+            animation-delay: 10s;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  @-webkit-keyframes widthAnimate {
+    from {
+      width: 0;
+    }
+    to {
+      width: 220px;
+    }
+  }
+  @keyframes widthAnimate {
+    from {
+      width: 0;
+    }
+    to {
+      width: 220px;
+    }
+  }
+  .scheme__icon--1 {
+    -webkit-animation: widthAnimate 3s forwards;
+            animation: widthAnimate 3s forwards;
+    -webkit-animation-delay: 1s;
+            animation-delay: 1s;
+  }
+  .scheme__icon--2 {
+    -webkit-animation: widthAnimate 3s forwards;
+            animation: widthAnimate 3s forwards;
+    -webkit-animation-delay: 4s;
+            animation-delay: 4s;
+  }
+  .scheme__icon--4 {
+    -webkit-animation: widthAnimate 3s forwards;
+            animation: widthAnimate 3s forwards;
+    -webkit-animation-delay: 7s;
+            animation-delay: 7s;
+  }
+  .scheme__icon--5 {
+    -webkit-animation: widthAnimate 3s forwards;
+            animation: widthAnimate 3s forwards;
+    -webkit-animation-delay: 10s;
+            animation-delay: 10s;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  @-webkit-keyframes widthAnimate {
+    from {
+      width: 0;
+    }
+    to {
+      width: 289px;
+    }
+  }
+  @keyframes widthAnimate {
+    from {
+      width: 0;
+    }
+    to {
+      width: 289px;
+    }
+  }
+  .scheme__icon--1 {
+    -webkit-animation: widthAnimate 3s forwards;
+            animation: widthAnimate 3s forwards;
+    -webkit-animation-delay: 1s;
+            animation-delay: 1s;
+    -webkit-animation-iteration-count: 3;
+            animation-iteration-count: 3;
+  }
+  .scheme__icon--2 {
+    -webkit-animation: widthAnimate 3s forwards;
+            animation: widthAnimate 3s forwards;
+    -webkit-animation-delay: 4s;
+            animation-delay: 4s;
+    -webkit-animation-iteration-count: 3;
+            animation-iteration-count: 3;
+  }
+  .scheme__icon--4 {
+    -webkit-animation: widthAnimate 3s forwards;
+            animation: widthAnimate 3s forwards;
+    -webkit-animation-delay: 7s;
+            animation-delay: 7s;
+    -webkit-animation-iteration-count: 3;
+            animation-iteration-count: 3;
+  }
+  .scheme__icon--5 {
+    -webkit-animation: widthAnimate 3s forwards;
+            animation: widthAnimate 3s forwards;
+    -webkit-animation-delay: 10s;
+            animation-delay: 10s;
+    -webkit-animation-iteration-count: 3;
+            animation-iteration-count: 3;
+  }
+}
