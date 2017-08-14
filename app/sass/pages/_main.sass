@@ -47,6 +47,10 @@ button
 .modal
   -webkit-overflow-scrolling: touch
   transform: translateZ(0)
+  &.show
+    display: flex !important
+  &-dialog
+    margin: auto
   &__content
     position: relative
     background: #fff
@@ -58,7 +62,7 @@ button
     display: block
     height: 56px
     width: 56px
-    background: #FFF !important
+    background: #fff !important
     opacity: 1 !important 
     position: absolute
     right: -65px
@@ -815,6 +819,8 @@ button
       background-color: $color-orange 
   &__hover
     display: none  
+  &__icon
+    width: 0
 +r(760)
   .scheme
     &__icon
@@ -826,7 +832,6 @@ button
         bottom: 20px
         left: 80%
         height: 51px
-        width: 0
         background: url(../img/schemeline.png) no-repeat
         background-size: auto
       &--2,
@@ -836,9 +841,11 @@ button
         top: 50px
         left: 92%
         height: 51px
-        width: 0
         background: url(../img/schemeline2.png) no-repeat
         background-size: auto
+      &--active
+        width: 280px
+        transition: all 2s ease-out
     &__hover
       display: block
       position: absolute   

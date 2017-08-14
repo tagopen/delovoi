@@ -135,18 +135,28 @@ $(function($){
     }); 
     });﻿
   };
-  if( $( window ).width() >= 1200 ) {
-    $(window).scroll(function (){ 
-      $('.scheme__container').each(function (){
-       if ($(window).scrollTop() + $(window).height() >= $(this).offset().top){
-        setTimeout(function(){ $( ".scheme__icon--1" ).animate({width: "289px"}, 2000); },1000);
-        setTimeout(function(){ $( ".scheme__icon--2" ).animate({width: "289px"}, 2000); },3000);
-        setTimeout(function(){ $( ".scheme__icon--4" ).animate({width: "289px"}, 2000); },5000);
-        setTimeout(function(){ $( ".scheme__icon--5" ).animate({width: "289px"}, 2000); },7000);
-      } 
-    }); 
-    });﻿
-  };
+  $(function() {
+    var $schemeElements = $(".scheme__col--animate").find(".scheme__icon"),
+        schemeElementsLength = $schemeElements.length,
+        currElement = 0;
+
+    if( $( window ).width() >= 1200 ) {
+      $(window).scroll(function (){
+        if ($(window).scrollTop() + $(window).height() >= $(".scheme__container").offset().top) {
+          setInterval(function() {
+            if (currElement >= (schemeElementsLength) ) {
+              $schemeElements.removeClass("scheme__icon--active");
+              currElement = 0;
+            }
+              $schemeElements.eq(currElement).addClass("scheme__icon--active");
+
+            currElement ++;
+          }, 3000);
+        } 
+      });﻿
+    }
+
+  });
 
   $(function () {
     $('.scheme__col').hover(

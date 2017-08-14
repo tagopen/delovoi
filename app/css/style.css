@@ -871,6 +871,17 @@ button:hover, button:focus {
           transform: translateZ(0);
 }
 
+.modal.show {
+  display: -webkit-box !important;
+  display: -webkit-flex !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+}
+
+.modal-dialog {
+  margin: auto;
+}
+
 .modal__content {
   position: relative;
   background: #fff;
@@ -885,7 +896,7 @@ button:hover, button:focus {
   display: block;
   height: 56px;
   width: 56px;
-  background: #FFF !important;
+  background: #fff !important;
   opacity: 1 !important;
   position: absolute;
   right: -65px;
@@ -1974,6 +1985,10 @@ button:hover, button:focus {
   display: none;
 }
 
+.scheme__icon {
+  width: 0;
+}
+
 @media only screen and (min-width: 760px) {
   .scheme__icon {
     z-index: -1;
@@ -1984,7 +1999,6 @@ button:hover, button:focus {
     bottom: 20px;
     left: 80%;
     height: 51px;
-    width: 0;
     background: url(../img/schemeline.png) no-repeat;
     background-size: auto;
   }
@@ -1994,9 +2008,13 @@ button:hover, button:focus {
     top: 50px;
     left: 92%;
     height: 51px;
-    width: 0;
     background: url(../img/schemeline2.png) no-repeat;
     background-size: auto;
+  }
+  .scheme__icon--active {
+    width: 280px;
+    -webkit-transition: all 2s ease-out;
+    transition: all 2s ease-out;
   }
   .scheme__hover {
     display: block;

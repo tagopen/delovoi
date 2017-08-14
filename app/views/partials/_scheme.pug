@@ -8,7 +8,7 @@ section.scheme
   .container.scheme__container.animate(data-animation="fadeInUp")
     .row
       each item, i in content.index.scheme.content  
-        .col-24.col-md-8.text-center.scheme__col
+        .col-24.col-md-8.text-center.scheme__col(class=item.class)
           .scheme__box
             .scheme__date(data-time!=item.date)
             .scheme__image
