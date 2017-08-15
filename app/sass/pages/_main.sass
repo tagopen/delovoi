@@ -1530,60 +1530,109 @@ button
     &__question        
       font: 700 18px/30px $font-open-sans
 +r(760)
-  @keyframes widthAnimate
-    from 
+  @keyframes widthAnimate1
+    0 
       width: 0
-    to 
+    25%
       width: 180px
-  .scheme__icon--1    
-    animation: widthAnimate 3s forwards 
-    animation-delay: 1s  
-  .scheme__icon--2 
-    animation: widthAnimate 3s forwards    
-    animation-delay: 4s
-  .scheme__icon--4
-    animation: widthAnimate 3s forwards   
-    animation-delay: 7s
-  .scheme__icon--5 
-    animation: widthAnimate 3s forwards  
-    animation-delay: 10s  
-+r(992)
-  @keyframes widthAnimate
-    from 
+    100%
+      width: 180px
+  @keyframes widthAnimate2
+    0 
       width: 0
-    to 
-      width: 220px
-  .scheme__icon--1    
-    animation: widthAnimate 3s forwards 
-    animation-delay: 1s  
-  .scheme__icon--2 
-    animation: widthAnimate 3s forwards    
-    animation-delay: 4s
-  .scheme__icon--4
-    animation: widthAnimate 3s forwards   
-    animation-delay: 7s
-  .scheme__icon--5 
-    animation: widthAnimate 3s forwards  
-    animation-delay: 10s  
-+r(1200)       
-  @keyframes widthAnimate
-    from 
+    25%
       width: 0
-    to 
-      width: 289px
+    50% 
+      width: 180px
+    100%
+      width: 180px
+  @keyframes widthAnimate3
+    0 
+      width: 0
+    50% 
+      width: 0
+    75%
+      width: 180px
+    100%
+      width: 180px
+  @keyframes widthAnimate4
+    0 
+      width: 0
+    75% 
+      width: 0
+    100%
+      width: 180px
   .scheme__icon--1  
-    animation: widthAnimate 3s forwards 
-    animation-delay: 1s  
-    animation-iteration-count: 3
+    animation: widthAnimate1 8s infinite 
   .scheme__icon--2
-    animation: widthAnimate 3s forwards    
-    animation-delay: 4s
-    animation-iteration-count: 3
+    animation: widthAnimate2 8s infinite  
   .scheme__icon--4
-    animation: widthAnimate 3s forwards   
-    animation-delay: 7s
-    animation-iteration-count: 3
+    animation: widthAnimate3 8s infinite 
   .scheme__icon--5
-    animation: widthAnimate 3s forwards  
-    animation-delay: 10s  
-    animation-iteration-count: 3
+    animation: widthAnimate4 8s infinite 
++r(992)
+  @keyframes widthAnimate1
+    0 
+      width: 0
+    25%
+      width: 220px
+    100%
+      width: 220px
+  @keyframes widthAnimate2
+    0 
+      width: 0
+    25%
+      width: 0
+    50% 
+      width: 220px
+    100%
+      width: 220px
+  @keyframes widthAnimate3
+    0 
+      width: 0
+    50% 
+      width: 0
+    75%
+      width: 220px
+    100%
+      width: 220px
+  @keyframes widthAnimate4
+    0 
+      width: 0
+    75% 
+      width: 0
+    100%
+      width: 220px
++r(1200)       
+  @keyframes widthAnimate1
+    0 
+      width: 0
+    25%
+      width: 289px
+    100%
+      width: 289px
+  @keyframes widthAnimate2
+    0 
+      width: 0
+    25%
+      width: 0
+    50% 
+      width: 289px
+    100%
+      width: 289px
+  @keyframes widthAnimate3
+    0 
+      width: 0
+    50% 
+      width: 0
+    75%
+      width: 289px
+    100%
+      width: 289px
+  @keyframes widthAnimate4
+    0 
+      width: 0
+    75% 
+      width: 0
+    100%
+      width: 289px
