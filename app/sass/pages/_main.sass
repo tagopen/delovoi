@@ -51,6 +51,7 @@ button
     display: flex !important
   &-dialog
     margin: auto
+    position: relative
   &__content
     position: relative
     background: #fff
@@ -58,6 +59,13 @@ button
     border: 0
     border-radius: 0
     text-align: center
+    z-index: 25
+  &__light
+    position: absolute
+    left: 50%
+    top: 50% 
+    margin-left: -570px
+    margin-top: -470px
   &__close
     display: block
     height: 56px
@@ -1106,7 +1114,7 @@ button
     &__box
       padding-top: 0
     &__text
-      font: 400 24px/34px $font-open-sans 
+      font: 400 22px/32px $font-open-sans 
       margin-bottom: 30px
     &__container
       &:before
@@ -1153,7 +1161,10 @@ button
   &__subheading
     color: #FFF
     font: 400 18px/27px $font-lora  
-    margin-bottom: 30px   
+    margin-bottom: 30px
+    &--span
+      display: block   
+      font: 700 18px/27px $font-lora  
   &__btn   
     background-color: #fff
     box-shadow: 7.5px 13px 35px rgba(0, 0, 0, 0.15)
@@ -1203,7 +1214,7 @@ button
 +r(992)
   .plan
     &__icon
-      left: -25px   
+      left: -180px   
 +r(1200)
   .plan
     &__heading
@@ -1211,7 +1222,7 @@ button
         left: 0
         margin: 0
     &__icon
-      left: 0
+      left: -160px    
   .form
     &__input
       &--small

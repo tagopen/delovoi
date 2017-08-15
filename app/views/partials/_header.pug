@@ -11,7 +11,7 @@ header.header
           each item in content.index.header.number
             .header__number
               a.header__link(href!=item.href)!= item.text 
-          a.header__call(data-toggle="modal", href="#header__modal")
+          a.header__call(data-toggle="modal", href="#footer__modal")
             i.ic.ic--call.hidden-sm-down
             .header__call--text!=content.index.header.call.text 
     .row.justify-content-center
@@ -22,7 +22,7 @@ header.header
         h2.header__subtitle!=content.index.header.subtitle
       .col-24.col-lg-16.text-center 
         .header__text!=content.index.header.text      
-        button.btn.header__btn.text-center
+        button.btn.header__btn.text-center(type='button', data-toggle="modal", data-target="#header__modal")
           span.header__btn--text!=content.index.header.btn    
         .header__scroll.hidden-sm-down
           a.header__scroll--link

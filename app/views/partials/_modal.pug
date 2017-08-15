@@ -1,5 +1,6 @@
 #header__modal.modal.fade(tabindex='-1', role='dialog', aria-hidden='true')
   .modal-dialog.modal__size
+    i.ic.ic--light.modal__light
     .modal-content.modal__content
       button.close.modal__close(type='button', data-dismiss='modal', aria-hidden='true')
         svg(xmlns='http://www.w3.org/2000/svg', width='30', height='30', viewbox='0 0 30 30')
@@ -38,6 +39,7 @@
       img.img-fluid(src!=content.index.price.img.src, alt!=content.index.price.img.alt)                                
 #footer__modal.modal.fade(tabindex='-1', role='dialog', aria-hidden='true')
   .modal-dialog.modal__size
+    i.ic.ic--light.modal__light
     .modal-content.modal__content
       button.close.modal__close(type='button', data-dismiss='modal', aria-hidden='true')
         svg(xmlns='http://www.w3.org/2000/svg', width='30', height='30', viewbox='0 0 30 30')
@@ -52,10 +54,6 @@
         i.ic.ic--headingborderrightblack.heading__icon
       form.contact__form.contactForm.contactForm--modal(method='post', action='./mail/mail.php')
         .row
-          .col-24 
-            .form-group
-              input.form-control.form__input.modal__input.form__input--name.form__name(aria-invalid='false', placeholder="Введите имя", name='name', type='text', data-error='Введите имя', required)
-              p.help-block.with-errors
           .col-24 
             .form-group
               input.form-control.form__input.modal__input.form__input--phone.form__phone(aria-invalid='false', placeholder="+38 (___) ___-__-__", name='phone', type='tel', data-error='Введите телефон', required)

@@ -62,7 +62,7 @@
           <div class="col-10 col-md-8 col-lg-6 col-xl-5">
             <div class="header__contact">
               <div class="header__number"><a class="header__link" href="tel:+80507965289">8 050 79 652 89</a></div>
-              <div class="header__number"><a class="header__link" href="tel:+80675963314">8 067 59 633 14</a></div><a class="header__call" data-toggle="modal" href="#header__modal"><i class="ic ic--call hidden-sm-down"></i>
+              <div class="header__number"><a class="header__link" href="tel:+80675963314">8 067 59 633 14</a></div><a class="header__call" data-toggle="modal" href="#footer__modal"><i class="ic ic--call hidden-sm-down"></i>
                 <div class="header__call--text">Обратный звонок</div></a>
             </div>
           </div>
@@ -74,7 +74,7 @@
           </div>
           <div class="col-24 col-lg-16 text-center"> 
             <div class="header__text">Узнайте 7 рекомендаций, которые помогут ускорить продажу Вашей квартиры</div>
-            <button class="btn header__btn text-center"><span class="header__btn--text">Получить бесплатный файл с рекомендациями</span></button>
+            <button class="btn header__btn text-center" type="button" data-toggle="modal" data-target="#header__modal"><span class="header__btn--text">Получить бесплатный файл с рекомендациями</span></button>
             <div class="header__scroll hidden-sm-down"><a class="header__scroll--link"><i class="ic ic--scrolldown"> </i>
                 <div class="header__scroll--circle-1"></div>
                 <div class="header__scroll--circle-2"></div>
@@ -616,8 +616,8 @@
         <div class="container plan__container">
           <div class="row justify-content-center plan__row">
             <div class="col-24 col-sm-20 col-lg-14 offset-lg-10 text-center text-lg-left">
-              <h2 class="heading plan__heading"><span class="heading__text heading__text heading__text--white">Получите маркетинговый план с описанием того, как мы продадим вашу недвижимость!</span><i class="ic ic--headingborderright heading__icon"></i></h2>
-              <div class="plan__subheading">Укажите ваш email и через минуту вам придет файл с описанием маркетинговой стратегии по продаже вашей квартиры!</div>
+              <h2 class="heading plan__heading"><span class="heading__text heading__text heading__text--white">Продаете квартиру? У нас уже есть 57 клиентов, которые ищут жилье в  Киеве прямо сейчас!</span><i class="ic ic--headingborderright heading__icon"></i></h2>
+              <div class="plan__subheading"><span class="plan__subheading--span">Возможно ваша квартиру подойдет одному из них!</span> Оставьте свой номер телефона, чтобы мы с вами связались и смогли проверить наличие покупателей, которые ищут квартиру подобную вашей.</div>
             </div>
             <div class="col-24 col-sm-20 offset-sm-2 col-md-14 offset-md-10 col-lg-14 offset-lg-10">
               <form class="contact__form contactForm contactForm--modal" method="post" action="./mail/mail.php">
@@ -637,7 +637,7 @@
               </form>
             </div>
           </div>
-          <div class="plan__icon"><i class="ic ic--kit1200 hidden-md-down"></i><i class="ic ic--kit760 hidden-lg-up">          </i></div>
+          <div class="plan__icon"><i class="ic ic--plan1200 hidden-md-down"></i><i class="ic ic--plan320 hidden-lg-up">  </i></div>
         </div>
       </section>
       <section class="comment">
@@ -832,7 +832,7 @@
       </div>
     </footer>
     <div class="modal fade" id="header__modal" tabindex="-1" role="dialog" aria-hidden="true">
-      <div class="modal-dialog modal__size">
+      <div class="modal-dialog modal__size"><i class="ic ic--light modal__light"></i>
         <div class="modal-content modal__content">
           <button class="close modal__close" type="button" data-dismiss="modal" aria-hidden="true">
             <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewbox="0 0 30 30">
@@ -891,7 +891,7 @@
       </div>
     </div>
     <div class="modal fade" id="footer__modal" tabindex="-1" role="dialog" aria-hidden="true">
-      <div class="modal-dialog modal__size">
+      <div class="modal-dialog modal__size"><i class="ic ic--light modal__light"></i>
         <div class="modal-content modal__content">
           <button class="close modal__close" type="button" data-dismiss="modal" aria-hidden="true">
             <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewbox="0 0 30 30">
@@ -910,12 +910,6 @@
           <div class="modal__subheading">Мы знаем, что у вас есть много вопросов. Оставьте контактный номер и получите ответы от нашего эксперта в удобное для вас время.<i class="ic ic--headingborderrightblack heading__icon"></i></div>
           <form class="contact__form contactForm contactForm--modal" method="post" action="./mail/mail.php">
             <div class="row">
-              <div class="col-24"> 
-                <div class="form-group">
-                  <input class="form-control form__input modal__input form__input--name form__name" aria-invalid="false" placeholder="Введите имя" name="name" type="text" data-error="Введите имя" required>
-                  <p class="help-block with-errors"></p>
-                </div>
-              </div>
               <div class="col-24"> 
                 <div class="form-group">
                   <input class="form-control form__input modal__input form__input--phone form__phone" aria-invalid="false" placeholder="+38 (___) ___-__-__" name="phone" type="tel" data-error="Введите телефон" required>
