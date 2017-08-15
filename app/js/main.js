@@ -265,4 +265,15 @@ $(function($){
     });
   });
 
+  $(function () {
+    var $time = $('.form__input--time');
+    $('.checkbox-btn__control').on('change click', function () {
+      if ($(this).is('#period-1')) {
+        $time.stop().fadeIn('fast');
+      } else {
+        $time.stop().fadeOut('fast');
+      }
+    });
+  });
+
 })(jQuery); // End of use strict
