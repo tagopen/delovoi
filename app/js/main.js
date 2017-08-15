@@ -267,8 +267,9 @@ $(function($){
 
   $(function () {
     var $time = $('.form__input--time');
+    $time.hide();
     $('.checkbox-btn__control').on('change click', function () {
-      if ($(this).is('#period-1')) {
+      if ($(this).is('#period-2')) {
         $time.stop().fadeIn('fast');
       } else {
         $time.stop().fadeOut('fast');
