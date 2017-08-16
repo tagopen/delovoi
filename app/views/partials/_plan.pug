@@ -11,8 +11,7 @@ section.plan
           .row
             .col-24.col-xl-9.form-group.form__group
               label.input__heading.input__heading--black!=content.index.plan.form.title   
-              input.form-control.form__input.form__input--small.form__mail(aria-invalid='false', placeholder="Введите Ваш E-mail", name='email', type='email', data-error='Введите email', required)
-              p.help-block.with-errors
+              input.form-control.form__input.form__input--small.form__phone.form__input--phone(aria-invalid='false', placeholder="+38 (___) ___-__-__", name='phone', type='tel', required)
             .col-24.col-xl-15.d-flex.align-items-end
               button.button.button--size.form__btn.plan__btn(name='form', value='Маркетинговый план', type='submit', data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Файл отправляется...")
                 span.plan__btn--text!=content.index.plan.form.btn
