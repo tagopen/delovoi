@@ -9,8 +9,8 @@
         author: "Tagopen",
         meta: {
           charset: "utf-8",
-          favicon: "favicon.png",
-          appleTouchIcon: "apple-touch-icon.png"
+          favicon: "favicon.ico",
+          appleTouchIcon: "apple-touch-icon.ico"
         },
         nav: {
           links: [
@@ -39,6 +39,35 @@
           ]
         }
       }, //- site
+      success: {
+        hostname: "success.html",
+        title: "Спасибо за заявку",
+        meta: {
+          description: "",
+          keywords: "",
+          openGraph: {
+            title: "Site name",
+            siteName: "Site name",
+            description: "Описание сайта",
+            type: "website",
+            locale: "ru_RU",
+            image: "microformat.png",
+            imageType: "image/png",
+            url: hostname
+          },
+          twitter: {
+            card: "summary",
+            site: "@flickr",
+            title: "My Site",
+            description: "My Site is cool",
+            image: hostname + "/img/logo/microformat.png"
+          }
+        },
+        content: {
+          heading: "<span class=\"success__heading--span\">Спасибо,</span> что обратились в БГ деловая!",
+          text: "Скоро с Вами свяжется наш эксперт. Подписывайтесь на нашу группу в facebook и следите за новостями БГ Деловая и рынка недвижимости в целом"
+        }
+      },
       index: {
         hostname: "index.html",
         title: "Главная страница",
@@ -182,6 +211,7 @@
           text: "Продайте квартиру сейчас <span class=\"price__text--span\">на 35% дороже,</span> чем через пол года. Действуйте прямо сейчас и Ваша квартира будет продана уже в этом месяце!",
           img: {
             src: "img/graphic.jpg",
+            src2: "img/graphicbig.jpg",
             alt: "График"
           },
           bg: {
@@ -199,6 +229,7 @@
         },
         scheme: {
           heading: "Гарантированный спрос на Вашу квартиру уже через 8 дней",
+          text: "Сегодня",
           content: [
             {
               number: "1",
@@ -386,7 +417,7 @@
           subheading: "<span class=\"plan__subheading--span\">Возможно ваша квартиру подойдет одному из них!</span> Оставьте свой номер телефона, чтобы мы с вами связались и смогли проверить наличие покупателей, которые ищут квартиру подобную вашей.",
           form: {
             title: "Ваш телефон",
-            btn: "Получить маркетинговый план"
+            btn: "Узнать о возможных покупателях"
           }
         },
         comment: {
@@ -496,7 +527,7 @@
             access: {
               text: "Мы гарантируем безопасность Ваших данных. Нажимая на кнопку, вы соглашаетесь с ",
               link: {
-                href: "#",
+                href: "#confident__modal",
                 text: "Политикой конфиденциальности"
               }
             }

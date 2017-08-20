@@ -1,0 +1,21 @@
+header.header.header--success
+  .container.header__container
+    .row.justify-content-between.header__row
+      .col-10.col-sm-8.col-lg-6.col-xl-5
+        .header__heading.header__heading--fff!=content.index.header.heading 
+      a.logo.header__logo
+        img.img-fluid.logo__img.hidden-sm-down(src!=content.index.header.logo.src, alt!=content.index.header.logo.alt)
+        img.img-fluid.logo__img.hidden-sm-up(src!=content.index.header.logo320.src, alt!=content.index.header.logo320.alt)  
+      .col-10.col-md-8.col-lg-6.col-xl-5
+        .header__contact
+          each item in content.index.header.number
+            .header__number
+              a.header__link(href!=item.href)!= item.text 
+    .row
+      .col-24.col-lg-11
+        .success
+          .success__heading
+            .success__heading--text!=content.success.content.heading
+            i.ic.ic--headingborderright
+          .success__text!=content.success.content.text  
+

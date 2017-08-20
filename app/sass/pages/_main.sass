@@ -52,20 +52,29 @@ button
   &-dialog
     margin: auto
     position: relative
+  &__size
+    width: 500px
   &__content
     position: relative
     background: #fff
-    padding: 35px 30px
+    padding: 60px 30px
     border: 0
     border-radius: 0
     text-align: center
     z-index: 25
+    &--nopadding
+      padding: 0
   &__light
     position: absolute
     left: 50%
     top: 50% 
     margin-left: -570px
     margin-top: -470px
+  &__mobila
+    position: absolute
+    left: 90%
+    top: 50%
+    margin-top: -142px  
   &__close
     display: block
     height: 56px
@@ -73,7 +82,7 @@ button
     background: #fff !important
     opacity: 1 !important 
     position: absolute
-    right: -65px
+    right: 15px
     top: 0
     box-shadow: 5px 8.7px 15px rgba(0, 0, 0, 0.2)
     transition: all .3s ease
@@ -122,6 +131,24 @@ button
   &__access
     color: #212121   
     font: 300 12px/18px $font-open-sans
++r(760)
+  .modal
+    &__close
+      right: -65px
+    &--size
+      max-width: none
+      width: 700px 
+      .modal__close
+        right: 0   
++r(992)
+  .modal  
+    &-lg
+      width: 900px !important
+      max-width: none
+    &__mobila
+      left: 100%   
+    &--size
+      width: 900px   
 .checkbox-btn
   &__control
     display: none
@@ -139,8 +166,7 @@ button
     text-transform: uppercase
     cursor: pointer
     text-align: center
-    background-color: #ebebeb
- 
+    background-color: #ebebeb 
 .body
   display: flex
   flex-direction: column
@@ -753,7 +779,7 @@ button
 .scheme
   padding: 85px 0
   &__heading
-    margin-bottom: 80px
+    margin-bottom: 30px
   &__container
     position: relative
     &:before
@@ -829,6 +855,20 @@ button
     display: none  
   &__icon
     width: 0
+.date
+  margin-bottom: 40px
+  &__icon
+    margin-right: 10px
+    line-height: 45px
+  &__info
+    display: inline-block  
+  &__text  
+    color: #212121 
+    font: 700 18px/26px $font-lora
+    text-transform: uppercase
+  &__number 
+    color: $color-orange
+    font: 700 18px/20px $font-lora 
 +r(760)
   .scheme
     &__icon
@@ -888,7 +928,16 @@ button
         background-color: $color-orange
     &__descr
       color: #212121
-      font: 400 14px/21px $font-lora  
+      font: 400 14px/21px $font-lora
++r(992)
+  .scheme
+    &__heading
+      margin-bottom: 80px    
+  .date
+    margin-bottom: 0    
++r(1200)
+  .date
+    padding-top: 15px        
 +comment("case style")      
 .case
   padding: 100px 0
@@ -1448,11 +1497,10 @@ button
   #map
     display: block
     height: 300px
-    width: 100%
-  &__container
-    position: relative
-    z-index: 25  
+    width: 100% 
   &__info
+    position: relative
+    z-index: 25
     padding: 60px 30px
     margin: 0 -15px
     background-color: white
@@ -1647,3 +1695,55 @@ button
       width: 0
     100%
       width: 289px
++comment("confident style")       
+.confident
+  &__title
+    font: 400 22px/26px $font-open-sans
+    color: #212121
+    margin-bottom: 20px
+  &__subtitle  
+    color: #212121
+    font: 400 16px/20px $font-open-sans
+    text-align: left
+    margin-bottom: 20px
+  &__heading
+    font: 400 22px/26px $font-open-sans
+    color: #212121
+    margin: 20px 0
+  &__text  
+    color: #212121
+    font: 400 16px/20px $font-open-sans
+    text-align: left
+    margin-bottom: 0
+  ul 
+    li
+      text-align: left
++comment("success style")     
+.header 
+  &--success
+    background: url(../img/headersuccessbg.jpg) no-repeat
+    background-size: cover
+  &__heading
+    &--fff
+      color: #fff
+.success     
+  &__heading
+    margin-bottom: 20px
+    &--text
+      color: $color-orange
+      font: 700 30px/36px $font-lora
+    &--span
+      display: block
+      font: 700 40px/52px $font-lora
+      text-transform: uppercase
+  &__text
+    text-shadow: 1px 1.7px 5px rgba(0, 0, 0, 0.75)
+    color: #fefefe
+    font: 400 20px/26px $font-lora
++r(760)
+  .success
+    &__heading
+      &--span    
+        font: 700 70px/72px $font-lora
+    &__text    
+      font: 400 24px/36px $font-lora

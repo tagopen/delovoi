@@ -21,6 +21,14 @@
     });
   });
 
+  var firstModalOpen = $("body").hasClass("modal-open");
+
+  $("#confident__modal").on('hidden.bs.modal', function()
+  {
+    if (!firstModalOpen)
+      $("body").addClass("modal-open");
+  });
+
   if( $( window ).width() >= 760 ) {
 
     $('.intro__image').matchHeight({
@@ -109,45 +117,6 @@ $(function($){
       $this.text(currentDate.format('DD/MM/YYYY'));
     });
   });
-
-/*CSS ANIMATION*/
-/*  if( $( window ).width() >= 760 && $( window ).width() < 992 ) {
-    $(window).scroll(function (){ 
-      $('.scheme__container').each(function (){
-       if ($(window).scrollTop() + $(window).height() >= $(this).offset().top){
-        setTimeout(function(){ $( ".scheme__icon--1" ).animate({width: "180px"}, 2000); },1000);
-        setTimeout(function(){ $( ".scheme__icon--2" ).animate({width: "180px"}, 2000); },3000);
-        setTimeout(function(){ $( ".scheme__icon--4" ).animate({width: "180px"}, 2000); },5000);
-        setTimeout(function(){ $( ".scheme__icon--5" ).animate({width: "180px"}, 2000); },7000);
-      } 
-    }); 
-    });﻿
-  };
-  if( $( window ).width() >= 992 && $( window ).width() < 1200 ) {
-    $(window).scroll(function (){ 
-      $('.scheme__container').each(function (){
-       if ($(window).scrollTop() + $(window).height() >= $(this).offset().top){
-        setTimeout(function(){ $( ".scheme__icon--1" ).animate({width: "220px"}, 2000); },1000);
-        setTimeout(function(){ $( ".scheme__icon--2" ).animate({width: "220px"}, 2000); },3000);
-        setTimeout(function(){ $( ".scheme__icon--4" ).animate({width: "220px"}, 2000); },5000);
-        setTimeout(function(){ $( ".scheme__icon--5" ).animate({width: "220px"}, 2000); },7000);
-      } 
-    }); 
-    });﻿
-  };
-  if ($( window ).width() > 1200)  {
-    $(window).scroll(function (){ 
-      $('.scheme__container').each(function (){
-       if ($(window).scrollTop() + $(window).height() >= $(this).offset().top){
-        setTimeout(function(){ $( ".scheme__icon--1" ).animate({width: "289px"}, 2000); },1000);
-        setTimeout(function(){ $( ".scheme__icon--2" ).animate({width: "289px"}, 2000); },3000);
-        setTimeout(function(){ $( ".scheme__icon--4" ).animate({width: "289px"}, 2000); },5000);
-        setTimeout(function(){ $( ".scheme__icon--5" ).animate({width: "289px"}, 2000); },7000);
-      } 
-    }); 
-    });﻿
-  };
-*/
 
   $(function () {
     $('.scheme__col').hover(

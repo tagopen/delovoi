@@ -15,8 +15,8 @@
     <meta name="MobileOptimized" content="320"/>
     <!--[if IEMobile]><meta http-equiv='cleartype' content='on' /><![endif]-->
     <!-- Replace favicon.ico and apple-touch-icon.png-->
-    <link rel="shortcut icon" type="image/png" href="img/logo/favicon.png">
-    <link rel="apple-touch-icon" type="image/png" href="img/logo/apple-touch-icon.png">
+    <link rel="shortcut icon" type="image/png" href="img/logo/favicon.ico">
+    <link rel="apple-touch-icon" type="image/png" href="img/logo/apple-touch-icon.ico">
     <!-- Disables automatic  of possible phone numbers and address in Safari on iOS-->
     <meta name="format-detection" content="telephone=no"/>
     <meta name="format-detection" content="address=no"/>
@@ -278,9 +278,17 @@
       </section>
       <section class="scheme">
         <div class="container">
-          <div class="row justify-content-center">
-            <div class="col-24 col-sm-18 col-lg-14 text-center">
+          <div class="row">
+            <div class="col-24 col-sm-18 offset-sm-3 col-lg-13 offset-lg-5 col-xl-14 offset-xl-4 text-center">
               <h2 class="heading scheme__heading"><span class="heading__text">Гарантированный спрос на Вашу квартиру уже через 8 дней</span><i class="ic ic--headingborder heading__icon"></i></h2>
+            </div>
+            <div class="col-24 col-lg-5 col-xl-4 text-center text-lg-left">
+              <div class="date"><i class="ic ic--date date__icon"></i>
+                <div class="date__info"> 
+                  <div class="date__text">Сегодня</div>
+                  <div class="date__number">     </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -622,12 +630,13 @@
             <div class="col-24 col-sm-20 offset-sm-2 col-md-14 offset-md-10 col-lg-14 offset-lg-10">
               <form class="contact__form contactForm contactForm--modal" method="post" action="./mail/mail.php">
                 <div class="row">
-                  <div class="col-24 col-xl-9 form-group form__group">
+                  <div class="col-24 col-xl-8 form__group">
                     <label class="input__heading input__heading--black">Ваш телефон</label>
                     <input class="form-control form__input form__input--small form__phone form__input--phone" aria-invalid="false" placeholder="+38 (___) ___-__-__" name="phone" type="tel" required>
+                    <p class="help-block with-errors"> </p>
                   </div>
-                  <div class="col-24 col-xl-15 d-flex align-items-end">
-                    <button class="button button--size form__btn plan__btn" name="form" value="Маркетинговый план" type="submit" data-loading-text="&lt;i class='fa fa-circle-o-notch fa-spin'&gt;&lt;/i&gt; Файл отправляется..."><span class="plan__btn--text">Получить маркетинговый план</span></button>
+                  <div class="col-24 col-xl-16 d-flex align-items-end">
+                    <button class="button button--size form__btn plan__btn" name="form" value="Маркетинговый план" type="submit" data-loading-text="&lt;i class='fa fa-circle-o-notch fa-spin'&gt;&lt;/i&gt; Файл отправляется..."><span class="plan__btn--text">Узнать о возможных покупателях</span></button>
                   </div>
                   <div class="col-24">
                     <div class="success"></div>
@@ -778,7 +787,7 @@
         <div id="map">
           <script>
             function initMap() {
-              var uluru = {lat: 50.428867, lng: 30.517704};
+              var uluru = {lat: 50.42970082, lng: 30.51751088};
               var map = new google.maps.Map(document.getElementById('map'), {
                 zoom: 17,
                 mapTypeControl: false,
@@ -851,7 +860,7 @@
           <form class="contact__form contactForm contactForm--modal" method="post" action="./mail/mail.php">
             <div class="row">
               <div class="col-24"> 
-                <div class="form-group">
+                <div>
                   <input class="form-control form__input modal__input form__input--phone form__phone" aria-invalid="false" placeholder="+38 (___) ___-__-__" name="phone" type="tel" data-error="Введите телефон" required>
                   <p class="help-block with-errors"></p>
                 </div>
@@ -863,7 +872,8 @@
                 <div class="success"></div>
               </div>
               <div class="col-24">
-                <div class="modal__access">Мы гарантируем безопасность Ваших данных. Нажимая на кнопку, вы соглашаетесь с Политикой конфиденциальности</div>
+                <div class="modal__access">Мы гарантируем безопасность Ваших данных. Нажимая на кнопку, вы соглашаетесь с <a data-toggle="modal" href="#confident__modal">Политикой конфиденциальности</a>
+                </div>
               </div>
             </div>
           </form>
@@ -871,8 +881,8 @@
       </div>
     </div>
     <div class="modal fade" id="price__modal" tabindex="-1" role="dialog" aria-hidden="true">
-      <div class="modal-dialog modal__size">
-        <div class="modal-content modal__content">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content modal__content modal__content--nopadding">
           <button class="close modal__close" type="button" data-dismiss="modal" aria-hidden="true">
             <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewbox="0 0 30 30">
               <metadata>
@@ -885,12 +895,12 @@
               <defs></defs>
               <path class="modal__close--icon" d="M1199.01,185.281l-0.72.732L1184,171.37l-14.29,14.643-0.72-.732,14.3-14.644-13.58-13.911,0.71-.732L1184,169.905l13.58-13.911,0.71,0.732-13.58,13.911Z" transform="translate(-1169 -156)"></path>
             </svg>
-          </button><img class="img-fluid" src="img/graphic.jpg" alt="График">
+          </button><img class="img-fluid" src="img/graphicbig.jpg" alt="График">
         </div>
       </div>
     </div>
     <div class="modal fade" id="footer__modal" tabindex="-1" role="dialog" aria-hidden="true">
-      <div class="modal-dialog modal__size"><i class="ic ic--light modal__light"></i>
+      <div class="modal-dialog modal__size"><i class="ic ic--light modal__light"></i><i class="ic ic--phone modal__mobila hidden-sm-down"> </i>
         <div class="modal-content modal__content">
           <button class="close modal__close" type="button" data-dismiss="modal" aria-hidden="true">
             <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewbox="0 0 30 30">
@@ -910,21 +920,21 @@
           <form class="contact__form contactForm contactForm--modal" method="post" action="./mail/mail.php">
             <div class="row">
               <div class="col-24"> 
-                <div class="form-group">
+                <div>
                   <input class="form-control form__input modal__input form__input--phone form__phone" aria-invalid="false" placeholder="+38 (___) ___-__-__" name="phone" type="tel" data-error="Введите телефон" required>
                   <p class="help-block with-errors"></p>
                 </div>
               </div>
               <div class="col-24">
-                <div class="form-group">
+                <div>
                   <div class="row justify-content-between">
-                    <div class="col-12">
+                    <div class="col-24 col-md-12">
                       <div class="checkbox-btn">
                         <input class="checkbox-btn__control" id="period-1" type="radio" name="period[]" value="Сейчас" checked>
                         <label class="checkbox-btn__box" for="period-1">Сейчас</label>
                       </div>
                     </div>
-                    <div class="col-12">
+                    <div class="col-24 col-md-12">
                       <div class="checkbox-btn">
                         <input class="checkbox-btn__control" id="period-2" type="radio" name="period[]" value="По времени">
                         <label class="checkbox-btn__box" for="period-2">По времени</label>
@@ -934,7 +944,7 @@
                 </div>
               </div>
               <div class="col-24"> 
-                <div class="form-group">
+                <div>
                   <input class="form-control form__input modal__input form__input--time form__time" aria-invalid="false" placeholder="Например: завтра в 12:00" name="time" type="text" data-error="Введите, когда вам позвонить">
                   <p class="help-block with-errors"></p>
                 </div>
@@ -944,11 +954,168 @@
                 <div class="success"></div>
               </div>
               <div class="col-24">
-                <div class="modal__access">Мы гарантируем безопасность Ваших данных. Нажимая на кнопку, вы соглашаетесь с <a href="#">Политикой конфиденциальности</a>
+                <div class="modal__access">Мы гарантируем безопасность Ваших данных. Нажимая на кнопку, вы соглашаетесь с <a data-toggle="modal" href="#confident__modal">Политикой конфиденциальности</a>
                 </div>
               </div>
             </div>
           </form>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="confident__modal" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog modal--size">
+        <div class="modal-content modal__content">
+          <button class="close modal__close" type="button" data-dismiss="modal" aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewbox="0 0 30 30">
+              <metadata>
+                <x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.6-c138 79.159824, 2016/09/14-01:09:01        ">
+                  <rdf:rdf xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+                    <rdf:description rdf:about=""></rdf:description>
+                  </rdf:rdf>
+                </x:xmpmeta>
+              </metadata>
+              <defs></defs>
+              <path class="modal__close--icon" d="M1199.01,185.281l-0.72.732L1184,171.37l-14.29,14.643-0.72-.732,14.3-14.644-13.58-13.911,0.71-.732L1184,169.905l13.58-13.911,0.71,0.732-13.58,13.911Z" transform="translate(-1169 -156)"></path>
+            </svg>
+          </button>
+          <div class="confident">
+            <div class="confident__title">ПОЛИТИКА КОНФИДЕНЦИАЛЬНОСТИ</div>
+            <div class="confident__subtitle">
+              Настоящая Политика конфиденциальности персональных данных (далее - политика конфиденциальности) действует
+              в отношении всей информации, которую  сайт "БГ Деловая", расположенный на доменном имени delovaya.com.ua
+              может получить о Пользователе во время использования сайта, программ и продуктов сайта "БГ Деловая".
+            </div>
+            <p class="confident__heading">1. ОПРЕДЕЛЕНИЕ ТЕРМИНОВ</p>
+            <p class="confident__text">1.1. В настоящей Политике конфиденциальности используются следующие термины:</p>
+            <p class="confident__text">1.1.1. "Администрация сайта (далее - Администрация сайта)" - уполномоченные сотрудники на управление сайтом, действующие от имени Индивидуального предпринимателя Ескина Артёма Евгеньевича, которые организуют и (или) осуществляют обработку персональных данных, а также определяют цели обработки персональных данных, состав персональных данных, подлежащих обработке, действия (операции), совершаемые с персональными данными.</p>
+            <p class="confident__text">1.1.2. «Персональные данные» - любая информация, относящаяся к прямо или косвенно определенному или определяемому физическому лицу (субъекту персональных данных).</p>
+            <p class="confident__text">1.1.3. «Обработка персональных данных» - любое действие (операция) или совокупность действий (операций), совершаемых с использованием средств автоматизации или без использования таких средств с персональными данными, включая сбор, запись, систематизацию, накопление, хранение, уточнение (обновление, изменение), извлечение, использование, передачу (распространение, предоставление, доступ), обезличивание, блокирование, удаление, уничтожение персональных данных.</p>
+            <p class="confident__text">1.1.4.«Конфиденциальность персональных данных» - обязательное для соблюдения Оператором или иным получившим доступ к персональным данным лицом требование не допускать их распространения без согласия субъекта персональных данных или наличия иного законного основания.</p>
+            <p class="confident__text">1.1.5. «Пользователь сайта "БГ Деловая" (далее ? Пользователь)» – лицо, имеющее доступ к Сайту, посредством сети Интернет и использующее Сайт.</p>
+            <p class="confident__text">1.1.6. «Cookies» — небольшой фрагмент данных, отправленный веб-сервером и хранимый на компьютере пользователя, который веб-клиент или веб-браузер каждый раз пересылает веб-серверу в HTTP-запросе при попытке открыть страницу соответствующего сайта.</p>
+            <p class="confident__text">1.1.7. «IP-адрес» — уникальный сетевой адрес узла в компьютерной сети, построенной по протоколу IP.</p>
+            <p class="confident__heading">2. ОБЩИЕ ПОЛОЖЕНИЯ</p>
+            <p class="confident__text">2.1.  Использование Пользователем сайта "БГ Деловая" означает согласие с настоящей Политикой конфиденциальности и условиями обработки персональных данных Пользователя.</p>
+            <p class="confident__text">2.2. В случае несогласия с условиями Политики конфиденциальности Пользователь должен прекратить использование сайта.</p>
+            <p class="confident__text">2.3.Настоящая Политика конфиденциальности применяется только к сайту сайт "БГ Деловая". Сайт не контролирует и не несет ответственность за сайты третьих лиц, на которые Пользователь может перейти по ссылкам, доступным на сайте "БГ Деловая".</p>
+            <p class="confident__text">2.4. Администрация сайта не проверяет достоверность персональных данных, предоставляемых Пользователем сайта "БГ Деловая".</p>
+            <p class="confident__heading">3. ПРЕДМЕТ ПОЛИТИКИ КОНФИДЕНЦИАЛЬНОСТИ</p>
+            <p class="confident__text">3.1.  Настоящая Политика конфиденциальности устанавливает обязательства Администрации сайта "БГ Деловая" по неразглашению и обеспечению режима защиты конфиденциальности персональных данных, которые Пользователь предоставляет по запросу Администрации сайта при регистрации на сайте "БГ Деловая".</p>
+            <p class="confident__text">3.2. Персональные данные, разрешённые к обработке в рамках настоящей Политики конфиденциальности, предоставляются Пользователем путём заполнения регистрационных форм на данном Сайте и могут включать в себя следующую информацию:</p>
+            <p class="confident__text">3.2.1. фамилию, имя, отчество Пользователя;</p>
+            <p class="confident__text">3.2.2. контактный телефон Пользователя;</p>
+            <p class="confident__text">3.2.3. адрес электронной почты (e-mail) Пользователя;</p>
+            <p class="confident__text">3.2.4. адрес доставки Товара(ов) Пользователю;</p>
+            <p class="confident__text">3.2.5. место жительство Пользователя;</p>
+            <p class="confident__text">3.2.6. логин Пользователя.</p>
+            <p class="confident__text">3.3. Сайт "БГ Деловая" защищает Данные, которые автоматически передаются в процессе просмотра рекламных блоков и при посещении страниц, на которых установлен статистический скрипт системы ("пиксель"):</p>
+            <ul>
+              <li>IP адрес;</li>
+              <li>Информация из cookies;</li>
+              <li>информация о браузере (или иной программе, которая осуществляет доступ к показу рекламы);</li>
+              <li>Время доступа;</li>
+              <li>Адрес страницы, на которой расположен рекламный блок;</li>
+              <li>Реферер (адрес предыдущей страницы).</li>
+            </ul>
+            <p class="confident__text">3.3.1. Отключение cookies может повлечь невозможность доступа к частям сайта "БГ Деловая", требующим авторизации.</p>
+            <p class="confident__text">3.3.2. Сайт "БГ Деловая" осуществляет сбор статистики об IP-адресах своих посетителей. Данная информация используется с целью выявления и решения технических проблем, для контроля законности проводимых финансовых платежей.</p>
+            <p class="confident__text">
+              3.4. Любая иная персональная информация неоговоренная выше (история покупок, используемые браузеры и
+              операционные системы и т.д.) подлежит надежному хранению и нераспространению, за исключением случаев,
+              предусмотренных в п.п. 5.2. и 5.3. настоящей Политики конфиденциальности.
+            </p>
+            <p class="confident__heading">4. ЦЕЛИ СБОРА ПЕРСОНАЛЬНОЙ ИНФОРМАЦИИ ПОЛЬЗОВАТЕЛЯ</p>
+            <p class="confident__text">4.1. Персональные данные Пользователя Администрация сайта "БГ Деловая" может использовать в целях:</p>
+            <p class="confident__text">4.1.1. Идентификации Пользователя, зарегистрированного на сайте, для оформления заявки и (или) заключения Договора дистанционным способом с сайт "БГ Деловая".</p>
+            <p class="confident__text">4.1.2. Предоставления Пользователю доступа к персонализированным ресурсам Сайта интернет-магазина.</p>
+            <p class="confident__text">4.1.3. Установления с Пользователем обратной связи, включая направление уведомлений, запросов, касающихся использования сайта "БГ Деловая", оказания услуг, обработка запросов и заявок от Пользователя.</p>
+            <p class="confident__text">4.1.4 Определения места нахождения Пользователя для обеспечения безопасности, предотвращения мошенничества.</p>
+            <p class="confident__text">4.1.5 Подтверждения достоверности и полноты персональных данных, предоставленных Пользователем.</p>
+            <p class="confident__text">4.1.6 Создания учетной записи для совершения покупок, если Пользователь дал согласие на создание учетной записи.</p>
+            <p class="confident__text">
+               4.1.7 Уведомления Пользователя сайта "БГ Деловая" о состоянии заявки.</p>
+            <p class="confident__text">4.1.8 Обработки и получения платежей, подтверждения налога или налоговых льгот, оспаривания платежа.</p>
+            <p class="confident__text">4.1.9 Предоставления Пользователю эффективной клиентской и технической поддержки при возникновении проблем связанных с использованием сайта "БГ Деловая".</p>
+            <p class="confident__text">4.1.10 Предоставления Пользователю с его согласия, обновлений продукции, специальных предложений, информации о ценах, новостной рассылки и иных сведений от имени сайта "БГ Деловая" или от имени партнеров сайта.</p>
+            <p class="confident__text">4.1.11 Осуществления рекламной деятельности с согласия Пользователя.</p>
+            <p class="confident__text">4.1.12 Предоставления доступа Пользователю на сайты или сервисы партнеров сайта "БГ Деловая" с целью получения продуктов, обновлений и услуг.</p>
+            <p class="confident__heading">5. СПОСОБЫ И СРОКИ ОБРАБОТКИ ПЕРСОНАЛЬНОЙ ИНФОРМАЦИИ</p>
+            <p class="confident__text">
+              5.1. Обработка персональных данных Пользователя осуществляется без ограничения срока, любым законным способом,
+              в том числе в информационных системах персональных данных с использованием средств автоматизации или без
+              использования таких средств.
+            </p>
+            <p class="confident__text">5.2. Пользователь соглашается с тем, что Администрация сайта вправе передавать персональные данные третьим лицам, в частности, организациями почтовой связи, операторам электросвязи, исключительно в целях выполнения заявки Пользователя, оформленного на сайте "БГ Деловая".</p>
+            <p class="confident__text">5.3. Персональные данные Пользователя могут быть переданы уполномоченным органам государственной власти Украины только по основаниям и в порядке, установленным законодательством Украины.</p>
+            <p class="confident__text">
+              5.4. При утрате или разглашении персональных данных Администрация сайта информирует Пользователя об
+              утрате или разглашении персональных данных.
+            </p>
+            <p class="confident__text">
+              5.5. Администрация сайта принимает необходимые организационные и технические меры для защиты персональной
+              информации Пользователя от неправомерного или случайного доступа, уничтожения, изменения, блокирования,
+              копирования, распространения, а также от иных неправомерных действий третьих лиц.
+            </p>
+            <p class="confident__text">
+              5.6. Администрация сайта совместно с Пользователем принимает все необходимые меры по предотвращению
+              убытков или иных отрицательных последствий, вызванных утратой или разглашением персональных данных
+              Пользователя.
+            </p>
+            <p class="confident__heading">6. ОБЯЗАТЕЛЬСТВА СТОРОН</p>
+            <p class="confident__text bold">6.1. Пользователь обязан:</p>
+            <p class="confident__text">6.1.1. Предоставить информацию о персональных данных, необходимую для пользования сайтом "БГ Деловая".</p>
+            <p class="confident__text">6.1.2. Обновить, дополнить предоставленную информацию о персональных данных в случае изменения данной информации.</p>
+            <p class="confident__text bold">6.2. Администрация сайта обязана:</p>
+            <p class="confident__text">
+              6.2.1. Использовать полученную информацию исключительно для целей, указанных в п. 4 настоящей
+              Политики конфиденциальности.
+            </p>
+            <p class="confident__text">
+              6.2.2. Обеспечить хранение конфиденциальной информации в тайне, не разглашать без предварительного
+              письменного разрешения Пользователя, а также не осуществлять продажу, обмен, опубликование, либо разглашение
+              иными возможными способами переданных персональных данных Пользователя, за исключением п.п. 5.2. и 5.3.
+              настоящей Политики Конфиденциальности.
+            </p>
+            <p class="confident__text">
+              6.2.3. Принимать меры предосторожности для защиты конфиденциальности персональных данных Пользователя
+              согласно порядку, обычно используемого для защиты такого рода информации в существующем деловом обороте.
+            </p>
+            <p class="confident__text">
+              6.2.4. Осуществить блокирование персональных данных, относящихся к соответствующему Пользователю, с момента
+              обращения или запроса Пользователя или его законного представителя либо уполномоченного органа по защите
+              прав субъектов персональных данных на период проверки, в случае выявления недостоверных персональных данных
+              или неправомерных действий.
+            </p>
+            <p class="confident__heading">7. ОТВЕТСТВЕННОСТЬ СТОРОН</p>
+            <p class="confident__text">7.1. Администрация сайта, не исполнившая свои обязательства, несёт ответственность за убытки, понесённые Пользователем в связи с неправомерным использованием персональных данных, в соответствии с законодательством Украины, за исключением случаев, предусмотренных п.п. 5.2., 5.3. и 7.2. настоящей Политики Конфиденциальности.</p>
+            <p class="confident__text">
+              7.2. В случае утраты или разглашения Конфиденциальной информации Администрация сайта не несёт
+              ответственность, если данная конфиденциальная информация:
+            </p>
+            <p class="confident__text">7.2.1. Стала публичным достоянием до её утраты или разглашения.</p>
+            <p class="confident__text">7.2.2. Была получена от третьей стороны до момента её получения Администрацией сайта.</p>
+            <p class="confident__text">7.2.3. Была разглашена с согласия Пользователя.</p>
+            <p class="confident__heading">8. РАЗРЕШЕНИЕ СПОРОВ</p>
+            <p class="confident__text">
+              8.1. До обращения в суд с иском по спорам, возникающим из отношений между Пользователем сайта
+              Интернет-магазина и Администрацией сайта, обязательным является предъявление претензии (письменного
+              предложения о добровольном урегулировании спора).
+            </p>
+            <p class="confident__text">
+              8.2. Получатель претензии в течение 30 календарных дней со дня получения претензии, письменно уведомляет
+              заявителя претензии о результатах рассмотрения претензии.
+            </p>
+            <p class="confident__text">8.3.  При недостижении соглашения спор будет передан на рассмотрение в судебный орган в соответствии с действующим законодательством Украины.</p>
+            <p class="confident__text">8.4. К настоящей Политике конфиденциальности и отношениям между Пользователем и Администрацией сайта применяется действующее законодательство Украины.</p>
+            <p class="confident__heading">9. ДОПОЛНИТЕЛЬНЫЕ УСЛОВИЯ</p>
+            <p class="confident__text">9.1. Администрация сайта вправе вносить изменения в настоящую Политику конфиденциальности без согласия Пользователя.</p>
+            <p class="confident__text">
+              9.2. Новая Политика конфиденциальности вступает в силу с момента ее размещения на Сайте интернет-магазина, если
+              иное не предусмотрено новой редакцией Политики конфиденциальности.
+            </p>
+            <p class="confident__text">9.3. Все предложения или вопросы по настоящей Политике конфиденциальности следует адресовать на электронный адрес: bg.delovaya@gmail.com</p>
+            <p class="confident__text">9.4. Действующая Политика конфиденциальности размещена на странице по адресу delovaya.com.ua</p>
+          </div>
         </div>
       </div>
     </div>
