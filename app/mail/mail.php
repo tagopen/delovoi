@@ -61,7 +61,7 @@
     $body .= "Удобное время: " . $post["user_time"] . chr(10) . chr(13);
   }
 
-  if ( !empty($_POST["period"])  && (isset($_POST["time"])) ) {
+  if ( !empty($_POST["period"])  && (isset($_POST["period"])) ) {
     if (is_array($_POST['period'])) {
       $post["period"] = implode(", ", $_POST["period"]);
     } else {
