@@ -16,7 +16,7 @@ $(function() {
           time               = $form.find('[name=time]').val(),
           period             = new Array();
 
-      $("[name^=\"period\"]:checked").each(function() {
+      $form.find("[name^=\"period\"]:checked").each(function() {
         if ($(this).prop("checked")) {
           var radioText = $(this).siblings().text();
 
