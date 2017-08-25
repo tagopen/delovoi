@@ -1590,6 +1590,11 @@ button:hover, button:focus {
   margin-bottom: 50px;
 }
 
+.tool__name--link {
+  display: inline-block;
+  position: relative;
+}
+
 .tool__name--span {
   font: 400 22px/24px "Lora", sans-serif;
   color: #e7b869;
@@ -1751,6 +1756,7 @@ button:hover, button:focus {
   background-image: -webkit-gradient(linear, left bottom, left top, from(white), to(#e9e9e9));
   background-image: -webkit-linear-gradient(bottom, white 0%, #e9e9e9 100%);
   background-image: linear-gradient(to top, white 0%, #e9e9e9 100%);
+  overflow: hidden;
 }
 
 .price__heading {
@@ -1773,6 +1779,35 @@ button:hover, button:focus {
 
 .price__text--span {
   font: 700 18px/27px "Open Sans", sans-serif;
+}
+
+.price__text--link {
+  display: inline-block;
+  position: relative;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+  cursor: pointer;
+}
+
+.price__text--link:hover span, .price__text--link:focus span {
+  opacity: 1;
+  visibility: visible;
+}
+
+.price__text--link span {
+  width: 300px;
+  background: #fff;
+  padding: 15px;
+  display: inline-block;
+  position: absolute;
+  left: -135px;
+  top: 0;
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+  font: 400 14px/18px "Open Sans", sans-serif;
+  text-align: left;
 }
 
 .price__image {
@@ -1809,6 +1844,12 @@ button:hover, button:focus {
           transform: scale(1.2);
 }
 
+@media only screen and (min-width: 576px) {
+  .price__text--link span {
+    left: -200px;
+  }
+}
+
 @media only screen and (min-width: 760px) {
   .price__title {
     font: 700 24px/33px "Lora", sans-serif;
@@ -1816,6 +1857,10 @@ button:hover, button:focus {
   }
   .price__text {
     text-align: left;
+  }
+  .price__text--link span {
+    left: 50%;
+    margin-left: -150px;
   }
 }
 
@@ -2024,6 +2069,13 @@ button:hover, button:focus {
           border-radius: 50%;
   color: #fff;
   font: 700 14px/24px "Lora", sans-serif;
+}
+
+.scheme__descr img {
+  display: block;
+  margin: 10px auto;
+  max-height: 150px;
+  max-width: 100%;
 }
 
 .scheme__text {
@@ -2255,7 +2307,7 @@ button:hover, button:focus {
 
 .case__dots {
   position: relative;
-  width: 100px;
+  width: 190px;
   margin: 0 auto;
 }
 
@@ -2305,9 +2357,6 @@ button:hover, button:focus {
   .case__point {
     margin-bottom: 10px;
   }
-  .case__info--mob {
-    display: block;
-  }
   .case__info--desctop {
     display: none;
   }
@@ -2319,6 +2368,7 @@ button:hover, button:focus {
   .case__dots {
     display: inline-block;
     position: relative;
+    margin-left: 90px;
     top: -100px;
   }
   .case__dots .slick-dots {
@@ -2362,10 +2412,10 @@ button:hover, button:focus {
   }
   .case__dots {
     position: static;
-    padding-left: 40px;
+    margin-left: 0;
   }
   .case__dots .slick-dots {
-    bottom: 120px;
+    bottom: 100px;
   }
 }
 
