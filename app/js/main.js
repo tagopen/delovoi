@@ -246,4 +246,42 @@ $(function($){
     });
   });
 
+  $(function() {
+    let min = 49,
+        max = 59,
+        randomVal = 0,
+        prevData = 0,
+        date = new Date(),
+        $dateText = $('.heading__text--client'),
+        period = 24 * 60 * 60; // 24 hours
+
+    date.setTime(date.getTime() + (period * 1000));
+
+    if (!$.cookie('client') || !localStorage.getItem('client')) {
+      //get your_data from server, then...
+      prevData = parseInt( $dateText.text() );
+
+      do {
+        randomVal = getRandomInt(min, max);
+      } while (prevData == randomVal)
+
+      localStorage.setItem('client', randomVal );
+      $dateText.text(randomVal);
+      $.cookie('client', 1, { expires: date });
+    } else {
+      let your_data = localStorage.getItem('client');
+      $dateText.text(your_data);
+    }
+
+    /**
+    * Get a random integer between `min` and `max`.
+    * 
+    * @param {number} min - min number
+    * @param {number} max - max number
+    * @return {int} a random integer
+    */
+    function getRandomInt(min, max) {
+      return Math.floor(Math.random() * (max - min + 1) + min);
+    }
+  });
 })(jQuery); // End of use strict
