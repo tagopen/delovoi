@@ -38,6 +38,7 @@
   $_POST = filter_input_array(INPUT_POST, FILTER_SANITIZE_STRING);
 
   if (!$_POST) {
+    echo "Форма пустая!";
     exit;
   }
   
