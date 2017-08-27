@@ -416,6 +416,10 @@ button
   height: 550px
   &__container
     position: relative
+    img
+      position: absolute
+      top: 230px
+      right: 50%
     &:before
       content: ''
       position: absolute
@@ -426,7 +430,62 @@ button
       height: 400px
       background: url(../img/setkasm.png) repeat
   &__heading
-    margin-top: 45px    
+    margin-top: 45px  
+  &__loader
+    display: inline-block
+    position: relative
+    top: -100px
+    cursor: pointer
+    &:hover
+      &:before
+        background-color: $color-orange 
+      &:after
+        color: #fff  
+    &:before
+      content: ''
+      display: block
+      position: absolute
+      left: 50%
+      top: 50%
+      margin-left: -38px
+      margin-top: -41px
+      width: 76px
+      height: 76px
+      background-color: rgba(255,255,255, .6)
+      border-radius: 50%
+      transition: all .3s ease
+    &:after
+      content: '\f0da'
+      display: inline-block
+      position: absolute
+      font-size: 30px
+      color: $color-orange 
+      line-height: 106px
+      left: 50%
+      top: 0
+      margin-left: -4px
+      font-family: $font-awesome  
+      transition: all .3s ease  
+  &__time
+    font: 700 120px/120px $font-lora     
+    position: relative
+    display: inline-block
+    top: 150px
+    color: $color-orange 
+    text-shadow: 7.5px 13px 25px rgba(0, 0, 0, 0.2)
+  &__elem   
+    position: absolute
+    color: #212121
+    font: 400 16px/20px $font-open-sans 
+    &--1
+      top: 50px
+    &--2  
+      top: 85px
+      left: 40px 
++r(480)
+  .video
+    &__loader
+      top: 50px             
 +r(760)
   .video
     &__image
@@ -450,41 +509,9 @@ button
         top: 85px
       &--2  
         top: 150px
-        left: 90px 
+        left: 90px
     &__loader
-      display: inline-block
-      position: relative
-      cursor: pointer
-      &:hover
-        &:before
-          background-color: $color-orange 
-        &:after
-          color: #fff  
-      &:before
-        content: ''
-        display: block
-        position: absolute
-        left: 50%
-        top: 50%
-        margin-left: -38px
-        margin-top: -41px
-        width: 76px
-        height: 76px
-        background-color: rgba(255,255,255, .6)
-        border-radius: 50%
-        transition: all .3s ease
-      &:after
-        content: '\f0da'
-        display: inline-block
-        position: absolute
-        font-size: 30px
-        color: $color-orange 
-        line-height: 106px
-        left: 50%
-        top: 0
-        margin-left: -4px
-        font-family: $font-awesome  
-        transition: all .3s ease 
+      top: 0     
 +r(1200)
   .video
     &__image

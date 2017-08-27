@@ -2,11 +2,12 @@ section.video#video
   .video__image.hidden-sm-down.animate(data-animation="fadeInUp")
     img.img-fluid(src="img/videoimg.jpg", alt="Здание")
   .container.video__container.animate(data-animation="fadeInUp")
+    img.img-fluid.hidden-md-up(src="img/videoimg.jpg", alt="Здание")
     .row
       .col-24.col-xl-14.offset-xl-10.text-center
         h2.heading.video__heading
           span.heading__text!=content.index.video.heading 
-      .col-12.offset-12.col-lg-11.offset-lg-13.hidden-sm-down
+      .col-12.offset-12.col-lg-11.offset-lg-13
         .video__time!=content.index.video.time
           .video__elem.video__elem--1!=content.index.video.elem1
           .video__elem.video__elem--2!=content.index.video.elem2
