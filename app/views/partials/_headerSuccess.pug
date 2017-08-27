@@ -12,10 +12,26 @@ header.header.header--success
             .header__number
               a.header__link(href!=item.href)!= item.text 
     .row
-      .col-24.col-lg-11
+      .col-24.col-lg-12
         .success
           .success__heading
             .success__heading--text!=content.success.content.heading
             i.ic.ic--headingborderright
           .success__text!=content.success.content.text  
+      .col-24.col-lg-11
+        .success__fb.text-center
+          .fb-page(data-href='https://www.facebook.com/bg.delovaya/', data-tabs='timeline', data-small-header='false', data-adapt-container-width='true', data-hide-cover='false', data-show-facepile='true')
+            blockquote.fb-xfbml-parse-ignore(cite='https://www.facebook.com/bg.delovaya/')
+              a(href='https://www.facebook.com/bg.delovaya/') БГ "Деловая"
+          #fb-root
+          script.
+            (function(d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.src = "//connect.facebook.net/ru_RU/sdk.js#xfbml=1&version=v2.10";
+            fjs.parentNode.insertBefore(js, fjs);
+            }(document, 'script', 'facebook-jssdk'));
+
+    
 

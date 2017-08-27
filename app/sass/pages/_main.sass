@@ -197,6 +197,14 @@ button
   background: url(../img/headerbg.jpg) no-repeat
   background-size: cover
   min-height: 100vh
+  &--b
+    background: url(../img/headerbg-b.jpg) no-repeat
+    background-size: cover
+    background-position: center
+  &--c  
+    background: url(../img/headerbgc.jpg) no-repeat
+    background-size: cover
+    background-position: center
   &--2
     background: url(../img/headerbg2.jpg) no-repeat
     background-size: cover
@@ -242,6 +250,8 @@ button
     color: #fff
     text-transform: uppercase   
     margin-bottom: 20px
+    &--b
+      text-shadow: 2.5px 4.3px 10px rgba(0, 0, 0, 0.55)
     .ic
       position: absolute
       &--lefthead
@@ -254,10 +264,14 @@ button
     font: 400 24px/36px $font-lora
     color: #fff
     margin-bottom: 30px
+    &--b
+      margin-bottom: 30px
   &__text
     font: 400 14px/20px $font-open-sans  
     color: $color-orange 
     margin-bottom: 15px
+    &--b
+      color: #fff
   &__btn
     background-color: #e7b869
     cursor: pointer
@@ -270,6 +284,8 @@ button
       .header__btn--text
         &:before
           left: 0
+    &--b
+      background: #fff      
     &--text
       position: relative
       display: inline-block
@@ -288,7 +304,9 @@ button
         left: -100%
         transition: all .6s ease
   &__scroll
+    text-align: center
     &--link
+      text-align: center
       position: relative
       display: inline-block
       cursor: pointer
@@ -360,6 +378,8 @@ button
     &__subtitle
       font: 400 30px/45px $font-lora
       margin-bottom: 100px
+      &--b
+        margin-bottom: 30px
     &__text
       font: 400 18px/20px $font-open-sans 
     &__btn
@@ -384,7 +404,7 @@ button
     margin-bottom: 25px
     line-height: 196px
   &__img 
-    display: inline-block   
+    display: inline-block    
 +r(992)
   .intro
     padding-bottom: 160px
@@ -1411,8 +1431,22 @@ button
         top: 0
   &__dots
     position: relative 
-    width: 100px 
-    margin: 0 auto   
+    width: 120px 
+    margin: 0 auto  
+  &__iframe
+    position: relative
+    height: 300px
+    iframe
+      position: absolute
+      left: 0
+      top: 0
+      height: 100%
+      width: 100%   
+  &__modal
+    margin: auto
+    width: 320px   
+    .modal__close
+      top: -55px 
 +r(760)
   .comment
     &__name
@@ -1430,6 +1464,14 @@ button
       top: -210px
       .slick-dots
         bottom: 40px 
+    &__iframe
+      position: relative
+      height: 480px  
+    &__modal
+      width: 600px
+      max-width: none  
+      .modal__close
+        top: 0   
 +r(992)
   .comment
     &__arrows
@@ -1445,6 +1487,8 @@ button
     &__name
       left: -228px
       padding-left: 105px
+    &__modal
+      width: 800px  
 +r(1200)      
   .comment
     &__dots
@@ -1782,6 +1826,7 @@ button
     text-shadow: 1px 1.7px 5px rgba(0, 0, 0, 0.75)
     color: #fefefe
     font: 400 20px/26px $font-lora
+    margin-bottom: 20px
 +r(760)
   .success
     &__heading

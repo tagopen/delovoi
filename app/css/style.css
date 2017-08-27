@@ -1136,6 +1136,18 @@ button:hover, button:focus {
   min-height: 100vh;
 }
 
+.header--b {
+  background: url(../img/headerbg-b.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.header--c {
+  background: url(../img/headerbgc.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
 .header--2 {
   background: url(../img/headerbg2.jpg) no-repeat;
   background-size: cover;
@@ -1203,6 +1215,10 @@ button:hover, button:focus {
   margin-bottom: 20px;
 }
 
+.header__title--b {
+  text-shadow: 2.5px 4.3px 10px rgba(0, 0, 0, 0.55);
+}
+
 .header__title .ic {
   position: absolute;
 }
@@ -1223,10 +1239,18 @@ button:hover, button:focus {
   margin-bottom: 30px;
 }
 
+.header__subtitle--b {
+  margin-bottom: 30px;
+}
+
 .header__text {
   font: 400 14px/20px "Open Sans", sans-serif;
   color: #e7b869;
   margin-bottom: 15px;
+}
+
+.header__text--b {
+  color: #fff;
 }
 
 .header__btn {
@@ -1241,6 +1265,10 @@ button:hover, button:focus {
 
 .header__btn:hover .header__btn--text:before, .header__btn:focus .header__btn--text:before {
   left: 0;
+}
+
+.header__btn--b {
+  background: #fff;
 }
 
 .header__btn--text {
@@ -1265,7 +1293,12 @@ button:hover, button:focus {
   transition: all .6s ease;
 }
 
+.header__scroll {
+  text-align: center;
+}
+
 .header__scroll--link {
+  text-align: center;
   position: relative;
   display: inline-block;
   cursor: pointer;
@@ -1358,6 +1391,9 @@ button:hover, button:focus {
   .header__subtitle {
     font: 400 30px/45px "Lora", sans-serif;
     margin-bottom: 100px;
+  }
+  .header__subtitle--b {
+    margin-bottom: 30px;
   }
   .header__text {
     font: 400 18px/20px "Open Sans", sans-serif;
@@ -2843,8 +2879,30 @@ button:hover, button:focus {
 
 .comment__dots {
   position: relative;
-  width: 100px;
+  width: 120px;
   margin: 0 auto;
+}
+
+.comment__iframe {
+  position: relative;
+  height: 300px;
+}
+
+.comment__iframe iframe {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.comment__modal {
+  margin: auto;
+  width: 320px;
+}
+
+.comment__modal .modal__close {
+  top: -55px;
 }
 
 @media only screen and (min-width: 760px) {
@@ -2867,6 +2925,17 @@ button:hover, button:focus {
   .comment__dots .slick-dots {
     bottom: 40px;
   }
+  .comment__iframe {
+    position: relative;
+    height: 480px;
+  }
+  .comment__modal {
+    width: 600px;
+    max-width: none;
+  }
+  .comment__modal .modal__close {
+    top: 0;
+  }
 }
 
 @media only screen and (min-width: 992px) {
@@ -2886,6 +2955,9 @@ button:hover, button:focus {
   .comment__name {
     left: -228px;
     padding-left: 105px;
+  }
+  .comment__modal {
+    width: 800px;
   }
 }
 
@@ -3556,6 +3628,7 @@ button:hover, button:focus {
   text-shadow: 1px 1.7px 5px rgba(0, 0, 0, 0.75);
   color: #fefefe;
   font: 400 20px/26px "Lora", sans-serif;
+  margin-bottom: 20px;
 }
 
 @media only screen and (min-width: 760px) {

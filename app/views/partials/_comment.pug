@@ -15,7 +15,7 @@ section.comment
                 .col-24.col-md-10
                   .comment__image
                     img.img-fluid(src!=item.img.src, alt!=item.img.alt)
-                    .comment__button  
+                    a.comment__button(data-toggle="modal", href="#comment__modal"+(i+1))  
                       .comment__loader
                         .chart(data-percent="100")  
                 .col-24.col-md-14.col-lg-12.offset-lg-2  
