@@ -76,10 +76,9 @@
   $mail->CharSet = "UTF-8";
   $mail->IsSendmail();
   $from = "no-repeat@delovaya.com.ua";
-  $to   = "website4you.dp@gmail.com";
-  $to   = "bg.delovaya@gmail.com";
   $mail->SetFrom($from, HOST_NAME);
-  $mail->AddAddress($to);
+  $mail->AddAddress("website4you.dp@gmail.com");
+  $mail->AddAddress("bg.delovaya@gmail.com");
   $mail->isHTML(false);
   $mail->Subject = HOST_NAME;
   $mail->Body    = $body;
