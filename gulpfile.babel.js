@@ -4,9 +4,9 @@ import gulp             from 'gulp';
 import browserSync      from 'browser-sync';
 import del              from 'del';
 import pngquant         from 'imagemin-pngquant';
-import critical         from 'critical';
 import ftp              from 'vinyl-ftp';
 import gulpLoadPlugins  from 'gulp-load-plugins';
+var critical            = require('critical').stream;
 
 const $ = gulpLoadPlugins({scope: 'devDependencies', lazy: 'false'});
 
@@ -182,7 +182,7 @@ gulp.task('critical', function () {
        width: 1280,
        height: 960
      }],
-       css: [path.dest.critical],
+       css: [path.build.critical],
        minify: true,
        extract: false,
        ignore: ['font-face']
