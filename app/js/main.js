@@ -23,28 +23,28 @@
 
   $('#comment__modal1').on('shown.bs.modal', function() {
     $(".comment__iframe--1 iframe").attr('src', 'https://www.youtube.com/embed/3DV7Z0uhKmU?ecver=1&autoplay=1&showinfo=0&mute=0&iv_load_policy=3&showsearch=0');
-  })
+  });
   $('#comment__modal1').on('hidden.bs.modal', function() {
     $(".comment__iframe--1 iframe").attr('src', 'https://www.youtube.com/embed/3DV7Z0uhKmU?ecver=1&autoplay=0&showinfo=0&mute=1&iv_load_policy=3&showsearch=0');
-  })
+  });
   $('#comment__modal2').on('shown.bs.modal', function() {
     $(".comment__iframe--2 iframe").attr('src', 'https://www.youtube.com/embed/hWeXAhrluE8?ecver=1&autoplay=1&showinfo=0&mute=0&iv_load_policy=3&showsearch=0');
-  })
+  });
   $('#comment__modal2').on('hidden.bs.modal', function() {
     $(".comment__iframe--2 iframe").attr('src', 'https://www.youtube.com/embed/hWeXAhrluE8?ecver=1&autoplay=0&showinfo=0&mute=1&iv_load_policy=3&showsearch=0');
-  })
+  });
   $('#comment__modal3').on('shown.bs.modal', function() {
     $(".comment__iframe--3 iframe").attr('src', 'https://www.youtube.com/embed/3EMsu7mrGcg?ecver=1&autoplay=1&showinfo=0&mute=0&iv_load_policy=3&showsearch=0');
-  })
+  });
   $('#comment__modal3').on('hidden.bs.modal', function() {
     $(".comment__iframe--3 iframe").attr('src', 'https://www.youtube.com/embed/3EMsu7mrGcg?ecver=1&autoplay=0&showinfo=0&mute=1&iv_load_policy=3&showsearch=0');
-  })
+  });
   $('#comment__modal4').on('shown.bs.modal', function() {
     $(".comment__iframe--4 iframe").attr('src', 'https://www.youtube.com/embed/0aR1FXB2V4U?ecver=1&autoplay=1&showinfo=0&mute=0&iv_load_policy=3&showsearch=0');
-  })
+  });
   $('#comment__modal4').on('hidden.bs.modal', function() {
     $(".comment__iframe--4 iframe").attr('src', 'https://www.youtube.com/embed/0aR1FXB2V4U?ecver=1&autoplay=0&showinfo=0&mute=1&iv_load_policy=3&showsearch=0');
-  })
+  });
 
   var firstModalOpen = $("body").hasClass("modal-open");
 
@@ -237,7 +237,7 @@ $(function($){
 
   $(function() {
     $(window).scroll( function() {
-      if ($(this).scrollTop() + $(this).height() >= $('.video').offset().top) {
+/*      if ($(this).scrollTop() + $(this).height() >= $('.video').offset().top) {
         $('.video .chart').easyPieChart({
           animate: 10000,
           barColor: '#e7b869',
@@ -245,7 +245,7 @@ $(function($){
           lineWidth: 6,
           scaleColor: 'transparent'
         });
-      } 
+      } */
       
       if($(this).scrollTop() + $(this).height() >= $('.comment').offset().top) {
         $('.comment .chart').easyPieChart({
@@ -256,6 +256,7 @@ $(function($){
           scaleColor: 'transparent'
         });
       }
+      
     });
   });
 
