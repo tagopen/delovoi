@@ -25,4 +25,7 @@ section.scheme
             .scheme__icon(class="scheme__icon--"+(i+1))
           .scheme__hover
             .scheme__title!=item.hover.title
-            .scheme__descr!=item.hover.text    
+            .scheme__descr
+              .row
+                .col-24
+                  !=item.hover.text 

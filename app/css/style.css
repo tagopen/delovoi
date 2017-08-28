@@ -2153,10 +2153,10 @@ button:hover, button:focus {
 }
 
 .scheme__descr img {
-  display: block;
+  display: inline-block;
   margin: 10px auto;
   max-height: 150px;
-  max-width: 100%;
+  max-width: 50%;
 }
 
 .scheme__text {

@@ -283,7 +283,7 @@ gulp.task('dev', ['clean', 'pug', 'fonts', 'sprite', 'img', 'sass', 'scripts'], 
       searchPath: dirs.src
     }))
     .pipe($.if(
-      '*.js', $.uglifyjs()
+      '*.js', $.javascriptObfuscator()
     ))
     .pipe($.if(
       '*.css', $.cssnano({
