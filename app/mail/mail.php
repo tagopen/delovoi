@@ -125,7 +125,6 @@
 
   $mail = new PHPMailer();
   $mail->CharSet = "UTF-8";
-  $mail->IsSendmail();
 
   $from = "no-repeat@" . HOST_NAME;
   $mail->SetFrom($from, HOST_NAME);

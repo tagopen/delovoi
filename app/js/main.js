@@ -92,7 +92,7 @@ if( $( window ).width() >= 992 ) {
 
 // Masked phone
 $(function($){
-  $(".form__input--phone").mask("+38 (999) 999-99-99");
+  $(".form__input--phone").mask("+38 (999) 9999999");
 });
 
 // Today date
@@ -259,6 +259,7 @@ $(function($){
       
     });
   });
+
 
   $(function () {
     var $time = $('.form__input--time');

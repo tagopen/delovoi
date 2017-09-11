@@ -9,11 +9,11 @@ section.plan
       .col-24.col-sm-20.offset-sm-2.col-md-14.offset-md-10.col-lg-14.offset-lg-10
         form.contact__form.contactForm.contactForm--modal(method='post', action='./mail/mail.php')
           .row
-            .col-24.col-xl-8.form__group
+            .col-24.col-xl-9.form__group
               label.input__heading.input__heading--black!=content.index.plan.form.title   
               input.form-control.form__input.form__input--small.form__phone.form__input--phone(aria-invalid='false', placeholder="+38 (___) ___-__-__", name='phone', type='tel', required)
               p.help-block.with-errors  
-            .col-24.col-xl-16.d-flex.align-items-end
+            .col-24.col-xl-15.d-flex.align-items-end
               button.button.button--size.form__btn.plan__btn(name='form', value='Маркетинговый план', type='submit', data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Файл отправляется...")
                 span.plan__btn--text!=content.index.plan.form.btn
             .col-24

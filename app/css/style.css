@@ -1368,7 +1368,7 @@ button:hover, button:focus {
     font: 400 18px/27px "Open Sans", sans-serif;
   }
   .header__link {
-    font: 600 18px/27px "Open Sans", sans-serif;
+    font: 600 28px/30px "Open Sans", sans-serif;
   }
   .header__call--text {
     font: 400 18px/27px "Open Sans", sans-serif;
@@ -1440,9 +1440,6 @@ button:hover, button:focus {
 }
 
 @media only screen and (min-width: 992px) {
-  .intro {
-    padding-bottom: 160px;
-  }
   .intro__text {
     margin-bottom: 0;
   }
@@ -2754,7 +2751,7 @@ button:hover, button:focus {
   }
   .plan__btn {
     margin-top: 15px;
-    padding: 8px 20px;
+    padding: 8px 15px;
   }
   .plan__btn--text {
     font: 600 18px/26px "Open Sans", sans-serif;

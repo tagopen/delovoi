@@ -6,7 +6,8 @@ import del              from 'del';
 import pngquant         from 'imagemin-pngquant';
 import ftp              from 'vinyl-ftp';
 import gulpLoadPlugins  from 'gulp-load-plugins';
-var critical            = require('critical').stream;
+import critical         from 'critical';
+
 
 const $ = gulpLoadPlugins({scope: 'devDependencies', lazy: 'false'});
 
@@ -23,7 +24,7 @@ const path = {
     img:            dirs.dest + '/img/',
     fonts:          dirs.dest + '/fonts/',
     mail:           dirs.dest + '/mail/',
-    critical:       dirs.dest + 'dist/css/bundle.min.css'
+    critical:       dirs.dest + '/css/bundle.min.css'
   },
   src: {
     html:           dirs.src + '/',
@@ -168,8 +169,8 @@ gulp.task('browser-sync',  ['pug', 'sass'], function() {
 
 // Generate & Inline Critical-path CSS
 gulp.task('critical', function () {
- return gulp.src(path.build.html)
-   .pipe(critical({
+ return gulp.src('dist/*.html/')
+   .pipe(critical.stream({
      base: 'dist/', 
      inline: true, 
      dimensions: [{
@@ -182,12 +183,12 @@ gulp.task('critical', function () {
        width: 1280,
        height: 960
      }],
-       css: [path.build.critical],
+       css: ['dist/css/bundle.min.css'],
        minify: true,
        extract: false,
        ignore: ['font-face']
      }))
-   .pipe(gulp.dest(dirs.dest));
+   .pipe(gulp.dest('dist'));
 });
 
 gulp.task('clean', function () {
