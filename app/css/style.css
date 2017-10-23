@@ -662,18 +662,24 @@
 .ic--arrowleft:before {
   width: 33px;
   height: 7px;
-  background: url(../img/sprite.png) -1830px -764px no-repeat;
+  background: url(../img/sprite.png) -1717px -804px no-repeat;
 }
 
 .ic--arrowright:before {
   width: 33px;
   height: 7px;
-  background: url(../img/sprite.png) -1787px -764px no-repeat;
+  background: url(../img/sprite.png) -1827px -764px no-repeat;
 }
 
 .ic--call:before {
   width: 20px;
   height: 20px;
+  background: url(../img/sprite.png) -1797px -764px no-repeat;
+}
+
+.ic--call2:before {
+  width: 30px;
+  height: 30px;
   background: url(../img/sprite.png) -1757px -764px no-repeat;
 }
 
@@ -917,6 +923,13 @@ button:hover, button:focus {
   width: 500px;
 }
 
+.modal__large {
+  max-width: none;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+
 .modal__content {
   position: relative;
   background: #fff;
@@ -930,6 +943,13 @@ button:hover, button:focus {
 
 .modal__content--nopadding {
   padding: 0;
+}
+
+.modal__text {
+  margin: 20px 0;
+  font: 700 18px/27px "Lora", sans-serif;
+  color: #000;
+  text-align: center;
 }
 
 .modal__light {
@@ -1053,6 +1073,12 @@ button:hover, button:focus {
   }
   .modal--size {
     width: 900px;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .modal__large {
+    max-width: 1000px;
   }
 }
 
@@ -1446,6 +1472,61 @@ button:hover, button:focus {
 }
 
 /* ---------------------------------------- */
+/* D E S C R    S T Y L E                   */
+/* ---------------------------------------- */
+.descr {
+  position: relative;
+}
+
+.descr__container {
+  position: relative;
+  height: 100%;
+}
+
+.descr__row {
+  height: 100%;
+}
+
+.descr__text {
+  font: 400 18px/27px "Lora", sans-serif;
+  color: #050505;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.descr__text--span {
+  font: 700 18px/27px "Lora", sans-serif;
+}
+
+@media only screen and (min-width: 992px) {
+  .descr {
+    height: 500px;
+  }
+  .descr:before {
+    content: '';
+    position: absolute;
+    display: block;
+    right: 0;
+    top: 160px;
+    width: 100%;
+    height: 400px;
+    background: url(../img/setkasm.png) repeat;
+  }
+  .descr__image {
+    position: relative;
+  }
+  .descr__image img {
+    position: absolute;
+    top: 0;
+    right: 0;
+    max-width: none;
+  }
+  .descr__text {
+    text-align: left;
+  }
+}
+
+/* ---------------------------------------- */
 /* V I D E O    S T Y L E                   */
 /* ---------------------------------------- */
 .video {
@@ -1598,7 +1679,7 @@ button:hover, button:focus {
 /* T O O L    S T Y L E                     */
 /* ---------------------------------------- */
 .tool {
-  padding: 80px 0;
+  padding: 80px 0 0;
 }
 
 .tool__subheading {
@@ -1607,8 +1688,45 @@ button:hover, button:focus {
   margin: 50px 0;
 }
 
+.tool__btn {
+  background-color: #e7b869;
+  -webkit-box-shadow: 7.5px 13px 35px rgba(0, 0, 0, 0.25);
+          box-shadow: 7.5px 13px 35px rgba(0, 0, 0, 0.25);
+  box-shadow: 7.5px 13px 35px rgba(0, 0, 0, 0.25);
+  font: 600 16px/26px "Open Sans", sans-serif;
+  text-transform: uppercase;
+  padding: 11px 25px;
+  text-align: center;
+  cursor: pointer;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+  -webkit-border-radius: 15px 15px 0 0;
+          border-radius: 15px 15px 0 0;
+  white-space: normal;
+}
+
+.tool__btn:hover .tool__icones .fa, .tool__btn:focus .tool__icones .fa {
+  top: 3px;
+}
+
+.tool__icones .fa {
+  position: relative;
+  top: -3px;
+  font-size: 11px;
+  padding: 0 2px;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+}
+
 .tool__elem {
   position: relative;
+}
+
+.tool__elem--hidden {
+  display: none;
+  visibility: hidden;
+  -webkit-transition: all .5s ease;
+  transition: all .5s ease;
 }
 
 .tool__elem--1:before {
@@ -1713,6 +1831,9 @@ button:hover, button:focus {
 @media only screen and (min-width: 760px) {
   .tool__row {
     margin-bottom: 0;
+  }
+  .tool__btn {
+    min-width: 500px;
   }
   .tool__image img {
     -webkit-transform: scale(0.8);
@@ -1837,6 +1958,28 @@ button:hover, button:focus {
   overflow: hidden;
 }
 
+.price__container {
+  position: relative;
+}
+
+.price__bait {
+  position: absolute;
+  right: 0;
+  top: 0;
+  border: 3px solid #ce1630;
+  font: 700 italic 18px/20px "Open Sans", sans-serif;
+  color: #ce1630;
+  text-align: center;
+  padding: 10px 15px;
+  -webkit-border-radius: 30px;
+          border-radius: 30px;
+}
+
+.price__bait--random {
+  display: inline-block;
+  margin-right: 5px;
+}
+
 .price__heading {
   margin-bottom: 50px;
 }
@@ -1920,6 +2063,83 @@ button:hover, button:focus {
   -webkit-transform: scale(1.2);
       -ms-transform: scale(1.2);
           transform: scale(1.2);
+}
+
+@-webkit-keyframes bait {
+  0 {
+    width: 0;
+  }
+  10% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 0;
+  }
+  30% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  60% {
+    opacity: 0;
+  }
+  70% {
+    opacity: 0;
+  }
+  80% {
+    opacity: 0;
+  }
+  90% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes bait {
+  0 {
+    width: 0;
+  }
+  10% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 0;
+  }
+  30% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  60% {
+    opacity: 0;
+  }
+  70% {
+    opacity: 0;
+  }
+  80% {
+    opacity: 0;
+  }
+  90% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.price__bait {
+  -webkit-animation: bait 10s infinite;
+          animation: bait 10s infinite;
 }
 
 @media only screen and (min-width: 576px) {
@@ -3680,4 +3900,25 @@ button:hover, button:focus {
   .success__text {
     font: 400 24px/36px "Lora", sans-serif;
   }
+}
+
+.cbutton {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  height: 60px;
+  width: 60px;
+  background-color: #e7b869;
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
+  text-align: center;
+  -webkit-box-shadow: 0px 4px 25px 1px rgba(0, 0, 0, 0.5);
+          box-shadow: 0px 4px 25px 1px rgba(0, 0, 0, 0.5);
+  border: 0;
+  cursor: pointer;
+}
+
+.cbutton .ic {
+  margin-left: 7px;
+  margin-top: -3px;
 }

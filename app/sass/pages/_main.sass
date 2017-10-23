@@ -54,6 +54,11 @@ button
     position: relative
   &__size
     width: 500px
+  &__large
+    max-width: none
+    margin-left: auto
+    margin-right: auto
+    width: 100%  
   &__content
     position: relative
     background: #fff
@@ -64,6 +69,11 @@ button
     z-index: 25
     &--nopadding
       padding: 0
+  &__text
+    margin: 20px 0
+    font: 700 18px/27px $font-lora
+    color: #000
+    text-align: center  
   &__light
     position: absolute
     left: 50%
@@ -148,7 +158,11 @@ button
     &__mobila
       left: 100%   
     &--size
-      width: 900px   
+      width: 900px  
++r(1024)
+  .modal
+    &__large
+      max-width: 1000px       
 .checkbox-btn
   &__control
     display: none
@@ -408,7 +422,43 @@ button
 +r(992)
   .intro
     &__text
-      margin-bottom: 0      
+      margin-bottom: 0   
++comment("descr style")
+.descr
+  position: relative
+  &__container
+    position: relative
+    height: 100%
+  &__row
+    height: 100%  
+  &__text       
+    font: 400 18px/27px $font-lora  
+    color: #050505
+    text-align: center
+    margin-top: 20px
+    &--span
+      font: 700 18px/27px $font-lora  
++r(992)
+  .descr
+    height: 500px   
+    &:before
+      content: ''
+      position: absolute
+      display: block
+      right: 0
+      top: 160px
+      width: 100%
+      height: 400px
+      background: url(../img/setkasm.png) repeat
+    &__image
+      position: relative
+      img
+        position: absolute
+        top: 0
+        right: 0
+        max-width: none
+    &__text
+      text-align: left
 +comment("video style")
 .video
   position: relative
@@ -517,13 +567,41 @@ button
       top: 0             
 +comment("tool style")      
 .tool
-  padding: 80px 0
+  padding: 80px 0 0
   &__subheading
     color: #212121
     font: 400 18px/21px $font-lora
     margin: 50px 0
+  &__btn
+    background-color: #e7b869
+    box-shadow: 7.5px 13px 35px rgba(0, 0, 0, 0.25)
+    box-shadow: 7.5px 13px 35px rgba(0, 0, 0, 0.25) 
+    font: 600 16px/26px $font-open-sans
+    text-transform: uppercase
+    padding: 11px 25px
+    text-align: center
+    cursor: pointer
+    transition: all .3s ease
+    border-radius: 15px 15px 0 0
+    white-space: normal
+    &:hover,
+    &:focus
+      .tool__icones
+        .fa
+          top: 3px
+  &__icones 
+    .fa
+      position: relative
+      top: -3px
+      font-size: 11px 
+      padding: 0 2px 
+      transition: all .3s ease
   &__elem
     position: relative
+    &--hidden
+      display: none
+      visibility: hidden
+      transition: all .5s ease
     &--1
       &:before
         content: ''
@@ -603,6 +681,8 @@ button
   .tool
     &__row
       margin-bottom: 0
+    &__btn
+      min-width: 500px  
     &__image
       img
         transform: scale(0.8)  
@@ -700,6 +780,21 @@ button
   background-color: #e9e9e9
   background-image: linear-gradient(to top, white 0%, #e9e9e9 100%)
   overflow: hidden
+  &__container
+    position: relative
+  &__bait
+    position: absolute
+    right: 0
+    top: 0
+    border: 3px solid #ce1630
+    font: 700 italic 18px/20px $font-open-sans 
+    color: #ce1630
+    text-align: center
+    padding: 10px 15px
+    border-radius: 30px
+    &--random
+      display: inline-block
+      margin-right: 5px
   &__heading
     margin-bottom: 50px
   &__title
@@ -760,6 +855,31 @@ button
     &:focus
       background-color: $color-orange
       transform: scale(1.2)
+@keyframes bait
+  0 
+    width: 0
+  10%
+    opacity: 0
+  20%
+    opacity: 0
+  30%
+    opacity: 0
+  40%
+    opacity: 0
+  50%
+    opacity: 0
+  60%
+    opacity: 0
+  70%
+    opacity: 0
+  80%
+    opacity: 0
+  90%
+    opacity: 0               
+  100%
+    opacity: 1
+.price__bait 
+  animation: bait 10s infinite       
 +r(576)
   .price
     &__text
@@ -1860,3 +1980,18 @@ button
         font: 700 70px/72px $font-lora
     &__text    
       font: 400 24px/36px $font-lora
+.cbutton
+  position: fixed
+  bottom: 30px
+  right: 30px
+  height: 60px
+  width: 60px 
+  background-color: rgb(231, 184, 105)
+  border-radius: 50%
+  text-align: center
+  box-shadow: 0px 4px 25px 1px rgba(0, 0, 0, 0.5)
+  border: 0
+  cursor: pointer
+  .ic
+    margin-left: 7px
+    margin-top: -3px      

@@ -7,7 +7,7 @@ section.tool
           i.ic.ic--headingborder.heading__icon
         .tool__subheading!=content.index.tool.subheading 
   each item, i in content.index.tool.content        
-    .tool__elem(class="tool__elem--"+(i+1))        
+    .tool__elem(class="tool__elem--"+(i+1) class={"tool__elem--hidden" : i !== 0})              
       .container.animate(data-animation="fadeInUp")
         .row.tool__row(class={'flex-row-reverse': i%2 == 1})
           .col-md-12
@@ -17,3 +17,17 @@ section.tool
             .tool__box(class="tool__box--"+(i+1))   
               .tool__name!=item.name
               .tool__text!=item.text
+  .col-24.text-center
+    button.btn.tool__btn 
+      .row
+        .col-5.col-md-4
+          .tool__icones.tool__icones--left
+            i.fa.fa-chevron-down(aria-hidden="true")
+            i.fa.fa-chevron-down(aria-hidden="true")
+            i.fa.fa-chevron-down(aria-hidden="true")
+        .col-14.col-md-16 Открыть другие инструменты 
+        .col-5.col-md-4
+          .tool__icones.tool__icones--left  
+            i.fa.fa-chevron-down(aria-hidden="true")
+            i.fa.fa-chevron-down(aria-hidden="true")
+            i.fa.fa-chevron-down(aria-hidden="true")    

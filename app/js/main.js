@@ -21,6 +21,25 @@
     });
   });
 
+    $(function($) {
+    var currentMousePos = { x: -1, y: -1 },
+        prevMousePos    = {x: -1, y: -1},
+        documentTop     = $(document).scrollTop();
+
+    $(document).on('mousemove, mouseout', function(event) {
+      currentMousePos.x = event.pageX;
+      currentMousePos.y = event.pageY;
+      documentTop = $(document).scrollTop();
+        // ELSEWHERE, your code that needs to know the mouse position without an event
+        if ((currentMousePos.y < prevMousePos.y) && (currentMousePos.y < documentTop + 21)) {
+          $('#sibassa__modal').modal("show");
+          $(document).unbind('mousemove, mouseout');
+        }
+        prevMousePos.x = currentMousePos.x;
+        prevMousePos.y = currentMousePos.y;
+      });
+  });
+
   $('#comment__modal1').on('shown.bs.modal', function() {
     $(".comment__iframe--1 iframe").attr('src', 'https://www.youtube.com/embed/3DV7Z0uhKmU?ecver=1&autoplay=1&showinfo=0&mute=0&iv_load_policy=3&showsearch=0');
   });
@@ -53,6 +72,12 @@
     if (!firstModalOpen)
       $("body").addClass("modal-open");
   });
+
+  // Build Btn show all
+  $('.tool__btn').on('click', function () {
+    $('.tool__elem').removeClass('tool__elem--hidden');
+    $('.tool__btn').hide();
+  }); 
 
   if( $( window ).width() >= 760 ) {
 
@@ -274,12 +299,12 @@ $(function($){
   });
 
   $(function() {
-    let min = 49,
-        max = 59,
+    var min = 100,
+        max = 150,
         randomVal = 0,
         prevData = 0,
         date = new Date(),
-        $dateText = $('.heading__text--client'),
+        $dateText = $('.price__bait--random'),
         period = 24 * 60 * 60; // 24 hours
 
     date.setTime(date.getTime() + (period * 1000));
