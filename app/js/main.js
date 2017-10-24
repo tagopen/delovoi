@@ -110,7 +110,7 @@
 
 if( $( window ).width() >= 992 ) {
   $('.header__scroll').click(function(){
-    $("html, body").animate({ scrollTop: $(".intro").offset().top +1}, 1500);
+    $("html, body").animate({ scrollTop: $(".descr").offset().top +1}, 1500);
     return false;
   });
 }
