@@ -6,7 +6,7 @@ section.price
       .price__bait--random 150 
       | ₴
     .row.justify-content-center
-      .col-24.col-md-16.col-lg-12.text-center
+      .col-24.col-md-16.col-lg-14.text-center
         h2.heading.price__heading
           span.heading__text!=content.index.price.heading 
           i.ic.ic--headingborder.heading__icon
@@ -16,6 +16,7 @@ section.price
           img.img-fluid(src!=content.index.price.img.src, alt!=content.index.price.img.alt)
           .price__zoom  
             i.ic.ic--zoom
+        .price__subtext!=content.index.price.subtext    
       .col-24.col-md-10.col-xl-12
         .price__box
           .price__title!=content.index.price.title

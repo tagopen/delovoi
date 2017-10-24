@@ -1992,6 +1992,12 @@ button:hover, button:focus {
   text-align: center;
 }
 
+.price__subtext {
+  margin-top: 15px;
+  color: #212121;
+  font: 400 italic 14px/20px "Open Sans", sans-serif;
+}
+
 .price__text {
   color: #212121;
   font: 400 18px/27px "Open Sans", sans-serif;
@@ -2152,6 +2158,9 @@ button:hover, button:focus {
   .price__title {
     font: 700 24px/33px "Lora", sans-serif;
     text-align: left;
+  }
+  .price__subtext {
+    font: 400 italic 18px/27px "Open Sans", sans-serif;
   }
   .price__text {
     text-align: left;
@@ -3916,6 +3925,7 @@ button:hover, button:focus {
           box-shadow: 0px 4px 25px 1px rgba(0, 0, 0, 0.5);
   border: 0;
   cursor: pointer;
+  z-index: 50;
 }
 
 .cbutton .ic {
