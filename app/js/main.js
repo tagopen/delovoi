@@ -40,6 +40,13 @@
       });
   });
 
+  $('#sibassa__modal').on('shown.bs.modal', function() {
+    $(".modal__iframe").attr('src', 'https://www.youtube.com/embed/xKum0iF5Mbc?ecver=1&autoplay=1&showinfo=0&mute=0&iv_load_policy=3&showsearch=0');
+  });
+  $('#sibassa__modal').on('hidden.bs.modal', function() {
+    $(".modal__iframe").attr('src', 'https://www.youtube.com/embed/xKum0iF5Mbc?ecver=1&autoplay=0&showinfo=0&mute=1&iv_load_policy=3&showsearch=0');
+  });
+
   $('#comment__modal1').on('shown.bs.modal', function() {
     $(".comment__iframe--1 iframe").attr('src', 'https://www.youtube.com/embed/3DV7Z0uhKmU?ecver=1&autoplay=1&showinfo=0&mute=0&iv_load_policy=3&showsearch=0');
   });

@@ -907,6 +907,20 @@ button:hover, button:focus {
           transform: translateZ(0);
 }
 
+.modal__video {
+  position: relative;
+  height: 240px;
+  margin: 0 -15px 20px;
+}
+
+.modal__iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+
 .modal.show {
   display: -webkit-box !important;
   display: -webkit-flex !important;
@@ -1061,12 +1075,19 @@ button:hover, button:focus {
   .modal--size .modal__close {
     right: 0;
   }
+  .modal__video {
+    height: 395px;
+    margin: 0 0 25px;
+  }
 }
 
 @media only screen and (min-width: 992px) {
   .modal-lg {
     width: 900px !important;
     max-width: none;
+  }
+  .modal__video {
+    height: 500px;
   }
   .modal__mobila {
     left: 100%;
@@ -1079,6 +1100,9 @@ button:hover, button:focus {
 @media only screen and (min-width: 1024px) {
   .modal__large {
     max-width: 1000px;
+  }
+  .modal__video {
+    height: 529px;
   }
 }
 
@@ -3932,4 +3956,8 @@ button:hover, button:focus {
 .cbutton .ic {
   margin-left: 7px;
   margin-top: -3px;
+}
+
+.sibassa__modal {
+  z-index: 500;
 }
