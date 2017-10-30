@@ -2,8 +2,6 @@ extends base/_layout.pug
 block variables
 
 block styles
-
-block scripts
   // Google Analytics Content Experiment code
   script.
     function utmx_section(){}function utmx(){}(function(){var
@@ -20,6 +18,8 @@ block scripts
   script.
     utmx('url','A/B');
   // End of Google Analytics Content Experiment code
+block scripts
+
 
 block header
   include partials/_header.pug
