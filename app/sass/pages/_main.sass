@@ -2022,3 +2022,16 @@ button
     margin-top: -3px      
 .sibassa__modal
   z-index: 500    
+
++comment("svg team style")
+.svg-team
+  &__path
+    cursor: pointer
+  &__bg
+    transition: filter .3s ease-out
+    &--active
+      filter: url(#myblurfilter)
+  &__img
+    opacity: 0
+    &--active
+      opacity: 1

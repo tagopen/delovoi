@@ -60,6 +60,8 @@ html(lang='ru' prefix='og: http://ogp.me/ns#')
     link(rel='stylesheet' href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800&amp;subset=cyrillic')
     // Font-Awesome CSS
     link(rel='stylesheet' href='css/font-awesome.css')
+    // ToolTipster CSS
+    link(rel='stylesheet' href='css/tooltipster.css')
     // Component CSS
     link(rel='stylesheet' href='css/component.css')  
     block styles
@@ -84,10 +86,15 @@ html(lang='ru' prefix='og: http://ogp.me/ns#')
 
     // build:js js/bundle.min.js
 
+    // d3 JavaScript
+    script(src='http://d3js.org/d3.v3.min.js')
+
     // Tether JavaScript
-    script(src='js/tether.js')
+    script(src='js/popper.js')
     // jQuery
     script(src='js/jquery.js')
+    // Tooltipster JavaScript
+    script(src='js/jquery.tooltipster.js')  
     // jQuery Cookies
     script(src='js/jquery.cookie.js')
     // Bootstrap JavaScript

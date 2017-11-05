@@ -54,6 +54,7 @@
     "gulp-util": "^3.0.8",
     "gulp.spritesmith": "^6.4.0",
     "imagemin-pngquant": "^5.0.0",
+    "popper.js": "^1.12.6",
     "vinyl-ftp": "^0.6.0"
   },
   "dependencies": {
@@ -62,6 +63,7 @@
     "fancybox": "^3.0.0",
     "font-awesome": "^4.7.0",
     "jquery": "^3.2.1",
+    "jquery-tooltipster": "^3.3.0",
     "jquery.cookie": "^1.4.1",
     "tether": "^1.4.0"
   }
