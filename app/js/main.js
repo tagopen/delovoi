@@ -366,6 +366,14 @@ $(function($){
   });
 
   $(function() {
-    $('.js-tooltipster').tooltipster();
+    $('.js-tooltipster').tooltipster({
+      contentCloning: true,
+      animation: 'fade',
+      interactive: true,
+      delay: 25,
+      side: 'top',
+      maxWidth: 200,
+      trigger: 'click'
+    });
   });
 })(jQuery); // End of use strict
