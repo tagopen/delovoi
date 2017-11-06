@@ -74,7 +74,7 @@ gulp.task('scripts', () => {
     'node_modules/select2/dist/js/select2.js',
     'node_modules/bootstrap-validator/dist/validator.js',
     'node_modules/jquery.cookie/jquery.cookie.js',
-    'node_modules/jquery-tooltipster/js/jquery.tooltipster.js',
+    //'node_modules/jquery-tooltipster/js/jquery.tooltipster.js',
   ])
   .pipe($.plumber())
   .pipe(gulp.dest(path.src.js));
