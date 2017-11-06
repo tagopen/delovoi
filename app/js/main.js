@@ -343,4 +343,29 @@ $(function($){
       return Math.floor(Math.random() * (max - min + 1) + min);
     }
   });
+
+  $(function() {
+    var svg = d3.select("svg.svg-team");
+    var paths = svg.selectAll(".svg-team__path");
+    var images = svg.selectAll(".svg-team__img");
+    var bg = svg.selectAll(".svg-team__bg");
+
+    paths
+      .on("mouseover", function () {
+        var target = d3.select(this).attr("data-path");
+
+        d3.select(target).classed("svg-team__img--active", true)
+        bg.classed("svg-team__bg--active", true);
+      }) // classed("active",boolean) not working
+      .on("mouseout", function () {
+        var target = d3.select(this).attr("data-path");
+
+        d3.select(target).classed("svg-team__img--active", false);
+        bg.classed("svg-team__bg--active", false);
+      });
+  });
+
+  $(function() {
+    $('.js-tooltipster').tooltipster();
+  });
 })(jQuery); // End of use strict

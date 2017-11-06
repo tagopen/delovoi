@@ -67,13 +67,14 @@ gulp.task('sass', () => {
 
 gulp.task('scripts', () => {
   return gulp.src([
-    'node_modules/tether/dist/js/tether.js',
+    'node_modules/popper.js/dist/umd/popper.js',
     'node_modules/bootstrap/dist/js/bootstrap.js',
     'node_modules/jquery/dist/jquery.js',
     'node_modules/slick-carousel/slick/slick.js',
     'node_modules/select2/dist/js/select2.js',
     'node_modules/bootstrap-validator/dist/validator.js',
     'node_modules/jquery.cookie/jquery.cookie.js',
+    'node_modules/jquery-tooltipster/js/jquery.tooltipster.js',
   ])
   .pipe($.plumber())
   .pipe(gulp.dest(path.src.js));

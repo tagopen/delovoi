@@ -3961,3 +3961,30 @@ button:hover, button:focus {
 .sibassa__modal {
   z-index: 500;
 }
+
+/* ---------------------------------------- */
+/* S V G    T E A M    S T Y L E            */
+/* ---------------------------------------- */
+.svg-team__path {
+  cursor: pointer;
+}
+
+.svg-team__bg {
+  -webkit-transition: -webkit-filter .3s ease-out;
+  transition: -webkit-filter .3s ease-out;
+  transition: filter .3s ease-out;
+  transition: filter .3s ease-out, -webkit-filter .3s ease-out;
+}
+
+.svg-team__bg--active {
+  -webkit-filter: url(#myblurfilter);
+          filter: url(#myblurfilter);
+}
+
+.svg-team__img {
+  opacity: 0;
+}
+
+.svg-team__img--active {
+  opacity: 1;
+}
